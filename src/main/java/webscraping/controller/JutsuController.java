@@ -18,16 +18,15 @@ public class JutsuController {
     @PostMapping(value = "/{name}")
     public ResponseEntity<Void> saveJutsu(@PathVariable String name) {
         log.info("Starting get infos for jutsu: {}", name);
-        JutsuDoc jutsuDoc = jutsuService.getJutsuInfo(name);
-        jutsuService.insert(jutsuDoc);
+        jutsuService.insert(name);
         log.info("Jutsu {} infos saved.", name);
         return ResponseEntity.noContent().build();
     }
 
     @GetMapping(value = "/{name}")
-    public ResponseEntity<JutsuDTO> getJutsu(@PathVariable String name) {
+    public ResponseEntity<JutsuDoc> getJutsu(@PathVariable String name) {
         log.info("Searching infos for jutsu: {}", name);
-        JutsuDTO jutsu = jutsuService.getJutsu(name);
+        JutsuDoc jutsu = jutsuService.getJutsu(name);
         log.info("Infos getted for jutsu: {}", name);
         return ResponseEntity.ok().body(jutsu);
     }

@@ -15,6 +15,7 @@ import webscraping.repository.JutsuRepository;
 import webscraping.util.JsoupConnection;
 
 import java.io.IOException;
+import java.util.Optional;
 
 import static webscraping.selector.jutsu.JutsuDebutSelector.getDebutJutsu;
 import static webscraping.selector.jutsu.JutsuInfoSelector.getInfoJutsu;
@@ -40,6 +41,7 @@ public class JutsuService {
                 JutsuInfo jutsuInfo = getInfoJutsu(doc);
                 JutsuDebut jutsuDebut = getDebutJutsu(doc);
 
+                jutsuDoc.setId( jutsuName );
                 jutsuDoc.setName(checkNullInfoName(name) ? null : name);
                 jutsuDoc.setDescription(jutsuInfo.getDescription() == null ? null : jutsuInfo.getDescription());
                 jutsuDoc.setImage(jutsuInfo.getImage() == null ? null : jutsuInfo.getImage());
@@ -63,9 +65,9 @@ public class JutsuService {
         return jutsuDoc;
     }
 
-    public void insert(JutsuDoc jutsuDoc) {
-        if (getCheckJutsu(jutsuDoc.getName().getEnglish()) == null) { //check if jutsu already exists
-            jutsuRepository.insert(jutsuDoc);
+    public void insert(String name) {
+        if ( ! getCheckJutsuId( name ).isPresent() ) { //check if jutsu already exists
+            jutsuRepository.insert( getJutsuInfo( name ) );
         } else {
             log.warn("Jutsu already exists.");
             throw new ResponseStatusException(
@@ -73,16 +75,17 @@ public class JutsuService {
         }
     }
 
-    public JutsuDTO getCheckJutsu(String name) {
-        return jutsuRepository.findByNameEnglish(name);
+    private Optional<JutsuDoc> getCheckJutsuId(String id ){
+        return jutsuRepository.findById( id ) ;
     }
 
-    public JutsuDTO getJutsu(String name) {
-        if (jutsuRepository.findByNameEnglish(name) == null) {
+    public JutsuDoc getJutsu(String name) {
+        Optional<JutsuDoc> obj = getCheckJutsuId( name ) ;
+        if ( ! obj.isPresent() ) {
             log.warn("Jutsu not found.");
             throw new ResponseStatusException(
                     HttpStatus.NOT_FOUND, "Jutsu not found.");
         }
-        return jutsuRepository.findByNameEnglish(name);
+        return obj.get() ;
     }
 }

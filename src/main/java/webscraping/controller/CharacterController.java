@@ -30,4 +30,5 @@ public class CharacterController {
         log.info("Infos getted for character: {}", name);
         return ResponseEntity.ok().body(character);
     }
+
 }

@@ -30,4 +30,5 @@ public class ClanController {
         log.info("Infos getted for clan: {}", name);
         return ResponseEntity.ok().body(clan);
     }
+
 }

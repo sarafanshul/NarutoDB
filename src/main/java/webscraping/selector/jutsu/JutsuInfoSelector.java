@@ -7,6 +7,7 @@ import org.jsoup.select.Elements;
 import webscraping.model.jutsu.JutsuInfo;
 import webscraping.util.Converters;
 
+import java.io.EOFException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -21,14 +22,27 @@ public class JutsuInfoSelector {
         JutsuInfo jutsuInfo = new JutsuInfo();
 
         //description
-        Elements descElements = doc.select(".infobox ~ p");
+        // TODO( cant gather description from source , used meta instead which is incomplete)
+        // Elements descElements = doc.select(".infobox ~ p");
+        //        if (!descElements.isEmpty()) {
+        //            if (!descElements.get(0).text().equals("")) {
+        //                jutsuInfo.setDescription(descElements.get(0).text().trim());
+        //            } else {
+        //                jutsuInfo.setDescription(descElements.get(1).text().trim());
+        //            }
+        //        }
+        //        if (jutsuInfo.getDescription().contains("[")) {
+        //            jutsuInfo.setDescription(jutsuInfo.getDescription().replaceAll("[0-9]", "").replace("[", "").replace("]", "").trim());
+        //        }
+        Elements descElements = doc.select("meta[property=\"og:description\"]");
         if (!descElements.isEmpty()) {
-            if (!descElements.get(0).text().equals("")) {
-                jutsuInfo.setDescription(descElements.get(0).text().trim());
+            if (!descElements.attr("content").equals("")) {
+                jutsuInfo.setDescription(descElements.attr("content"));
             } else {
-                jutsuInfo.setDescription(descElements.get(1).text().trim());
+                jutsuInfo.setDescription("");
             }
         }
+
         if (jutsuInfo.getDescription().contains("[")) {
             jutsuInfo.setDescription(jutsuInfo.getDescription().replaceAll("[0-9]", "").replace("[", "").replace("]", "").trim());
         }
@@ -37,9 +51,7 @@ public class JutsuInfoSelector {
         Elements imgElements = doc.select("aside figure a");
         if (!imgElements.isEmpty()) {
             String urlImage = imgElements.attr("href");
-            jutsuInfo.setImage(Converters.getBase64Image(urlImage.substring(0, urlImage.indexOf("/revision")) +
-                    "/revision" +
-                    "/latest/scale-to-width-down/300"));
+            jutsuInfo.setImage(urlImage.substring(0, urlImage.indexOf("/revision")));
         }
 
         //classification

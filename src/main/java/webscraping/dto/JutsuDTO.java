@@ -8,6 +8,7 @@ import webscraping.model.jutsu.JutsuName;
 import java.io.Serializable;
 import java.util.List;
 
+@Deprecated
 @Getter
 @Setter
 @AllArgsConstructor
