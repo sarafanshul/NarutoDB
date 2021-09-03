@@ -70,7 +70,6 @@ public class CharacterService {
     }
 
     public CharacterDoc insert(String name) {
-
         if (!getCheckCharacterId(name).isPresent()) { //check if character already
             // not exists
             log.warn("{} , Character does not exists.", name);
@@ -104,5 +103,19 @@ public class CharacterService {
             ) ;
         }
         return characterRepository.getCharacterByMatchingEnglishName(name);
+    }
+
+    public  List<CharacterDoc> getCharacterByNameEnglishRegex(String name){
+        if( name.length() < 1 ){
+            log.warn("String length too short.");
+            throw new ResponseStatusException(
+                    HttpStatus.BAD_REQUEST , "Length too short"
+            ) ;
+        }
+        return characterRepository.findByNameEnglishRegex(name);
+    }
+
+    public List<CharacterDoc> getAllCharacters(){
+        return characterRepository.findAll();
     }
 }

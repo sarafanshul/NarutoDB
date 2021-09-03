@@ -29,7 +29,7 @@ public class CharInfoSelector {
                 charInfo.setDescription(descElements.get(1).text().trim());
             }
         }
-        if (charInfo.getDescription().contains("[")) {
+        if ( charInfo.getDescription() != null && charInfo.getDescription().contains("[")) {
             charInfo.setDescription(charInfo.getDescription().replaceAll("[0-9]", "").replace("[", "").replace("]", "").trim());
         }
 

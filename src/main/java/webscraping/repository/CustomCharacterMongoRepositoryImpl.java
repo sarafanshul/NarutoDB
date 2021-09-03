@@ -34,7 +34,10 @@ public class CustomCharacterMongoRepositoryImpl implements CustomCharacterMongoR
         Aggregation pipeline = Aggregation.newAggregation(
                 CharacterDoc.class,
                 Aggregation.match(
-                        TextCriteria.forDefaultLanguage().matchingAny(name)
+                        TextCriteria
+                                .forDefaultLanguage()
+                                .matchingAny(name)
+                                .caseSensitive(false)
                 ),
                 Aggregation.sort(Sort.Direction.ASC , ENGLISH_NAME)
         );
