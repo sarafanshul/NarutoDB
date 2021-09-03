@@ -6,7 +6,7 @@ import webscraping.document.CharacterDoc;
 import webscraping.dto.CharacterDTO;
 
 @Repository
-public interface CharacterRepository extends MongoRepository<CharacterDoc, String> {
+public interface CharacterRepository extends MongoRepository<CharacterDoc, String> , CustomCharacterMongoRepository {
 
     CharacterDTO findByNameEnglish(String name);
 

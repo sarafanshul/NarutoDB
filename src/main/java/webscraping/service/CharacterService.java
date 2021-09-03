@@ -93,7 +93,16 @@ public class CharacterService {
             throw new ResponseStatusException(
                     HttpStatus.NOT_FOUND, "Character not found.");
         }
-        // do something here rather fetching twice
         return obj.get();
+    }
+
+    public List<CharacterDoc> getCharactersByName(String name) {
+        if( name.length() <= 1 ){
+            log.warn("String length too short.");
+            throw new ResponseStatusException(
+                    HttpStatus.BAD_REQUEST , "Length too short"
+            ) ;
+        }
+        return characterRepository.getCharacterByMatchingEnglishName(name);
     }
 }

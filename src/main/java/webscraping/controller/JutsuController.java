@@ -17,6 +17,7 @@ public class JutsuController {
 
     @PostMapping(value = "/{name}")
     public ResponseEntity<Void> saveJutsu(@PathVariable String name) {
+        log.warn("Jutsu Info -> getDescription does not work correctly");
         log.info("Starting get infos for jutsu: {}", name);
         jutsuService.insert(name);
         log.info("Jutsu {} infos saved.", name);
