@@ -9,7 +9,7 @@ import webscraping.dto.CharacterDTO;
 import java.util.List;
 
 @Repository
-public interface CharacterRepository extends MongoRepository<CharacterDoc, String> , CustomCharacterMongoRepository {
+public interface CharacterRepository extends MongoRepository<CharacterDoc, String>, CustomCharacterMongoRepository {
 
     @Deprecated
     CharacterDTO findByNameEnglish(String name);

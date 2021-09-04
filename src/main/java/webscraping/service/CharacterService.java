@@ -3,6 +3,8 @@ package webscraping.service;
 import lombok.extern.slf4j.Slf4j;
 import org.jsoup.nodes.Document;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
@@ -39,6 +41,8 @@ public class CharacterService {
         if (doc != null) {
             try {
                 CharName name = getInfoName(doc);
+                if (name.getEnglish() == null || name.getEnglish().length() == 0)
+                    name.setEnglish(charName);
                 CharInfo charInfo = getInfoBase(doc);
                 CharDebut charDebut = getInfoDebut(doc);
                 CharPersonal charPersonal = getInfoPersonal(doc);
@@ -96,26 +100,30 @@ public class CharacterService {
     }
 
     public List<CharacterDoc> getCharactersByName(String name) {
-        if( name.length() <= 1 ){
+        if (name.length() <= 1) {
             log.warn("String length too short.");
             throw new ResponseStatusException(
-                    HttpStatus.BAD_REQUEST , "Length too short"
-            ) ;
+                    HttpStatus.BAD_REQUEST, "Length too short"
+            );
         }
         return characterRepository.getCharacterByMatchingEnglishName(name);
     }
 
-    public  List<CharacterDoc> getCharacterByNameEnglishRegex(String name){
-        if( name.length() < 1 ){
+    public List<CharacterDoc> getCharacterByNameEnglishRegex(String name) {
+        if (name.length() < 1) {
             log.warn("String length too short.");
             throw new ResponseStatusException(
-                    HttpStatus.BAD_REQUEST , "Length too short"
-            ) ;
+                    HttpStatus.BAD_REQUEST, "Length too short"
+            );
         }
         return characterRepository.findByNameEnglishRegex(name);
     }
 
-    public List<CharacterDoc> getAllCharacters(){
+    public List<CharacterDoc> getAllCharacters() {
         return characterRepository.findAll();
+    }
+
+    public Page<CharacterDoc> getAllCharactersPaged(Pageable pageable) {
+        return characterRepository.findAll(pageable);
     }
 }

@@ -17,7 +17,8 @@ import java.util.List;
 public class CharName implements Serializable {
     private static final long serialVersionUID = 1L;
 
-    @TextIndexed(weight=3)String english;
+    @TextIndexed(weight = 3)
+    String english;
     String kanji;
     String romaji;
     List<String> others;

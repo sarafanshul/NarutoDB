@@ -27,8 +27,13 @@ public class CharNameSelector {
         Elements nameElements = doc.select(".title");
         if (!nameElements.isEmpty()) {
             String unionNames = nameElements.get(0).text();
-            charName.setKanji(unionNames.substring(0, unionNames.indexOf(" ")).trim());
-            charName.setRomaji(unionNames.substring(unionNames.indexOf(" ")).trim());
+            if (unionNames.contains(" ")) {
+                charName.setKanji(unionNames.substring(0, unionNames.indexOf(" ")).trim());
+                charName.setRomaji(unionNames.substring(unionNames.indexOf(" ")).trim());
+            } else {
+                charName.setKanji("");
+                charName.setRomaji("");
+            }
         }
 
         //other names

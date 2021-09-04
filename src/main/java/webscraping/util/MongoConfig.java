@@ -40,11 +40,13 @@ public class MongoConfig extends AbstractMongoClientConfiguration { //not to add
         return converter;
     }
 
-    public @Bean MongoClient mongoClient() {
+    public @Bean
+    MongoClient mongoClient() {
         return MongoClients.create(CONNECTION_URL);
     }
 
-    public @Bean MongoTemplate mongoTemplate() {
+    public @Bean
+    MongoTemplate mongoTemplate() {
         return new MongoTemplate(mongoClient(), DATABASE_NAME);
     }
 

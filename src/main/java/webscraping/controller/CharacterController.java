@@ -2,6 +2,9 @@ package webscraping.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import webscraping.document.CharacterDoc;
@@ -53,7 +56,7 @@ public class CharacterController {
      * @return List of characters found
      */
     @GetMapping(value = "name/{name}")
-    public ResponseEntity<Collection<CharacterDoc>> getCharactersByName( @PathVariable String name ){
+    public ResponseEntity<Collection<CharacterDoc>> getCharactersByName(@PathVariable String name) {
         log.info("Searching info for character: {}", name);
         List<CharacterDoc> characters = characterService.getCharactersByName(name);
         log.info("Info retrieved for character(REGEX): {}", name);
@@ -68,7 +71,7 @@ public class CharacterController {
      * @return List of characters found
      */
     @GetMapping(value = "like/{name}")
-    public ResponseEntity<Collection<CharacterDoc>> getCharacterLike( @PathVariable String name ){
+    public ResponseEntity<Collection<CharacterDoc>> getCharacterLike(@PathVariable String name) {
         log.info("Searching info for character(REGEX): {}", name);
         List<CharacterDoc> characters = characterService.getCharacterByNameEnglishRegex(name);
         log.info("Info retrieved for character(REGEX): {}", name);
@@ -76,8 +79,21 @@ public class CharacterController {
     }
 
     @GetMapping(value = "all")
-    public ResponseEntity<Collection<CharacterDoc>> getAllCharacter(){
-        return ResponseEntity.ok().body( characterService.getAllCharacters() );
+    public ResponseEntity<Collection<CharacterDoc>> getAllCharacter() {
+        return ResponseEntity.ok().body(characterService.getAllCharacters());
+    }
+
+    /**
+     * Rest for pageable access of all characters
+     *
+     * @param pageable a pageable entity with index , size(default 20) , and sorting params
+     * @return a pageable
+     */
+    @GetMapping(value = "page")
+    public ResponseEntity<Page<CharacterDoc>> getAllCharactersPaged(
+            @PageableDefault(size = 20)
+                    Pageable pageable) {
+        return ResponseEntity.ok().body(characterService.getAllCharactersPaged(pageable));
     }
 
 }

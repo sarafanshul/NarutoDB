@@ -7,7 +7,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 import webscraping.document.JutsuDoc;
-import webscraping.dto.JutsuDTO;
 import webscraping.model.jutsu.JutsuDebut;
 import webscraping.model.jutsu.JutsuInfo;
 import webscraping.model.jutsu.JutsuName;
@@ -41,7 +40,7 @@ public class JutsuService {
                 JutsuInfo jutsuInfo = getInfoJutsu(doc);
                 JutsuDebut jutsuDebut = getDebutJutsu(doc);
 
-                jutsuDoc.setId( jutsuName );
+                jutsuDoc.setId(jutsuName);
                 jutsuDoc.setName(checkNullInfoName(name) ? null : name);
                 jutsuDoc.setDescription(jutsuInfo.getDescription() == null ? null : jutsuInfo.getDescription());
                 jutsuDoc.setImage(jutsuInfo.getImage() == null ? null : jutsuInfo.getImage());
@@ -66,8 +65,8 @@ public class JutsuService {
     }
 
     public void insert(String name) {
-        if ( ! getCheckJutsuId( name ).isPresent() ) { //check if jutsu already exists
-            jutsuRepository.insert( getJutsuInfo( name ) );
+        if (!getCheckJutsuId(name).isPresent()) { //check if jutsu already exists
+            jutsuRepository.insert(getJutsuInfo(name));
         } else {
             log.warn("Jutsu already exists.");
             throw new ResponseStatusException(
@@ -75,17 +74,17 @@ public class JutsuService {
         }
     }
 
-    private Optional<JutsuDoc> getCheckJutsuId(String id ){
-        return jutsuRepository.findById( id ) ;
+    private Optional<JutsuDoc> getCheckJutsuId(String id) {
+        return jutsuRepository.findById(id);
     }
 
     public JutsuDoc getJutsu(String name) {
-        Optional<JutsuDoc> obj = getCheckJutsuId( name ) ;
-        if ( ! obj.isPresent() ) {
+        Optional<JutsuDoc> obj = getCheckJutsuId(name);
+        if (!obj.isPresent()) {
             log.warn("Jutsu not found.");
             throw new ResponseStatusException(
                     HttpStatus.NOT_FOUND, "Jutsu not found.");
         }
-        return obj.get() ;
+        return obj.get();
     }
 }

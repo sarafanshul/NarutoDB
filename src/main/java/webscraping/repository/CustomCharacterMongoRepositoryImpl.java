@@ -10,7 +10,7 @@ import webscraping.document.CharacterDoc;
 import java.util.List;
 
 
-public class CustomCharacterMongoRepositoryImpl implements CustomCharacterMongoRepository{
+public class CustomCharacterMongoRepositoryImpl implements CustomCharacterMongoRepository {
 
     public final String ENGLISH_NAME = "name.english";
     public final String COLLECTION_NAME = "characters";
@@ -20,10 +20,10 @@ public class CustomCharacterMongoRepositoryImpl implements CustomCharacterMongoR
 
     /**
      * Finds the characters with ID in name
-     *
+     * <p>
      * Usage - Right now it only returns the matching word ie -> Naturo Uzumaki can be found by
      * searching - uzumaki (not case sensetive) , but not - uzu , ie a full word is needed
-     *
+     * <p>
      * Text Indexing is used for matching
      *
      * @param name to match
@@ -39,8 +39,8 @@ public class CustomCharacterMongoRepositoryImpl implements CustomCharacterMongoR
                                 .matchingAny(name)
                                 .caseSensitive(false)
                 ),
-                Aggregation.sort(Sort.Direction.ASC , ENGLISH_NAME)
+                Aggregation.sort(Sort.Direction.ASC, ENGLISH_NAME)
         );
-        return mongoTemplate.aggregate(pipeline , COLLECTION_NAME , CharacterDoc.class).getMappedResults();
+        return mongoTemplate.aggregate(pipeline, COLLECTION_NAME, CharacterDoc.class).getMappedResults();
     }
 }

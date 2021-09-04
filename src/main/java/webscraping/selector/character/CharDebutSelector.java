@@ -1,5 +1,6 @@
 package webscraping.selector.character;
 
+import com.google.common.base.CharMatcher;
 import lombok.extern.slf4j.Slf4j;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
@@ -29,7 +30,11 @@ public class CharDebutSelector {
             charManga.setName(mangaElements.first().parent().children().select("td a i").text().trim());
             String volume = mangaElements.first().parent().children().select("td a").get(0).text().trim();
             charManga.setVolume(Double.parseDouble(volume.substring(volume.indexOf("#") + 1)));
-            String chapter = mangaElements.first().parent().children().select("td a").get(1).text().trim();
+            String chapter = "#00";
+            try {
+                chapter = mangaElements.first().parent().children().select("td a").get(1).text().trim();
+            } catch (IndexOutOfBoundsException ignored) {
+            }
             charManga.setChapter(Double.parseDouble(chapter.substring(chapter.indexOf("#") + 1)));
         }
         charDebut.setManga(checkNullInfoManga(charManga) ? null : charManga);
@@ -39,7 +44,9 @@ public class CharDebutSelector {
         if (!animeElements.isEmpty()) {
             String anime = animeElements.first().parent().children().get(1).text();
             charAnime.setName(animeElements.first().parent().select("tr td i").text().trim());
-            charAnime.setEpisode(Double.parseDouble(anime.substring(anime.indexOf("#") + 1)));
+            charAnime.setEpisode(Double.parseDouble(
+                    CharMatcher.inRange('0', '9').retainFrom(anime.substring(anime.indexOf("#") + 1))
+            ));
         }
         charDebut.setAnime(checkNullInfoAnime(charAnime) ? null : charAnime);
 
@@ -68,11 +75,14 @@ public class CharDebutSelector {
         //game
         Elements gameElements = doc.select("th:containsOwn(Game)");
         if (!gameElements.isEmpty()) {
-            String game = gameElements.first().parent().children().get(1).text();
-            if (game.contains("(")) {
-                charDebut.setGame(game.substring(0, game.indexOf(" (")).trim());
-            } else {
-                charDebut.setGame(game);
+            try {
+                String game = gameElements.first().parent().children().get(1).text();
+                if (game.contains("(")) {
+                    charDebut.setGame(game.substring(0, game.indexOf(" (")).trim());
+                } else {
+                    charDebut.setGame(game);
+                }
+            } catch (IndexOutOfBoundsException ignored) {
             }
         }
 
