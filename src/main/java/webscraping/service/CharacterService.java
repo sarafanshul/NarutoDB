@@ -126,4 +126,8 @@ public class CharacterService {
     public Page<CharacterDoc> getAllCharactersPaged(Pageable pageable) {
         return characterRepository.findAll(pageable);
     }
+
+    public Page<CharacterDoc> getAllCharactersPagedSortedByJutsusSize(Pageable pageable){
+        return characterRepository.findAllOrderByJutsusSizeDesc(pageable);
+    }
 }

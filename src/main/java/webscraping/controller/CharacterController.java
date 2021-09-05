@@ -96,4 +96,17 @@ public class CharacterController {
         return ResponseEntity.ok().body(characterService.getAllCharactersPaged(pageable));
     }
 
+    /**
+     * Paged Result of Characters W.R.T Characters::jutsus::length , order DESC
+     *
+     * @param pageable a pageable entity with index , size(default 20) , and sorting params
+     * @return a pageable
+     */
+    @GetMapping(value = "sort_power")
+    public ResponseEntity<Page<CharacterDoc>> getAllCharactersPagedSortedByJutsusSize(
+            @PageableDefault(size = 20)
+                    Pageable pageable) {
+        return ResponseEntity.ok().body(characterService.getAllCharactersPagedSortedByJutsusSize(pageable));
+    }
+
 }
