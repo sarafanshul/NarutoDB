@@ -1,4 +1,4 @@
-# Naruto Jsoup Springboot API
+# Naruto DataBase API
 
 ## Description
 Web scraping API created using [JSOUP](https://jsoup.org) to get the Naruto anime data from
@@ -11,33 +11,36 @@ the [NarutoFandom](https://naruto.fandom.com/wiki/Narutopedia) web page and save
 * MongoDB
 
 ## Requests
+
+<details><summary>Character Endpoint</summary>
+
 ```http
-POST /character/{name}
-POST /clan/{name}
-POST /country/{name}
-POST /jutsu/{name}
-POST /kekkeigenkai/{name}
-POST /team/{name}
-POST /tool/{name}
-POST /village/{name}
+POST /character/id/{id}
 ```
 
 ```http
-GET /character/{name}
-GET /clan/{name}
-GET /country/{name}
-GET /jutsu/{name}
-GET /kekkeigenkai/{name}
-GET /team/{name}
-GET /tool/{name}
-GET /village/{name}
+GET /character/id/{id}
+GET /character/name/{name}
+GET /character/like/{name}
+GET /character/all
+GET /character/page
 ```
 
 ### Example
 * Use the same name found at the end of the url
     * https://naruto.fandom.com/wiki/Naruto_Uzumaki
-* Use an HTTP POST request to save data in mongoDB
-    * **localhost:8080/character/Naruto_Uzumaki**
+* Use an HTTP POST /id request to save data in mongoDB
+    * **localhost:8080/character/id/Naruto_Uzumaki**
+* Use an HTTP GET /id request to get data with above id in mongoDB
+    * **localhost:8080/character/id/Naruto_Uzumaki**
+* Use an HTTP GET /name request to match english name in mongoDB
+    * **localhost:8080/character/name/Naruto**
+* Use an HTTP GET /like request to regex match data in mongoDB
+    * **localhost:8080/character/like/hina**
+* Use an HTTP GET /all request to fetch all save data in mongoDB
+    * **localhost:8080/character/all**
+* Use an HTTP GET /page request to fetch pageable data in mongoDB
+    * **localhost:8080/character/page?page=0&size=5&sort=id,asc**
 
 ### Character document example in mongoDB
 ```json
@@ -338,3 +341,36 @@ GET /village/{name}
   ]
 }
 ```
+
+</details>
+
+<details><summary>Clan Endpoint</summary>
+   
+```http
+POST /clan/id/{id}
+```
+
+```http
+GET /clan/id/{id}
+GET /clan/name/{name}
+GET /clan/like/{name}
+GET /clan/all
+GET /clan/page
+```
+### Example
+* Use the same name found at the end of the url
+    * https://naruto.fandom.com/wiki/Hyuga_Clan
+* Use an HTTP POST /id request to save data in mongoDB
+    * **localhost:8080/clan/id/Hyuga_Clan**
+* Use an HTTP GET /id request to get data with above id in mongoDB
+    * **localhost:8080/clan/id/Hyuga_Clan**
+* Use an HTTP GET /name request to match english name in mongoDB
+    * **localhost:8080/clan/name/Hyuga**
+* Use an HTTP GET /like request to regex match data in mongoDB
+    * **localhost:8080/clan/like/Hyu**
+* Use an HTTP GET /all request to fetch all save data in mongoDB
+    * **localhost:8080/clan/all**
+* Use an HTTP GET /page request to fetch pageable data in mongoDB
+    * **localhost:8080/clan/page?page=0&size=5&sort=id,asc**
+   
+</details>
