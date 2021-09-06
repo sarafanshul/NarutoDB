@@ -2,7 +2,7 @@ package webscraping.repository;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import webscraping.document.CharacterDoc;
+import webscraping.model.character.CharacterDoc;
 
 import java.util.List;
 

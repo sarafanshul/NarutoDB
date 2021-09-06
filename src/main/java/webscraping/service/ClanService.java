@@ -8,7 +8,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
-import webscraping.document.ClanDoc;
+import webscraping.model.clan.ClanDoc;
 import webscraping.model.clan.ClanInfo;
 import webscraping.model.clan.ClanName;
 import webscraping.repository.ClanRepository;
@@ -18,8 +18,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
-import static webscraping.selector.clan.ClanInfoSelector.getInfoData;
-import static webscraping.selector.clan.ClanNameSelector.getNameClan;
+import static webscraping.util.selector.clan.ClanInfoSelector.getInfoData;
+import static webscraping.util.selector.clan.ClanNameSelector.getNameClan;
 
 @Slf4j
 @Service
@@ -61,7 +61,7 @@ public class ClanService {
         } else {
             log.warn("Clan already exists.");
             throw new ResponseStatusException(
-                    HttpStatus.CONFLICT, "Clan already exists.");
+                HttpStatus.CONFLICT, "Clan already exists.");
         }
     }
 
@@ -74,26 +74,16 @@ public class ClanService {
         if (!obj.isPresent()) {
             log.warn("Clan not found.");
             throw new ResponseStatusException(
-                    HttpStatus.NOT_FOUND, "Clan not found.");
+                HttpStatus.NOT_FOUND, "Clan not found.");
         }
         return obj.get();
-    }
-
-    public List<ClanDoc> getClansByName(String name) {
-        if (name.length() <= 1) {
-            log.warn("String length too short.");
-            throw new ResponseStatusException(
-                    HttpStatus.BAD_REQUEST, "Length too short"
-            );
-        }
-        return clanRepository.findByNameEnglish(name);
     }
 
     public List<ClanDoc> getClanByNameEnglishRegex(String name) {
         if (name.length() < 1) {
             log.warn("String length too short.");
             throw new ResponseStatusException(
-                    HttpStatus.BAD_REQUEST, "Length too short"
+                HttpStatus.BAD_REQUEST, "Length too short"
             );
         }
         return clanRepository.findByNameEnglishRegex(name);
@@ -106,4 +96,13 @@ public class ClanService {
     public Page<ClanDoc> getAllClansPaged(Pageable pageable) {
         return clanRepository.findAll(pageable);
     }
+
+    public Page<ClanDoc> getClansOrderedByMemberSize(Pageable pageable) {
+        return clanRepository.getClansOrderedByMemberSize(pageable);
+    }
+
+    public Page<ClanDoc> getClansOrderedByJutsusSize(Pageable pageable) {
+        return clanRepository.getClansOrderedByJutsusSize(pageable);
+    }
+
 }

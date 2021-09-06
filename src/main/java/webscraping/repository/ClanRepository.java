@@ -3,14 +3,14 @@ package webscraping.repository;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 import org.springframework.stereotype.Repository;
-import webscraping.document.CharacterDoc;
-import webscraping.document.ClanDoc;
-import webscraping.dto.ClanDTO;
+import webscraping.model.clan.ClanDoc;
 
 import java.util.List;
 
 @Repository
-public interface ClanRepository extends MongoRepository<ClanDoc, String>  {
+public interface ClanRepository extends MongoRepository<ClanDoc, String> , CustomClanMongoRepository {
+
+    @Deprecated
     List<ClanDoc> findByNameEnglish(String name);
 
     /**

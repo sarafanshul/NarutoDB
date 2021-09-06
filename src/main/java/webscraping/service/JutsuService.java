@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
-import webscraping.document.JutsuDoc;
+import webscraping.model.jutsu.JutsuDoc;
 import webscraping.model.jutsu.JutsuDebut;
 import webscraping.model.jutsu.JutsuInfo;
 import webscraping.model.jutsu.JutsuName;
@@ -16,9 +16,9 @@ import webscraping.util.JsoupConnection;
 import java.io.IOException;
 import java.util.Optional;
 
-import static webscraping.selector.jutsu.JutsuDebutSelector.getDebutJutsu;
-import static webscraping.selector.jutsu.JutsuInfoSelector.getInfoJutsu;
-import static webscraping.selector.jutsu.JutsuNameSelector.getNameJutsu;
+import static webscraping.util.selector.jutsu.JutsuDebutSelector.getDebutJutsu;
+import static webscraping.util.selector.jutsu.JutsuInfoSelector.getInfoJutsu;
+import static webscraping.util.selector.jutsu.JutsuNameSelector.getNameJutsu;
 import static webscraping.util.JutsuInfoCheckNull.checkNullDebut;
 import static webscraping.util.JutsuInfoCheckNull.checkNullInfoName;
 
@@ -70,7 +70,7 @@ public class JutsuService {
         } else {
             log.warn("Jutsu already exists.");
             throw new ResponseStatusException(
-                    HttpStatus.CONFLICT, "Jutsu already exists.");
+                HttpStatus.CONFLICT, "Jutsu already exists.");
         }
     }
 
@@ -83,7 +83,7 @@ public class JutsuService {
         if (!obj.isPresent()) {
             log.warn("Jutsu not found.");
             throw new ResponseStatusException(
-                    HttpStatus.NOT_FOUND, "Jutsu not found.");
+                HttpStatus.NOT_FOUND, "Jutsu not found.");
         }
         return obj.get();
     }

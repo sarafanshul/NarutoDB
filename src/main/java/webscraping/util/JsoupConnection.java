@@ -21,7 +21,7 @@ public class JsoupConnection {
         } catch (IOException e) {
             log.error("Jsoup connection error.");
             throw new ResponseStatusException(
-                    HttpStatus.NOT_FOUND, "Url not found", e);
+                HttpStatus.NOT_FOUND, "Url not found", e);
         }
     }
 
@@ -33,7 +33,7 @@ public class JsoupConnection {
         } catch (IOException e) {
             log.error("Jsoup kekkei icon img connection error.");
             throw new ResponseStatusException(
-                    HttpStatus.NOT_FOUND, "Url not found", e);
+                HttpStatus.NOT_FOUND, "Url not found", e);
         }
     }
 }

@@ -8,7 +8,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
-import webscraping.document.CharacterDoc;
+import webscraping.model.character.CharacterDoc;
 import webscraping.model.character.*;
 import webscraping.repository.CharacterRepository;
 import webscraping.util.JsoupConnection;
@@ -17,13 +17,13 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
-import static webscraping.selector.character.CharDatabookSelector.getDatabookInfo;
-import static webscraping.selector.character.CharDebutSelector.getInfoDebut;
-import static webscraping.selector.character.CharInfoSelector.getInfoBase;
-import static webscraping.selector.character.CharNameSelector.getInfoName;
-import static webscraping.selector.character.CharPersonalSelector.getInfoPersonal;
-import static webscraping.selector.character.CharRankSelector.getInfoRank;
-import static webscraping.selector.character.CharVoiceSelector.getInfoVoices;
+import static webscraping.util.selector.character.CharDatabookSelector.getDatabookInfo;
+import static webscraping.util.selector.character.CharDebutSelector.getInfoDebut;
+import static webscraping.util.selector.character.CharInfoSelector.getInfoBase;
+import static webscraping.util.selector.character.CharNameSelector.getInfoName;
+import static webscraping.util.selector.character.CharPersonalSelector.getInfoPersonal;
+import static webscraping.util.selector.character.CharRankSelector.getInfoRank;
+import static webscraping.util.selector.character.CharVoiceSelector.getInfoVoices;
 import static webscraping.util.CharacterInfoCheckNull.*;
 
 @Service
@@ -81,7 +81,7 @@ public class CharacterService {
         } else {
             log.warn("Character already exists.");
             throw new ResponseStatusException(
-                    HttpStatus.CONFLICT, "Character already exists.");
+                HttpStatus.CONFLICT, "Character already exists.");
         }
     }
 
@@ -94,7 +94,7 @@ public class CharacterService {
         if (!obj.isPresent()) {
             log.warn("Character not found.");
             throw new ResponseStatusException(
-                    HttpStatus.NOT_FOUND, "Character not found.");
+                HttpStatus.NOT_FOUND, "Character not found.");
         }
         return obj.get();
     }
@@ -103,7 +103,7 @@ public class CharacterService {
         if (name.length() <= 1) {
             log.warn("String length too short.");
             throw new ResponseStatusException(
-                    HttpStatus.BAD_REQUEST, "Length too short"
+                HttpStatus.BAD_REQUEST, "Length too short"
             );
         }
         return characterRepository.getCharacterByMatchingEnglishName(name);
@@ -113,7 +113,7 @@ public class CharacterService {
         if (name.length() < 1) {
             log.warn("String length too short.");
             throw new ResponseStatusException(
-                    HttpStatus.BAD_REQUEST, "Length too short"
+                HttpStatus.BAD_REQUEST, "Length too short"
             );
         }
         return characterRepository.findByNameEnglishRegex(name);
@@ -127,7 +127,7 @@ public class CharacterService {
         return characterRepository.findAll(pageable);
     }
 
-    public Page<CharacterDoc> getAllCharactersPagedSortedByJutsusSize(Pageable pageable){
+    public Page<CharacterDoc> getAllCharactersPagedSortedByJutsusSize(Pageable pageable) {
         return characterRepository.findAllOrderByJutsusSizeDesc(pageable);
     }
 }

@@ -4,8 +4,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import webscraping.document.TeamDoc;
-import webscraping.dto.TeamDTO;
+import webscraping.model.team.TeamDoc;
+import webscraping.model.team.TeamDTO;
 import webscraping.service.TeamService;
 
 @Slf4j

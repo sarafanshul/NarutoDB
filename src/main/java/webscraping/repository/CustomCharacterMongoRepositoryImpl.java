@@ -9,7 +9,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.aggregation.Aggregation;
 import org.springframework.data.mongodb.core.query.TextCriteria;
-import webscraping.document.CharacterDoc;
+import webscraping.model.character.CharacterDoc;
 
 import java.util.Arrays;
 import java.util.List;

@@ -7,7 +7,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import webscraping.document.ClanDoc;
+import webscraping.model.clan.ClanDoc;
 import webscraping.service.ClanService;
 
 import java.util.Collection;
@@ -31,25 +31,13 @@ public class ClanController {
 
     @GetMapping(value = "/{id}")
     public ResponseEntity<ClanDoc> getClan(@PathVariable String id) {
-        log.info("Searching info for clan: {}", id);
         ClanDoc clan = clanService.getClan(id);
-        log.info("Info retrieved for clan: {}", id);
         return ResponseEntity.ok().body(clan);
     }
 
     @GetMapping(value = "name/{name}")
     public ResponseEntity<Collection<ClanDoc>> getCharactersByName(@PathVariable String name) {
-        log.info("Searching info for character: {}", name);
-        List<ClanDoc> characters = clanService.getClansByName(name);
-        log.info("Info retrieved for character(REGEX): {}", name);
-        return ResponseEntity.ok().body(characters);
-    }
-
-    @GetMapping(value = "like/{name}")
-    public ResponseEntity<Collection<ClanDoc>> getCharacterLike(@PathVariable String name) {
-        log.info("Searching info for character(REGEX): {}", name);
         List<ClanDoc> characters = clanService.getClanByNameEnglishRegex(name);
-        log.info("Info retrieved for character(REGEX): {}", name);
         return ResponseEntity.ok().body(characters);
     }
 
@@ -60,9 +48,23 @@ public class ClanController {
 
     @GetMapping(value = "page")
     public ResponseEntity<Page<ClanDoc>> getAllCharactersPaged(
-            @PageableDefault(size = 20)
-                    Pageable pageable) {
+        @PageableDefault(size = 20)
+            Pageable pageable) {
         return ResponseEntity.ok().body(clanService.getAllClansPaged(pageable));
+    }
+
+    @GetMapping(value = "order_by_members")
+    public ResponseEntity<Page<ClanDoc>> getClansOrderedByMemberSize(
+        @PageableDefault(size = 50)
+            Pageable pageable) {
+        return ResponseEntity.ok().body(clanService.getClansOrderedByMemberSize(pageable));
+    }
+
+    @GetMapping(value = "order_by_jutsus")
+    public ResponseEntity<Page<ClanDoc>> getClansOrderedByJutsusSize(
+        @PageableDefault(size = 50)
+            Pageable pageable) {
+        return ResponseEntity.ok().body(clanService.getClansOrderedByJutsusSize(pageable));
     }
 
 }

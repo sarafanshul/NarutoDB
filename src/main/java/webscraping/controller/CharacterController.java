@@ -7,7 +7,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import webscraping.document.CharacterDoc;
+import webscraping.model.character.CharacterDoc;
 import webscraping.service.CharacterService;
 
 import java.util.Collection;
@@ -43,9 +43,7 @@ public class CharacterController {
      */
     @GetMapping(value = "id/{id}")
     public ResponseEntity<CharacterDoc> getCharacter(@PathVariable String id) {
-        log.info("Searching info for character: {}", id);
         CharacterDoc character = characterService.getCharacter(id);
-        log.info("Info retrieved for character(REGEX): {}", id);
         return ResponseEntity.ok().body(character);
     }
 
@@ -57,9 +55,7 @@ public class CharacterController {
      */
     @GetMapping(value = "name/{name}")
     public ResponseEntity<Collection<CharacterDoc>> getCharactersByName(@PathVariable String name) {
-        log.info("Searching info for character: {}", name);
         List<CharacterDoc> characters = characterService.getCharactersByName(name);
-        log.info("Info retrieved for character(REGEX): {}", name);
         return ResponseEntity.ok().body(characters);
     }
 
@@ -72,9 +68,7 @@ public class CharacterController {
      */
     @GetMapping(value = "like/{name}")
     public ResponseEntity<Collection<CharacterDoc>> getCharacterLike(@PathVariable String name) {
-        log.info("Searching info for character(REGEX): {}", name);
         List<CharacterDoc> characters = characterService.getCharacterByNameEnglishRegex(name);
-        log.info("Info retrieved for character(REGEX): {}", name);
         return ResponseEntity.ok().body(characters);
     }
 
@@ -102,7 +96,7 @@ public class CharacterController {
      * @param pageable a pageable entity with index , size(default 20) , and sorting params
      * @return a pageable
      */
-    @GetMapping(value = "sort_power")
+    @GetMapping(value = "power")
     public ResponseEntity<Page<CharacterDoc>> getAllCharactersPagedSortedByJutsusSize(
             @PageableDefault(size = 20)
                     Pageable pageable) {

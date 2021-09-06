@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
-import webscraping.document.TeamDoc;
-import webscraping.dto.TeamDTO;
+import webscraping.model.team.TeamDoc;
+import webscraping.model.team.TeamDTO;
 import webscraping.model.team.TeamDebut;
 import webscraping.model.team.TeamInfo;
 import webscraping.model.team.TeamInfoBase;
@@ -17,10 +17,10 @@ import webscraping.util.JsoupConnection;
 
 import java.io.IOException;
 
-import static webscraping.selector.team.TeamDebutSelector.getTeamDebut;
-import static webscraping.selector.team.TeamInfoBaseSelector.getTeamInfoBase;
-import static webscraping.selector.team.TeamInfoSelector.getInfoTeam;
-import static webscraping.selector.team.TeamNameSelector.getTeamName;
+import static webscraping.util.selector.team.TeamDebutSelector.getTeamDebut;
+import static webscraping.util.selector.team.TeamInfoBaseSelector.getTeamInfoBase;
+import static webscraping.util.selector.team.TeamInfoSelector.getInfoTeam;
+import static webscraping.util.selector.team.TeamNameSelector.getTeamName;
 import static webscraping.util.TeamInfoCheckNull.*;
 
 @Slf4j
@@ -63,7 +63,7 @@ public class TeamService {
         } else {
             log.warn("Team already exists.");
             throw new ResponseStatusException(
-                    HttpStatus.CONFLICT, "Team already exists.");
+                HttpStatus.CONFLICT, "Team already exists.");
         }
     }
 
@@ -75,7 +75,7 @@ public class TeamService {
         if (teamRepository.findByNameEnglish(name) == null) {
             log.warn("Team not found.");
             throw new ResponseStatusException(
-                    HttpStatus.NOT_FOUND, "Team not found.");
+                HttpStatus.NOT_FOUND, "Team not found.");
         }
         return teamRepository.findByNameEnglish(name);
     }

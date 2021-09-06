@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
-import webscraping.document.ToolDoc;
-import webscraping.dto.ToolDTO;
+import webscraping.model.tool.ToolDoc;
+import webscraping.model.tool.ToolDTO;
 import webscraping.model.tool.ToolDebut;
 import webscraping.model.tool.ToolInfo;
 import webscraping.model.tool.ToolName;
@@ -17,9 +17,9 @@ import webscraping.util.ToolInfoCheckNull;
 
 import java.io.IOException;
 
-import static webscraping.selector.tool.ToolDebutSelector.getToolDebut;
-import static webscraping.selector.tool.ToolInfoSelector.getInfoTool;
-import static webscraping.selector.tool.ToolNameSelector.getToolName;
+import static webscraping.util.selector.tool.ToolDebutSelector.getToolDebut;
+import static webscraping.util.selector.tool.ToolInfoSelector.getInfoTool;
+import static webscraping.util.selector.tool.ToolNameSelector.getToolName;
 
 @Slf4j
 @Service
@@ -59,7 +59,7 @@ public class ToolService {
         } else {
             log.warn("Tool already exists.");
             throw new ResponseStatusException(
-                    HttpStatus.CONFLICT, "Tool already exists.");
+                HttpStatus.CONFLICT, "Tool already exists.");
         }
     }
 
@@ -71,7 +71,7 @@ public class ToolService {
         if (toolRepository.findByNameEnglish(name) == null) {
             log.warn("Tool not found.");
             throw new ResponseStatusException(
-                    HttpStatus.NOT_FOUND, "Tool not found.");
+                HttpStatus.NOT_FOUND, "Tool not found.");
         }
         return toolRepository.findByNameEnglish(name);
     }

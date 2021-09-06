@@ -353,9 +353,10 @@ POST /clan/id/{id}
 ```http
 GET /clan/id/{id}
 GET /clan/name/{name}
-GET /clan/like/{name}
 GET /clan/all
 GET /clan/page
+GET /clan/order_by_members
+GET /clan/order_by_jutsus
 ```
 ### Example
 * Use the same name found at the end of the url
@@ -365,12 +366,15 @@ GET /clan/page
 * Use an HTTP GET /id request to get data with above id in mongoDB
     * **localhost:8080/clan/id/Hyuga_Clan**
 * Use an HTTP GET /name request to match english name in mongoDB
-    * **localhost:8080/clan/name/Hyuga**
-* Use an HTTP GET /like request to regex match data in mongoDB
-    * **localhost:8080/clan/like/Hyu**
+    * **localhost:8080/clan/name/Uzumaki**
 * Use an HTTP GET /all request to fetch all save data in mongoDB
     * **localhost:8080/clan/all**
 * Use an HTTP GET /page request to fetch pageable data in mongoDB
     * **localhost:8080/clan/page?page=0&size=5&sort=id,asc**
+* Use an HTTP GET /order_by_members request to fetch pageable clan data in mongoDB sorted by number of members DESC
+    * **localhost:8080/clan/page?page=0&size=5**
+* Use an HTTP GET /clan/order_by_jutsus to fetch pageable Clan data in mongoDB sorted by number of jutsus DESC
+    * **localhost:8080/clan/page?page=0&size=5**
+
    
 </details>

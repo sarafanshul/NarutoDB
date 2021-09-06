@@ -4,8 +4,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import webscraping.document.ToolDoc;
-import webscraping.dto.ToolDTO;
+import webscraping.model.tool.ToolDoc;
+import webscraping.model.tool.ToolDTO;
 import webscraping.service.ToolService;
 
 @Slf4j

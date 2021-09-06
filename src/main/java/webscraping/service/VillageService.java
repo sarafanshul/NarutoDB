@@ -6,17 +6,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
-import webscraping.document.VillageDoc;
-import webscraping.dto.VillageDTO;
+import webscraping.model.village.VillageDoc;
+import webscraping.model.village.VillageDTO;
 import webscraping.model.village.VillageData;
 import webscraping.model.village.VillageInfo;
 import webscraping.model.village.VillageName;
 import webscraping.model.village.VillageStatistic;
 import webscraping.repository.VillageRepository;
-import webscraping.selector.village.VillageDataSelector;
-import webscraping.selector.village.VillageInfoSelector;
-import webscraping.selector.village.VillageNameSelector;
-import webscraping.selector.village.VillageStatisticSelector;
+import webscraping.util.selector.village.VillageDataSelector;
+import webscraping.util.selector.village.VillageInfoSelector;
+import webscraping.util.selector.village.VillageNameSelector;
+import webscraping.util.selector.village.VillageStatisticSelector;
 import webscraping.util.JsoupConnection;
 
 import java.io.IOException;
@@ -62,7 +62,7 @@ public class VillageService {
         } else {
             log.warn("Village already exists.");
             throw new ResponseStatusException(
-                    HttpStatus.CONFLICT, "Village already exists.");
+                HttpStatus.CONFLICT, "Village already exists.");
         }
     }
 
@@ -74,7 +74,7 @@ public class VillageService {
         if (villageRepository.findByNameEnglish(name) == null) {
             log.warn("Village not found.");
             throw new ResponseStatusException(
-                    HttpStatus.NOT_FOUND, "Village not found.");
+                HttpStatus.NOT_FOUND, "Village not found.");
         }
         return villageRepository.findByNameEnglish(name);
     }
