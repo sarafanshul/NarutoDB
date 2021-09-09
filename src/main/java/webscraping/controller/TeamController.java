@@ -19,7 +19,7 @@ public class TeamController {
     public ResponseEntity<Void> saveTeam(@PathVariable String name) {
         log.info("Starting get infos for team: {}", name);
         TeamDoc teamDoc = teamService.getTeamInfo(name);
-        teamService.insert(teamDoc);
+//        teamService.insert(teamDoc);
         log.info("Team {} infos saved.", name);
         return ResponseEntity.noContent().build();
     }

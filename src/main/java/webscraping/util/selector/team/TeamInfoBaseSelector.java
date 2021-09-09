@@ -7,6 +7,7 @@ import org.jsoup.select.Elements;
 import webscraping.model.team.TeamInfoBase;
 import webscraping.util.Converters;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;

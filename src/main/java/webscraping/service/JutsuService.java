@@ -66,6 +66,7 @@ public class JutsuService {
 
     public void insert(String name) {
         if (!getCheckJutsuId(name).isPresent()) { //check if jutsu already exists
+            getJutsuInfo(name);
             jutsuRepository.insert(getJutsuInfo(name));
         } else {
             log.warn("Jutsu already exists.");

@@ -20,27 +20,14 @@ public class JutsuInfoSelector {
         JutsuInfo jutsuInfo = new JutsuInfo();
 
         //description
-        // TODO( cant gather description from source , used meta instead which is incomplete)
-        // Elements descElements = doc.select(".infobox ~ p");
-        //        if (!descElements.isEmpty()) {
-        //            if (!descElements.get(0).text().equals("")) {
-        //                jutsuInfo.setDescription(descElements.get(0).text().trim());
-        //            } else {
-        //                jutsuInfo.setDescription(descElements.get(1).text().trim());
-        //            }
-        //        }
-        //        if (jutsuInfo.getDescription().contains("[")) {
-        //            jutsuInfo.setDescription(jutsuInfo.getDescription().replaceAll("[0-9]", "").replace("[", "").replace("]", "").trim());
-        //        }
-        Elements descElements = doc.select("meta[property=\"og:description\"]");
+        Elements descElements = doc.select("span#Overview").parents().first().nextElementSiblings();
+
+        jutsuInfo.setDescription("");
         if (!descElements.isEmpty()) {
-            if (!descElements.attr("content").equals("")) {
-                jutsuInfo.setDescription(descElements.attr("content"));
-            } else {
-                jutsuInfo.setDescription("");
+            if (!descElements.get(0).text().equals("")) {
+                jutsuInfo.setDescription(descElements.get(0).text().trim());
             }
         }
-
         if (jutsuInfo.getDescription().contains("[")) {
             jutsuInfo.setDescription(jutsuInfo.getDescription().replaceAll("[0-9]", "").replace("[", "").replace("]", "").trim());
         }
