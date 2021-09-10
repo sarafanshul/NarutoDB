@@ -20,10 +20,11 @@ public class JutsuInfoSelector {
         JutsuInfo jutsuInfo = new JutsuInfo();
 
         //description
-        Elements descElements = doc.select("span#Overview").parents().first().nextElementSiblings();
+        Elements temp = doc.select("span#Overview");
 
         jutsuInfo.setDescription("");
-        if (!descElements.isEmpty()) {
+        if (temp != null && temp.parents() != null && temp.parents().size() > 0) {
+            Elements descElements = temp.parents().first().nextElementSiblings();
             if (!descElements.get(0).text().equals("")) {
                 jutsuInfo.setDescription(descElements.get(0).text().trim());
             }

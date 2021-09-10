@@ -3,6 +3,8 @@ package webscraping.service;
 import lombok.extern.slf4j.Slf4j;
 import org.jsoup.nodes.Document;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
@@ -14,6 +16,7 @@ import webscraping.repository.JutsuRepository;
 import webscraping.util.JsoupConnection;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.Optional;
 
 import static webscraping.util.selector.jutsu.JutsuDebutSelector.getDebutJutsu;
@@ -66,7 +69,6 @@ public class JutsuService {
 
     public void insert(String name) {
         if (!getCheckJutsuId(name).isPresent()) { //check if jutsu already exists
-            getJutsuInfo(name);
             jutsuRepository.insert(getJutsuInfo(name));
         } else {
             log.warn("Jutsu already exists.");
@@ -87,5 +89,34 @@ public class JutsuService {
                 HttpStatus.NOT_FOUND, "Jutsu not found.");
         }
         return obj.get();
+    }
+
+    public List<JutsuDoc> getJutsuByNameEnglishRegex(String name) {
+        if (name.length() < 1) {
+            log.warn("String length too short.");
+            throw new ResponseStatusException(
+                HttpStatus.BAD_REQUEST, "Length too short"
+            );
+        }
+        return jutsuRepository.findByNameEnglishRegex(name);
+    }
+
+
+    public List<JutsuDoc> getAllJutsus() {
+        return jutsuRepository.findAll();
+    }
+
+    public Page<JutsuDoc> getAllJutsusPaged(Pageable pageable) {
+        return jutsuRepository.findAll(pageable);
+    }
+
+    public Page<JutsuDoc> getJutsuByNameEnglishRegexPaged(String name, Pageable pageable) {
+        if (name.length() < 1) {
+            log.warn("String length too short.");
+            throw new ResponseStatusException(
+                HttpStatus.BAD_REQUEST, "Length too short"
+            );
+        }
+        return jutsuRepository.findByNameEnglishRegexPaged(name , pageable);
     }
 }

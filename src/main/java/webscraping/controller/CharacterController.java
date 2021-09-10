@@ -79,7 +79,10 @@ public class CharacterController {
 
     /**
      * Rest for pageable access of all characters
-     *
+     * <br>
+     * Usage
+     * <br>
+     * <i>character/page/<b>page=2&size=10</b></i>
      * @param pageable a pageable entity with index , size(default 20) , and sorting params
      * @return a pageable
      */
@@ -92,7 +95,10 @@ public class CharacterController {
 
     /**
      * Paged Result of Characters W.R.T Characters::jutsus::length , order DESC
-     *
+     * <br>
+     * Usage
+     * <br>
+     * <i>character/power/<b>page=2&size=10</b></i>
      * @param pageable a pageable entity with index , size(default 20) , and sorting params
      * @return a pageable
      */
@@ -103,4 +109,23 @@ public class CharacterController {
         return ResponseEntity.ok().body(characterService.getAllCharactersPagedSortedByJutsusSize(pageable));
     }
 
+    /**
+     * Finds the characters with ID in name using Regex Match , not indexed like above ,
+     * hence can be slow but offers a partial text search due to wildcard matching
+     * <br>
+     * Usage
+     * <br>
+     * <i>character/like_paged/<b>uch?size=10&sort=name.english</b></i> : returns all characters with name.english containing <b>uch</b>
+     * @param name to match
+     * @return Page of characters found
+     */
+    @GetMapping(value = "like_paged/{name}")
+    public ResponseEntity<Page<CharacterDoc>> getCharacterLikePaged(
+        @PathVariable String name ,
+        @PageableDefault(
+            size = 20
+        ) Pageable pageable) {
+        Page<CharacterDoc> characters = characterService.getCharacterByNameEnglishRegexPaged(name , pageable);
+        return ResponseEntity.ok().body(characters);
+    }
 }

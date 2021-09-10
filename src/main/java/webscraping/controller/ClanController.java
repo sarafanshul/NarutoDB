@@ -29,13 +29,13 @@ public class ClanController {
         return ResponseEntity.noContent().build();
     }
 
-    @GetMapping(value = "/{id}")
+    @GetMapping(value = "id/{id}")
     public ResponseEntity<ClanDoc> getClan(@PathVariable String id) {
         ClanDoc clan = clanService.getClan(id);
         return ResponseEntity.ok().body(clan);
     }
 
-    @GetMapping(value = "name/{name}")
+    @GetMapping(value = "like/{name}")
     public ResponseEntity<Collection<ClanDoc>> getCharactersByName(@PathVariable String name) {
         List<ClanDoc> characters = clanService.getClanByNameEnglishRegex(name);
         return ResponseEntity.ok().body(characters);

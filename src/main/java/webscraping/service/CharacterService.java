@@ -130,4 +130,14 @@ public class CharacterService {
     public Page<CharacterDoc> getAllCharactersPagedSortedByJutsusSize(Pageable pageable) {
         return characterRepository.findAllOrderByJutsusSizeDesc(pageable);
     }
+
+    public Page<CharacterDoc> getCharacterByNameEnglishRegexPaged(String name , Pageable pageable) {
+        if (name.length() < 1) {
+            log.warn("String length too short.");
+            throw new ResponseStatusException(
+                HttpStatus.BAD_REQUEST, "Length too short"
+            );
+        }
+        return characterRepository.findByNameEnglishRegexPaged(name , pageable);
+    }
 }
