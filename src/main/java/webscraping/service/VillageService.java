@@ -3,23 +3,22 @@ package webscraping.service;
 import lombok.extern.slf4j.Slf4j;
 import org.jsoup.nodes.Document;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
-import webscraping.model.village.VillageDoc;
-import webscraping.model.village.VillageDTO;
-import webscraping.model.village.VillageData;
-import webscraping.model.village.VillageInfo;
-import webscraping.model.village.VillageName;
-import webscraping.model.village.VillageStatistic;
+import webscraping.model.village.*;
 import webscraping.repository.VillageRepository;
+import webscraping.util.JsoupConnection;
 import webscraping.util.selector.village.VillageDataSelector;
 import webscraping.util.selector.village.VillageInfoSelector;
 import webscraping.util.selector.village.VillageNameSelector;
 import webscraping.util.selector.village.VillageStatisticSelector;
-import webscraping.util.JsoupConnection;
 
 import java.io.IOException;
+import java.util.List;
+import java.util.Optional;
 
 import static webscraping.util.VillageInfoCheckNull.*;
 
@@ -42,6 +41,7 @@ public class VillageService {
                 VillageInfo villageInfo = VillageInfoSelector.getInfoVillage(doc);
                 VillageStatistic villageStatistic = VillageStatisticSelector.getVillageStatistic(doc);
 
+                villageDoc.setId(name);
                 villageDoc.setName(checkNullInfoName(villageName) ? null : villageName);
                 villageDoc.setDescription(villageInfo.getDescription() == null ? null : villageInfo.getDescription());
                 villageDoc.setImage(villageInfo.getImage() == null ? null : villageInfo.getImage());
@@ -56,9 +56,13 @@ public class VillageService {
         return villageDoc;
     }
 
-    public void insert(VillageDoc villageDoc) {
-        if (getCheckVillage(villageDoc.getName().getEnglish()) == null) { //check if village already exists
-            villageRepository.insert(villageDoc);
+    public void insert(String id) {
+        if (!getCheckVillageId(id).isPresent()) { //check if village already exists
+            VillageDoc obj = getVillageInfo(id);
+            if (obj.getName() != null && obj.getName().getEnglish() != null)
+                villageRepository.insert(obj);
+            else
+                log.warn("village data incomplete");
         } else {
             log.warn("Village already exists.");
             throw new ResponseStatusException(
@@ -66,16 +70,34 @@ public class VillageService {
         }
     }
 
-    public VillageDTO getCheckVillage(String name) {
-        return villageRepository.findByNameEnglish(name);
+    public Optional<VillageDoc> getCheckVillageId(String id) {
+        return villageRepository.findById(id);
     }
 
-    public VillageDTO getVillage(String name) {
-        if (villageRepository.findByNameEnglish(name) == null) {
-            log.warn("Village not found.");
+    public VillageDoc getVillage(String id) {
+        Optional<VillageDoc> obj = getCheckVillageId(id);
+        if (!obj.isPresent()) {
             throw new ResponseStatusException(
                 HttpStatus.NOT_FOUND, "Village not found.");
         }
-        return villageRepository.findByNameEnglish(name);
+        return obj.get();
+    }
+
+    public List<VillageDoc> getVillageByNameEnglishRegex(String name) {
+        if (name.length() < 1) {
+            log.warn("String length too short.");
+            throw new ResponseStatusException(
+                HttpStatus.BAD_REQUEST, "Length too short"
+            );
+        }
+        return villageRepository.findByNameEnglishRegex(name);
+    }
+
+    public List<VillageDoc> getAllVillages() {
+        return villageRepository.findAll();
+    }
+
+    public Page<VillageDoc> getAllVillagesPaged(Pageable pageable) {
+        return villageRepository.findAll(pageable);
     }
 }

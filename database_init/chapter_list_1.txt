@@ -1,0 +1,723 @@
+1   "Enter: Naruto Uzumaki!"	3 October 2002	10 September 2005
+2	"My Name is Konohamaru!"	10 October 2002	10 September 2005
+3	"Sasuke and Sakura: Friends or Foes?"	17 October 2002	17 September 2005
+4	"Pass or Fail: Survival Test"	24 October 2002	24 September 2005
+5	"You Failed! Kakashi's Final Decision"	31 October 2002	1 October 2005
+6	"A Dangerous Mission! Journey to the Land of Waves!"	7 November 2002	8 October 2005
+7	"The Assassin of the Mist!"	14 November 2002	15 October 2005
+8	"The Oath of Pain"	21 November 2002	22 October 2005
+9	"Kakashi: Sharingan Warrior!"	28 November 2002	29 October 2005
+10	"The Forest of Chakra"	5 December 2002	5 November 2005
+11	"The Land Where a Hero Once Lived"	12 December 2002	12 November 2005
+12	"Battle on the Bridge! Zabuza Returns!"	19 December 2002	19 November 2005
+13	"Haku's Secret Jutsu: Demonic Mirroring Ice Crystals"	26 December 2002	26 November 2005
+14	"The Number One Hyperactive, Knucklehead Ninja Joins the Fight!"	9 January 2003	3 December 2005
+15	"Zero Visibility: The Sharingan Shatters"	16 January 2003	10 December 2005
+16	"The Broken Seal"	23 January 2003	17 December 2005
+17	"White Past: Hidden Ambition"	30 January 2003	31 December 2005
+18	"The Weapons Known as Shinobi"	6 February 2003	7 January 2006
+19	"The Demon in the Snow"	13 February 2003	14 January 2006
+20	"A New Chapter Begins: The Chūnin Exam!"	20 February 2003	21 January 2006
+21	"Identify Yourself: Powerful New Rivals"	27 February 2003	28 January 2006
+22	"Chūnin Challenge: Rock Lee vs. Sasuke!"	6 March 2003	4 February 2006
+23	"Genin Takedown! All Nine Rookies Face Off!"	13 March 2003	11 February 2006
+24	"Start Your Engines: The Chūnin Exam Begins!"	20 March 2003	18 February 2006
+25	"The Tenth Question: All or Nothing!"	27 March 2003	25 February 2006
+26	"Special Report: Live from the Forest of Death!"	2 April 2003	4 March 2006
+27	"The Chūnin Exam Stage 2: The Forest of Death"	2 April 2003	15 April 2006
+28	"Eat or be Eaten: Panic in the Forest"	9 April 2003	15 April 2006
+29	"Naruto's Counterattack: Never Give In!"	16 April 2003	15 April 2006
+30	"The Sharingan Revived: Dragon-Flame Jutsu!"	23 April 2003	22 April 2006
+31	"Bushy Brow's Pledge: Undying Love and Protection!"	30 April 2003	29 April 2006
+32	"Sakura Blossoms!"	7 May 2003	6 May 2006
+33	"Battle Formation: Ino–Shika–Chō!!"	14 May 2003	13 May 2006
+34	"Akamaru Trembles: Gaara's Cruel Strength!"	21 May 2003	20 May 2006
+35	"The Scroll's Secret: No Peeking Allowed"	28 May 2003	27 May 2006
+36	"Clone vs. Clone: Mine are Better Than Yours!"	4 June 2003	3 June 2006
+37	"Surviving the Cut: The Rookie 9 Together Again!"	11 June 2003	10 June 2006
+38	"Narrowing the Field: Sudden Death Elimination!"	18 June 2003	17 June 2006
+39	"Bushy Brow's Jealousy: Lions Barrage Unleashed!"	2 July 2003	24 June 2006
+40	"Kakashi and Orochimaru: Face-to-Face!"	9 July 2003	1 July 2006
+41	"Kunoichi Rumble: The Rivals Get Serious!"	16 July 2003	8 July 2006
+42	"The Ultimate Battle: Cha!"	23 July 2003	15 July 2006
+43	"Killer Kunoichi and a Shaky Shikamaru"	30 July 2003	15 July 2006
+44	"Akamaru Unleashed! Who's Top Dog Now?"	6 August 2003	22 July 2006
+45	"Surprise Attack! Naruto's Secret Weapon!"	13 August 2003	29 July 2006
+46	"Byakugan Battle: Hinata Grows Bold!"	20 August 2003	5 August 2006
+47	"A Failure Stands Tall!"	27 August 2003	12 August 2006
+48	"Gaara vs. Rock Lee: The Power of Youth Explodes!"	3 September 2003	19 August 2006
+49	"Lee's Hidden Strength: Forbidden Secret Jutsu!"	10 September 2003	26 August 2006
+50	"The Fifth Gate: A Splendid Ninja is Born"	17 September 2003	2 September 2006
+51	"A Shadow in Darkness: Danger Approaches Sasuke"	24 September 2003	9 September 2006
+52	"Ebisu Returns: Naruto's Toughest Training Yet!"	1 October 2003	16 September 2006
+53	"Long Time No See: Jiraiya Returns!"	8 October 2003	30 September 2006
+54	"The Summoning Technique: Wisdom of the Toad Sage!"	15 October 2003	7 October 2006
+55	"A Feeling of Yearning, a Flower Full of Hope"	22 October 2003	21 October 2006
+56	"Live or Die: Risk it All to Win it All!"	29 October 2003	28 October 2006
+57	"He Flies! He Jumps! He Lurks! Chief Toad Appears!"	5 November 2003	4 November 2006
+58	"Hospital Besieged: The Evil Hand Revealed!"	12 November 2003	11 November 2006
+59	"The Final Rounds: Rush to the Battle Arena!"	19 November 2003	18 November 2006
+60	"Byakugan vs. Shadow Clone Technique!"	26 November 2003	18 November 2006
+61	"Ultimate Defence: Zero Blind Spot!"	3 December 2003	18 November 2006
+62	"A Failure's True Power"	10 December 2003	18 November 2006
+63	"Hit it or Quit it: The Final Rounds Get Complicated!"	17 December 2003	25 November 2006
+64	"Zero Motivation: The Guy with Cloud Envy!"	24 December 2003	2 December 2006
+65	"Dancing Leaf, Squirming Sand"	31 December 2003	9 December 2006
+66	"Bushy Brow's Jutsu: Sasuke Style!"	14 January 2004	16 December 2006
+67	"Late for the Show, but Ready to Go! The Ultimate Secret Technique is Born!"	14 January 2004	23 December 2006
+68	"Zero Hour! The Konoha Crush Begins!"	28 January 2004	6 January 2007
+69	"Village in Distress: A New A-Ranked Mission!"	4 February 2004	13 January 2007
+70	"A Shirker's Call to Action: A Layabout No More!"	11 February 2004	20 January 2007
+71	"An Unrivaled Match: Hokage Battle Royale!"	18 February 2004	27 January 2007
+72	"A Mistake from the Past: A Face Revealed!"	25 February 2004	27 January 2007
+73	"Forbidden Secret Technique: Dead Demon Consuming Seal!"	3 March 2004	3 February 2007
+74	"Astonishing Truth! Gaara's Identity Emerges!"	10 March 2004	10 February 2007
+75	"Sasuke's Decision: Pushed to the Edge!"	17 March 2004	17 February 2007
+76	"Assassin of the Moonlit Night"	24 March 2004	24 February 2007
+77	"Light vs. Dark: The Two Faces of Gaara"	31 March 2004	3 March 2007
+78	"Naruto's Ninja Handbook"	7 April 2004	10 March 2007
+79	"Beyond the Limit of Darkness and Light"	14 April 2004	17 March 2007
+80	"The Third Hokage, Forever…"	21 April 2004	24 March 2007
+81	"Return of the Morning Mist"	28 April 2004	7 April 2007
+82	"Eye to Eye: Sharingan vs. Sharingan!"	5 May 2004	7 April 2007
+83	"Jiraiya: Naruto's Potential Disaster!"	12 May 2004	14 April 2007
+84	"Roar, Chidori! Brother vs. Brother!"	19 May 2004	21 April 2007
+85	"Hate Among the Uchihas: The Last of the Clan!"	26 May 2004	28 April 2007
+86	"A New Training Begins: I Will Be Strong!"	2 June 2004	5 May 2007
+87	"Keep on Training: Pop Goes the Water Balloon!"	9 June 2004	12 May 2007
+88	"Focal Point: The Mark of the Leaf"	16 June 2004	19 May 2007
+89	"An Impossible Choice: The Pain Within Tsunade's Heart"	23 June 2004	26 May 2007
+90	"Unforgivable! A Total Lack of Respect!"	7 July 2004	9 June 2007
+91	"Inheritance! The Necklace of Death!"	14 July 2004	16 June 2007
+92	"A Dubious Offer! Tsunade's Choice!"	21 July 2004	23 June 2007
+93	"Breakdown! The Deal is Off!"	28 July 2004	30 June 2007
+94	"Attack! Fury of the Rasengan!"	4 August 2004	7 July 2007
+95	"The Fifth Hokage! A Life on the Line!"	11 August 2004	7 July 2007
+96	"Deadlock! Sannin Showdown!"	11 August 2004	14 July 2007
+97	"Kidnapped! Naruto's Hot Spring Adventure!"	18 August 2004	21 July 2007
+98	"Tsunade's Warning: Ninja No More!"	25 August 2004	28 July 2007
+99	"The Will of Fire Still Burns!"	1 September 2004	4 August 2007
+100	"Sensei and Student: The Bond of the Shinobi"	8 September 2004	11 August 2007
+101	"Gotta See! Gotta Know! Kakashi-Sensei's True Face!"	15 September 2004	18 August 2007
+102	"Mission: Help an Old Friend in the Land of Tea"	22 September 2004	25 August 2007
+103	"The Race is On! Trouble on the High Seas!"	29 September 2004	1 September 2007
+104	"Run Idate Run! Nagi Island Awaits!"	13 October 2004	8 September 2007
+105	"A Fierce Battle of Rolling Thunder!"	20 October 2004	15 September 2007
+106	"The Last Leg: A Final Act of Desperation"	27 October 2004	22 September 2007
+107	"The Battle Begins: Naruto vs. Sasuke"	3 November 2004	6 October 2007
+108	"Bitter Rivals and Broken Bonds"	10 November 2004	13 October 2007
+109	"Oto's Invitation"	17 November 2004	20 October 2007
+110	"Formation! The Sasuke Recovery Team"	24 November 2004	27 October 2007
+111	"Sound vs. Leaf"	24 November 2004	27 October 2007
+112	"Squad Mutiny: Everything Falls Apart!"	1 December 2004	3 November 2007
+113	"Full Throttle Power! Chōji, Ablaze!"	8 December 2004	3 November 2007
+114	"Good-bye Old Friend…! I'll Always Believe in You!"	15 December 2004	10 November 2007
+115	"Your Opponent is Me!"	22 December 2004	10 November 2007
+116	"360 Degrees of Vision: The Byakugan's Blind Spot"	5 January 2005	24 November 2007
+117	"Losing is Not an Option!"	5 January 2005	24 November 2007
+118	"The Vessel Arrives Too Late"	12 January 2005	1 December 2007
+119	"Miscalculation: A New Enemy Appears!"	19 January 2005	1 December 2007
+120	"Roar and Howl! The Ultimate Tag-Team!"	2 February 2005	8 December 2007
+121	"To Each His Own Battle"	9 February 2005	8 December 2007
+122	"Fakeout: Shikamaru's Comeback!"	16 February 2005	15 December 2007
+123	"The Leaf's Handsome Devil!"	23 February 2005	15 December 2007
+124	"The Beast Within"	2 March 2005	22 December 2007
+125	"The Sand Shinobi: Allies of the Leaf"	9 March 2005	22 December 2007
+126	"Showdown: Gaara vs. Kimimaro"	16 March 2005	29 December 2007
+127	"Vengeful Strike! The Bracken Dance!"	30 March 2005	29 December 2007
+128	"A Cry on Deaf Ears"	30 March 2005	5 January 2008
+129	"Brothers: Distance Among the Uchiha"	6 April 2005	5 January 2008
+130	"Father and Son, the Broken Crest"	13 April 2005	12 January 2008
+131	"The Secrets of the Mangekyō Sharingan"	20 April 2005	12 January 2008
+132	"For a Friend…"	27 April 2005	19 January 2008
+133	"A Plea from a Friend"	4 May 2005	19 January 2008
+134	"The End of Tears"	11 May 2005	26 January 2008
+135	"The Promise That Could Not Be Kept"	18 May 2005	26 January 2008
+136	"Deep Cover?! A Super S-Ranked Mission!"	25 May 2005	2 February 2008
+137	"A Town of Outlaws, The Shadow of the Fūma Clan"	1 June 2005	2 February 2008
+138	"Pure Betrayal and a Fleeting Plea"	8 June 2005	9 February 2008
+139	"Pure Terror! The House of Orochimaru!"	15 June 2005	9 February 2008
+140	"Two Heartbeats: Kabuto's Trap"	22 June 2005	16 February 2008
+141	"Sakura's Determination!"	29 June 2005	16 February 2008
+142	"The Three Villains from the Maximum Security Prison"	6 July 2005	23 February 2008
+143	"Tonton! I'm Counting on You!"	13 July 2005	23 February 2008
+144	"A New Squad! Two People and a Dog?!"	20 July 2005	1 March 2008
+145	"A New Formation: Ino–Shika–Chō!"	27 July 2005	1 March 2008
+146	"Remaining Ambition: Orochimaru's Shadow"	10 August 2005	8 March 2008
+147	"A Clash of Fate: You Can't Bring Me Down!"	17 August 2005	8 March 2008
+148	"The Search for the Rare Bikōchū Beetle"	17 August 2005	15 March 2008
+149	"What's the Difference? Don't All Insects Look Alike?"	24 August 2005	15 March 2008
+150	"A Battle of Bugs! The Deceivers and the Deceived!"	31 August 2005	22 March 2008
+151	"Blaze Away, Byakugan! This is My Ninja Way!"	14 September 2005	22 March 2008
+152	"Funeral March for the Living"	21 September 2005	29 March 2008
+153	"A Lesson Learned: The Iron Fist of Love!"	28 September 2005	29 March 2008
+154	"The Enemy of the Byakugan"	5 October 2005	5 April 2008
+155	"The Dark Creeping Clouds"	12 October 2005	5 April 2008
+156	"Raiga's Counterattack"	19 October 2005	12 April 2008
+157	"Run! The Curry of Life!"	26 October 2005	12 April 2008
+158	"Follow My Lead! The Great Survival Challenge"	2 November 2005	19 April 2008
+159	"The Bounty Hunter from the Wilderness"	9 November 2005	19 April 2008
+160	"Hunt or Be Hunted?! Showdown at the O.K. Temple!"	16 November 2005	26 April 2008
+161	"The Appearance of Strange Visitors"	23 November 2005	26 April 2008
+162	"The Cursed Warrior"	30 November 2005	3 May 2008
+163	"The Tactician's Intent"	7 December 2005	3 May 2008
+164	"Too Late for Help"	14 December 2005	10 May 2008
+165	"The Death of Naruto"	21 December 2005	10 May 2008
+166	"When Time Stands Still"	4 January 2006	17 May 2008
+167	"When Egrets Flap Their Wings"	4 January 2006	17 May 2008
+168	"Mix it, Stretch it, Boil it Up! Burn Copper Pot, Burn!"	18 January 2006	24 May 2008
+169	"Remembrance: The Lost Page"	25 January 2006	24 May 2008
+170	"The Closed Door"	1 February 2006	31 May 2008
+171	"Infiltration: The Set-Up!"	8 February 2006	31 May 2008
+172	"Despair: A Fractured Heart"	15 February 2006	7 June 2008
+173	"Battle at Sea: The Power Unleashed!"	22 February 2006	7 June 2008
+174	"Impossible! Celebrity Ninja Art: Money Style Jutsu!"	1 March 2006	14 June 2008
+175	"The Treasure Hunt is On!"	8 March 2006	14 June 2008
+176	"Run, Dodge, Zigzag! Chase or Be Chased!"	15 March 2006	21 June 2008
+177	"Please, Mr. Postman!"	22 March 2006	21 June 2008
+178	"Encounter! The Boy with a Star's Name"	29 March 2006	28 June 2008
+179	"The Remembered Lullaby"	5 April 2006	28 June 2008
+180	"Hidden Jutsu! The Price of Ninja Art: Kujaku"	12 April 2006	5 July 2008
+181	"Hoshikage: The Buried Truth"	19 April 2006	5 July 2008
+182	"Reunion: The Remaining Time"	26 April 2006	26 July 2008
+183	"The Star's Radiance"	3 May 2006	26 July 2008
+184	"Kiba's Long Day"	10 May 2006	2 August 2008
+185	"A Legend from the Hidden Leaf: The Onbaa!"	17 May 2006	2 August 2008
+186	"Laughing Shino"	24 May 2006	9 August 2008
+187	"Open for Business! The Leaf Moving Service"	31 May 2006	9 August 2008
+188	"The Mystery of the Targeted Merchants"	7 June 2006	16 August 2008
+189	"A Limitless Supply of Ninja Tools"	14 June 2006	16 August 2008
+190	"The Byakugan Sees the Blind Spot!"	21 June 2006	23 August 2008
+191	"Forecast: Death! Cloudy with Chance of Sun!"	28 June 2006	23 August 2008
+192	"Ino Screams! Chubby Paradise!"	5 July 2006	30 August 2008
+193	"Viva Dojo Challenge! Youth is All About Passion!"	12 July 2006	30 August 2008
+194	"The Mysterious Curse of the Haunted Castle"	19 July 2006	6 September 2008
+195	"The Third Super-Beast!"	26 July 2006	6 September 2008
+196	"Hot-Blooded Confrontation: Student vs. Sensei"	9 August 2006	13 September 2008
+197	"Crisis: The Konoha 11 Gather!"	16 August 2006	13 September 2008
+198	"The Anbu Gives Up? Naruto's Recollection"	23 August 2006	20 September 2008
+199	"The Missed Target"	30 August 2006	20 September 2008
+200	"The Powerful Helper"	13 September 2006	4 October 2008
+201	"Multiple Traps! Countdown to Destruction"	20 September 2006	18 October 2008
+202	"The Top 5 Ninja Battles!"	27 September 2006	1 November 2008
+203	"Kurenai's Decision: Team 8 Left Behind"	5 October 2006	15 November 2008
+204	"Yakumo's Sealed Power"	5 October 2006	22 November 2008
+205	"Kurenai's Top Secret Mission: The Promise with the Third Hokage"	5 October 2006	27 December 2008
+206	"Genjutsu or Reality?"	19 October 2006	3 January 2009
+207	"The Supposed Sealed Ability"	26 October 2006	10 January 2009
+208	"The Weight of the Prized Artefact!"	2 November 2006	24 January 2009
+209	"The Enemy: Ninja Dropouts"	9 November 2006	31 January 2009
+210	"The Bewildering Forest"	16 November 2006	25 October 2009
+211	"Memory of Flames"	30 November 2006	25 October 2009
+212	"To Each His Own Path"	7 December 2006	8 November 2009
+213	"Vanished Memories"	14 December 2006	8 November 2009
+214	"Bringing Back Reality"	21 December 2006	15 November 2009
+215	"A Past to Be Erased"	21 December 2006	15 November 2009
+216	"The Targeted Shukaku"	11 January 2007	22 November 2009
+217	"Sand Alliance With the Leaf Shinobi"	18 January 2007	22 November 2009
+218	"Sealed Sand: The Counterattack!"	25 January 2007	29 November 2009
+219	"The Ultimate Weapon Reborn"	1 February 2007	29 November 2009
+220	"Departure"	8 February 2007	6 December 2009
+Naruto: Shippūden
+See also: Plot of Naruto: Shippūden
+#	Episode Title	Japanese Airdate	English Airdate
+1	"Homecoming"	15 February 2007	28 October 2009
+2	"The Akatsuki Makes Its Move"	15 February 2007	28 October 2009
+3	"The Results of Training"	22 February 2007	28 October 2009
+4	"The Jinchūriki of the Sand"	1 March 2007	28 October 2009
+5	"The Kazekage Stands Tall"	15 March 2007	4 November 2009
+6	"Mission Cleared"	29 March 2007	11 November 2009
+7	"Run, Kankurō"	29 March 2007	18 November 2009
+8	"Team Kakashi, Deployed"	12 April 2007	2 December 2009
+9	"The Jinchūriki's Tears"	12 April 2007	9 December 2009
+10	"Sealing Technique: Phantom Dragons Nine Consuming Seals"	19 April 2007	16 December 2009
+11	"The Medical Ninja's Student"	26 April 2007	23 December 2009
+12	"The Retired Granny's Determination"	3 May 2007	31 December 2009
+13	"A Meeting With Destiny"	10 May 2007	31 December 2009
+14	"Naruto's Growth"	17 May 2007	31 December 2009
+15	"The Secret Weapon is Called…"	24 May 2007	31 December 2009
+16	"The Secret of Jinchūriki"	31 May 2007	6 January 2010
+17	"The Death of Gaara!"	7 June 2007	13 January 2010
+18	"Charge Tactic! Button Hook Entry"	21 June 2007	20 January 2010
+19	"Traps Activate! Team Guy's Enemies!"	5 July 2007	27 January 2010
+20	"Hiruko vs. Two Kunoichi!"	19 July 2007	3 February 2010
+21	"Sasori's Real Face"	26 July 2007	10 February 2010
+22	"Chiyo's Secret Skills"	2 August 2007	17 February 2010
+23	"Father and Mother"	2 August 2007	24 February 2010
+24	"The Third Kazekage"	9 August 2007	24 February 2010
+25	"Three Minutes Between Life and Death"	16 August 2007	3 March 2010
+26	"Puppet Fight: 10 vs 100!"	23 August 2007	10 March 2010
+27	"Impossible Dream"	30 August 2007	17 March 2010
+28	"Beasts! Alive Again!"	13 September 2007	24 March 2010
+29	"Kakashi Enlightened!"	27 September 2007	31 March 2010
+30	"Aesthetics of an Instant!"	27 September 2007	7 April 2010
+31	"The Legacy!"	18 October 2007	14 April 2010
+32	"Return of the Kazekage"	25 October 2007	21 April 2010
+33	"The New Target"	8 November 2007	28 April 2010
+34	"Formation! New Team Kakashi!"	15 November 2007	5 May 2010
+35	"An Unnecessary Addition"	22 November 2007	12 May 2010
+36	"The Fake Smile"	29 November 2007	19 May 2010
+37	"Untitled"	29 November 2007	26 May 2010
+38	"Simulation"	6 December 2007	2 June 2010
+39	"The Tenchi Bridge"	13 December 2007	16 June 2010
+40	"Nine-Tails Unleashed!"	20 December 2007	23 June 2010
+41	"The Top-Secret Mission Begins!"	20 December 2007	30 June 2010
+42	"Orochimaru vs. Jinchūriki"	10 January 2008	7 July 2010
+43	"Sakura's Tears"	17 January 2008	14 July 2010
+44	"The Secret of the Battle"	24 January 2008	21 July 2010
+45	"The Consequences of Betrayal"	31 January 2008	28 July 2010
+46	"The Unfinished Page"	7 February 2008	4 August 2010
+47	"Infiltration: The Den of the Snake!"	14 February 2008	11 August 2010
+48	"Bonds"	28 February 2008	18 August 2010
+49	"Something Important…"	6 March 2008	25 August 2010
+50	"The Picture Book's Story"	13 March 2008	1 September 2010
+51	"Reunion"	20 March 2008	8 September 2010
+52	"The Power of the Uchiha"	20 March 2008	15 September 2010
+53	"Title"	3 April 2008	27 October 2010
+54	"Nightmare"	3 April 2008	3 November 2010
+55	"Wind"	17 April 2008	10 November 2010
+56	"Writhe"	24 April 2008	17 November 2010
+57	"Robbed of Sleep"	8 May 2008	1 December 2010
+58	"Loneliness"	8 May 2008	8 December 2010
+59	"A New Enemy"	15 May 2008	15 December 2010
+60	"Impermanence"	22 May 2008	22 December 2010
+61	"Contact"	29 May 2008	29 December 2010
+62	"Teammate"	5 June 2008	5 January 2011
+63	"The Two Kings"	19 June 2008	12 January 2011
+64	"The Jet-Black Signal Fire"	3 July 2008	19 January 2011
+65	"Lockdown of Darkness"	3 July 2008	26 January 2011
+66	"Revived Souls"	10 July 2008	2 February 2011
+67	"Everyone's Struggle to the Death"	24 July 2008	9 February 2011
+68	"Moment of Awakening"	31 July 2008	16 February 2011
+69	"Despair"	31 July 2008	23 February 2011
+70	"Resonance"	7 August 2008	2 March 2011
+71	"My Friend"	14 August 2008	9 March 2011
+72	"The Quietly Approaching Threat"	21 August 2008	16 March 2011
+73	"Akatsuki's Invasion"	28 August 2008	23 March 2011
+74	"Under the Starry Sky"	4 September 2008	30 March 2011
+75	"The Old Monk's Prayer"	11 September 2008	6 April 2011
+76	"The Next Step"	25 September 2008	16 April 2011
+77	"Climbing Silver"	25 September 2008	23 April 2011
+78	"The Judgment"	2 October 2008	30 April 2011
+79	"Unfulfilled Scream"	2 October 2008	7 May 2011
+80	"Last Words"	16 October 2008	14 May 2011
+81	"Sad News"	23 October 2008	21 May 2011
+82	"Team 10"	30 October 2008	4 June 2011
+83	"Target: Locked On"	6 November 2008	18 June 2011
+84	"Kakuzu's Abilities"	13 November 2008	25 June 2011
+85	"Terrifying Secret"	20 November 2008	2 July 2011
+86	"Shikamaru's Genius"	4 December 2008	9 July 2011
+87	"When You Curse Someone, You Dig Your Own Grave"	4 December 2008	16 July 2011
+88	"Wind Release: Rasenshuriken!"	11 December 2008	23 July 2011
+89	"The Price of Power"	18 December 2008	30 July 2011
+90	"A Shinobi's Determination"	25 December 2008	6 August 2011
+91	"Orochimaru's Hideout Discovered"	8 January 2009	20 August 2011
+92	"Encounter"	15 January 2009	27 August 2011
+93	"Connecting Hearts"	22 January 2009	3 September 2011
+94	"A Night of Rain"	29 January 2009	10 September 2011
+95	"The Two Charms"	5 February 2009	17 September 2011
+96	"The Unseeing Enemy"	12 February 2009	1 October 2011
+97	"The Labyrinth of Distorted Reflection"	19 February 2009	8 October 2011
+98	"The Target Appears"	26 February 2009	5 November 2011
+99	"Raging Tailed Beast"	5 March 2009	11 October 2011
+100	"Inside the Mist"	12 March 2009	11 October 2011
+101	"Everyone's Feelings"	26 March 2009	24 January 2012
+102	"Regroup!"	26 March 2009	24 January 2012
+103	"The Four-Corner Sealing Barrier"	9 April 2009	24 January 2012
+104	"Breaking the Crystal Release"	9 April 2009	24 January 2012
+105	"The Battle Over the Barrier"	16 April 2009	24 January 2012
+106	"Red Camellia"	23 April 2009	24 January 2012
+107	"Strange Bedfellows"	30 April 2009	24 January 2012
+108	"Guidepost of the Camellia"	7 May 2009	24 January 2012
+109	"Cursed Seal Counterattack"	14 May 2009	24 January 2012
+110	"Memory of Guilt"	21 May 2009	24 January 2012
+111	"Shattered Promise"	28 May 2009	24 January 2012
+112	"A Place to Return To"	4 June 2009	24 January 2012
+113	"The Serpent's Pupil"	11 June 2009	10 April 2012
+114	"Eye of a Hawk"	18 June 2009	10 April 2012
+115	"Zabuza's Blade"	25 June 2009	10 April 2012
+116	"Guardian of the Iron Wall"	2 July 2009	10 April 2012
+117	"Jūgo of the Northern Hideout"	9 July 2009	10 April 2012
+118	"Formation!"	23 July 2009	10 April 2012
+119	"Kakashi Chronicles ~ Boys' Life on the Battlefield ~ Part 1"	30 July 2009	10 April 2012
+120	"Kakashi Chronicles ~ Boys' Life on the Battlefield ~ Part 2"	30 July 2009	10 April 2012
+121	"Assemble"	6 August 2009	10 April 2012
+122	"The Hunt"	13 August 2009	10 April 2012
+123	"Clash!"	20 August 2009	10 April 2012
+124	"Art"	27 August 2009	10 April 2012
+125	"Disappearance"	3 September 2009	10 April 2012
+126	"Twilight"	10 September 2009	10 April 2012
+127	"Tales of a Gutsy Ninja ~Jiraiya Ninja Scroll~ Part 1"	24 September 2009	10 July 2012
+128	"Tales of a Gutsy Ninja ~Jiraiya Ninja Scroll~ Part 2"	24 September 2009	10 July 2012
+129	"Infiltrate! The Village Hidden in the Rain"	8 October 2009	10 July 2012
+130	"The Man Who Became God"	8 October 2009	10 July 2012
+131	"Honoured Sage Mode!"	15 October 2009	10 July 2012
+132	"In Attendance, the Six Paths of Pain"	22 October 2009	10 July 2012
+133	"The Tale of Jiraiya the Gallant"	29 October 2009	10 July 2012
+134	"Banquet Invitation"	5 November 2009	10 July 2012
+135	"The Longest Moment"	19 November 2009	10 July 2012
+136	"The Light and Dark of the Mangekyō Sharingan"	19 November 2009	10 July 2012
+137	"Amaterasu!"	26 November 2009	10 July 2012
+138	"The End"	3 December 2009	10 July 2012
+139	"The Mystery of Tobi"	10 December 2009	10 July 2012
+140	"Fate"	17 December 2009	10 July 2012
+141	"Truth"	24 December 2009	9 October 2012
+142	"Battle of Valley of Clouds and Lightning"	7 January 2010	9 October 2012
+143	"The Eight-Tails vs. Sasuke"	14 January 2010	9 October 2012
+144	"Wanderer"	21 January 2010	9 October 2012
+145	"Successor of the Forbidden Jutsu"	28 January 2010	9 October 2012
+146	"The Successor's Wish"	4 February 2010	9 October 2012
+147	"Rogue Ninja's Past"	11 February 2010	9 October 2012
+148	"Heir to Darkness"	18 February 2010	9 October 2012
+149	"Separation"	25 February 2010	9 October 2012
+150	"The Forbidden Jutsu Released"	4 March 2010	9 October 2012
+151	"Master and Student"	11 March 2010	9 October 2012
+152	"Sombre News"	25 March 2010	9 October 2012
+153	"Following the Master's Shadow"	25 March 2010	9 October 2012
+154	"Decryption"	8 April 2010	8 January 2013
+155	"The First Challenge"	8 April 2010	8 January 2013
+156	"Surpassing the Master"	15 April 2010	8 January 2013
+157	"Assault on the Leaf Village!"	22 April 2010	8 January 2013
+158	"Power to Believe"	29 April 2010	8 January 2013
+159	"Pain vs. Kakashi"	6 May 2010	8 January 2013
+160	"Mystery of Pain"	13 May 2010	8 January 2013
+161	"Surname is Sarutobi, Given Name, Konohamaru"	20 May 2010	8 January 2013
+162	"Pain to the World"	27 May 2010	8 January 2013
+163	"Explode! Sage Mode"	3 June 2010	8 January 2013
+164	"Danger! Sage Mode Limit Reached"	10 June 2010	8 January 2013
+165	"Nine-Tails, Captured!"	17 June 2010	8 January 2013
+166	"Confession"	24 June 2010	8 January 2013
+167	"Chibaku Tensei"	1 July 2010	16 March 2013
+168	"The Fourth Hokage"	15 July 2010	16 March 2013
+169	"The Two Students"	22 July 2010	23 March 2013
+170	"Big Adventure! The Quest for the Fourth Hokage's Legacy Part 1"	29 July 2010	23 March 2013
+171	"Big Adventure! The Quest for the Fourth Hokage's Legacy Part 2"	29 July 2010	23 March 2013
+172	"Meeting"	5 August 2010	23 March 2013
+173	"Origin of Pain"	12 August 2010	30 March 2013
+174	"Tale of Naruto Uzumaki"	19 August 2010	30 March 2013
+175	"Hero of the Hidden Leaf"	26 August 2010	30 March 2013
+176	"Rookie Instructor Iruka"	2 September 2010	30 March 2013
+177	"Iruka's Ordeal"	9 September 2010	6 April 2013
+178	"Iruka's Decision"	16 September 2010	6 April 2013
+179	"Kakashi Hatake, the Jōnin in Charge"	30 September 2010	6 April 2013
+180	"Inari's Courage Put to the Test"	7 October 2010	6 April 2013
+181	"Naruto's School of Revenge"	14 October 2010	13 April 2013
+182	"Gaara's Bond"	21 October 2010	13 April 2013
+183	"Naruto: Outbreak"	28 October 2010	13 April 2013
+184	"Deploy! Team Tenten"	4 November 2010	13 April 2013
+185	"Animal District"	11 November 2010	20 April 2013
+186	"Ah, the Medicine of Youth"	18 November 2010	27 April 2013
+187	"Gutsy Master and Student: The Training"	25 November 2010	4 May 2013
+188	"Record of the Gutsy Ninja Master and Student"	25 November 2010	11 May 2013
+189	"Sasuke's Paw Encyclopaedia"	2 December 2010	18 May 2013
+190	"Naruto and the Old Soldier"	9 December 2010	25 May 2013
+191	"Kakashi Love Song"	16 December 2010	1 June 2013
+192	"Neji Chronicles"	23 December 2010	8 June 2013
+193	"The Man Who Died Twice"	6 January 2011	15 June 2013
+194	"The Worst Three-Legged Race"	13 January 2011	22 June 2013
+195	"Team 10's Teamwork"	20 January 2011	29 June 2013
+196	"Drive Towards Darkness"	27 January 2011	6 July 2013
+197	"The Sixth Hokage Danzō"	10 February 2011	13 July 2013
+198	"Five Kage Summit's Eve"	10 February 2011	20 July 2013
+199	"Enter the Five Kage!"	17 February 2011	27 July 2013
+200	"Naruto's Plea"	24 February 2011	3 August 2013
+201	"Painful Decision"	3 March 2011	10 August 2013
+202	"Racing Lightning"	10 March 2011	17 August 2013
+203	"Sasuke's Ninja Way"	17 March 2011	24 August 2013
+204	"Power of the Five Kage"	24 March 2011	31 August 2013
+205	"Declaration of War"	31 March 2011	7 September 2013
+206	"Sakura's Feelings"	7 April 2011	14 September 2013
+207	"The Tailed Beast vs. The Tailless Tailed Beast"	14 April 2011	21 September 2013
+208	"As One's Friend"	21 April 2011	28 September 2013
+209	"Danzō's Right Arm"	28 April 2011	5 October 2013
+210	"The Forbidden Visual Jutsu"	5 May 2011	12 October 2013
+211	"Danzō Shimura"	12 May 2011	19 October 2013
+212	"Sakura's Resolve"	19 May 2011	19 October 2013
+213	"Lost Bonds"	26 May 2011	26 October 2013
+214	"The Burden"	2 June 2011	2 November 2013
+215	"Two Fates"	9 June 2011	9 November 2013
+216	"High-Level Shinobi"	16 June 2011	16 November 2013
+217	"The Infiltrator"	23 June 2011	23 November 2013
+218	"The Five Great Nations Mobilise"	30 June 2011	30 November 2013
+219	"Kakashi Hatake, the Hokage"	7 July 2011	7 December 2013
+220	"Prophecy of the Great Lord Elder"	21 July 2011	14 December 2013
+221	"Storage"	28 July 2011	21 December 2013
+222	"The Five Kage's Decision"	28 July 2011	28 December 2013
+223	"The Young Man and the Sea"	4 August 2011	4 January 2014
+224	"The Ninja of Benisu"	11 August 2011	11 January 2014
+225	"The Cursed Ghost Ship"	18 August 2011	18 January 2014
+226	"Battleship Island"	25 August 2011	25 January 2014
+227	"The Forgotten Island"	1 September 2011	1 February 2014
+228	"Fight! Rock Lee!"	8 September 2011	8 February 2014
+229	"Eat or Die! Mushrooms from Hell"	22 September 2011	15 February 2014
+230	"Revenge of the Shadow Clones"	29 September 2011	22 February 2014
+231	"The Closed Route"	6 October 2011	1 March 2014
+232	"The Girls' Get-Together"	13 October 2011	8 March 2014
+233	"Naruto's Imposter"	20 October 2011	15 March 2014
+234	"Naruto's Favourite Pupil"	27 October 2011	22 March 2014
+235	"The Kunoichi of Nadeshiko Village"	3 November 2011	29 March 2014
+236	"Friends You Can Count On"	10 November 2011	5 April 2014
+237	"Ah, My Hero Lady Tsunade!"	24 November 2011	12 April 2014
+238	"Sai's Day Off"	1 December 2011	19 April 2014
+239	"The Legendary Ino–Shika–Chō"	8 December 2011	26 April 2014
+240	"Kiba's Determination"	15 December 2011	3 May 2014
+241	"Kakashi, My Eternal Rival!"	22 December 2011	10 May 2014
+242	"Naruto's Vow"	28 December 2011	17 May 2014
+243	"Land Ahoy! Is this the Island of Paradise?"	5 January 2012	24 May 2014
+244	"Killer B and Motoi"	12 January 2012	31 May 2014
+245	"The Next Challenge! Naruto vs. The Nine-Tails!!"	19 January 2012	7 June 2014
+246	"The Orange Spark"	26 January 2012	14 June 2014
+247	"Target: Nine-Tails"	2 February 2012	21 June 2014
+248	"The Fourth Hokage's Death Match"	9 February 2012	28 June 2014
+249	"Thank You"	9 February 2012	5 July 2014
+250	"Battle in Paradise! Odd Beast vs. The Monster!"	16 February 2012	12 July 2014
+251	"The Man Named Kisame"	23 February 2012	19 July 2014
+252	"The Angelic Herald of Death"	1 March 2012	26 July 2014
+253	"The Bridge to Peace"	8 March 2012	2 August 2014
+254	"The Super Secret S-Rank Mission"	15 March 2012	9 August 2014
+255	"The Artist Returns"	22 March 2012	16 August 2014
+256	"Assemble! Allied Shinobi Forces!"	29 March 2012	23 August 2014
+257	"Meeting"	5 April 2012	30 August 2014
+258	"Rivals"	12 April 2012	6 September 2014
+259	"Rift"	19 April 2012	13 September 2014
+260	"Parting"	26 April 2012	20 September 2014
+261	"For My Friend"	3 May 2012	27 September 2014
+262	"War Begins!"	10 May 2012	4 October 2014
+263	"Sai and Shin"	17 May 2012	11 October 2014
+264	"The Secret of the Impure World Reincarnation"	24 May 2012	18 October 2014
+265	"An Old Nemesis Returns"	31 May 2012	25 October 2014
+266	"The First and Last Opponent"	7 June 2012	1 November 2014
+267	"The Brilliant Military Advisor of the Hidden Leaf"	21 June 2012	8 November 2014
+268	"Battleground!"	28 June 2012	15 November 2014
+269	"No-Good Words"	5 July 2012	22 November 2014
+270	"Golden Bonds"	19 July 2012	29 November 2014
+271	"Road to Sakura"	26 July 2012	6 December 2014
+272	"Mifune vs. Hanzō"	2 August 2012	13 December 2014
+273	"True Kindness"	9 August 2012	20 December 2014
+274	"The Complete Ino-Shika-Chō Formation"	9 August 2012	27 December 2014
+275	"A Message from the Heart"	16 August 2012	3 January 2015
+276	"Attack of the Gedō Statue"	23 August 2012	10 January 2015
+277	"Unison Sign"	30 August 2012	17 January 2015
+278	"Medic Ninja in Danger"	6 September 2012	24 January 2015
+279	"White Zetsu's Trap"	13 September 2012	31 January 2015
+280	"Aesthetics of an Artist"	20 September 2012	7 February 2015
+281	"The Allied Mom Force!!"	27 September 2012	14 February 2015
+282	"The Secret Origin of the Ultimate Tag Team!!"	4 October 2012	21 February 2015
+283	"Two Suns!!"	11 October 2012	28 February 2015
+284	"The Helmet Splitter: Jinin Akebino!"	18 October 2012	7 March 2015
+285	"User of the Scorch Release: Pakura of the Sand!"	25 October 2012	14 March 2015
+286	"Things You Can't Get Back"	1 November 2012	21 March 2015
+287	"One Worth Betting On"	1 November 2012	28 March 2015
+288	"Danger: Jinpachi and Kushimaru!"	8 November 2012	4 April 2015
+289	"The Lightning Blade: Ameyuri Ringo!"	15 November 2012	11 April 2015
+290	"Power - Episode 1"	22 November 2012	18 April 2015
+291	"Power - Episode 2"	29 November 2012	25 April 2015
+292	"Power - Episode 3"	6 December 2012	2 May 2015
+293	"Power - Episode 4"	13 December 2012	9 May 2015
+294	"Power - Episode 5"	20 December 2012	16 May 2015
+295	"Power - Episode Final"	10 January 2013	23 May 2015
+296	"Naruto Enters the Battle!"	17 January 2013	30 May 2015
+297	"A Father's Hope, A Mother's Love"	24 January 2013	6 June 2015
+298	"Contact! Naruto vs. Itachi"	31 January 2013	13 June 2015
+299	"The Acknowledged One"	7 February 2013	20 June 2015
+300	"The Mizukage, the Giant Clam, and the Mirage"	14 February 2013	27 June 2015
+301	"Paradox"	21 February 2013	4 July 2015
+302	"Terror: Steaming Danger Tyranny"	28 February 2013	11 July 2015
+303	"Ghosts from the Past"	7 March 2013	18 July 2015
+304	"The Underworld Transfer Jutsu"	14 March 2013	25 July 2015
+305	"The Vengeful"	21 March 2013	8 August 2015
+306	"The Heart's Eye"	28 March 2013	15 August 2015
+307	"Fade into the Moonlight"	4 April 2013	22 August 2015
+308	"Night of the Crescent Moon"	11 April 2013	29 August 2015
+309	"An A-Rank Mission: The Contest"	18 April 2013	5 September 2015
+310	"The Fallen Castle"	25 April 2013	12 September 2015
+311	"Prologue of Road to Ninja"	2 May 2013	19 September 2015
+312	"The Old Master and the Dragon's Eye"	9 May 2013	26 September 2015
+313	"Rain Followed by Snow, with Some Lightning"	16 May 2013	3 October 2015
+314	"The Sad Sun Shower"	23 May 2013	10 October 2015
+315	"Lingering Snow"	30 May 2013	17 October 2015
+316	"The Reanimated Allied Forces"	6 June 2013	24 October 2015
+317	"Shino vs. Torune!"	13 June 2013	31 October 2015
+318	"A Hole in the Heart: The Other Jinchūriki"	20 June 2013	7 November 2015
+319	"The Soul Living Inside the Puppet"	27 June 2013	14 November 2015
+320	"Run, Omoi!"	4 July 2013	21 November 2015
+321	"Reinforcements Arrive"	18 July 2013	28 November 2015
+322	"Madara Uchiha"	25 July 2013	5 December 2015
+323	"The Five Kage Assemble"	1 August 2013	12 December 2015
+324	"The Unbreakable Mask and the Shattered Bubble"	8 August 2013	18 December 2015
+325	"Jinchūriki vs. Jinchūriki"	15 August 2013	24 December 2015
+326	"Four-Tails, the King of Sage Monkeys"	22 August 2013	31 December 2015
+327	"Nine-Tails"	29 August 2013	7 January 2016
+328	"Kurama"	29 August 2013	14 January 2016
+329	"Two-Man Team"	5 September 2013	21 January 2016
+330	"The Promise of Victory"	12 September 2013	28 January 2016
+331	"Eyes That See in the Dark"	19 September 2013	4 February 2016
+332	"A Will of Stone"	26 September 2013	11 February 2016
+333	"The Risks of the Impure World Reincarnation"	3 October 2013	18 February 2016
+334	"Sibling Tag Team"	10 October 2013	25 February 2016
+335	"To Each Their Own Leaf"	24 October 2013	4 March 2016
+336	"Kabuto Yakushi"	31 October 2013	11 March 2016
+337	"The Izanami Activated"	7 November 2013	18 March 2016
+338	"Izanagi and Izanami"	14 November 2013	25 March 2016
+339	"I Will Love You Always"	21 November 2013	5 July 2016
+340	"Impure World Reincarnation: Release!"	28 November 2013	5 July 2016
+341	"Orochimaru's Return"	5 December 2013	5 July 2016
+342	"The Secret of the Space–Time Ninjutsu"	12 December 2013	5 July 2016
+343	"Who Are You?"	19 December 2013	5 July 2016
+344	"Obito and Madara"	9 January 2014	5 July 2016
+345	"I'm in Hell"	16 January 2014	5 July 2016
+346	"World of Dreams"	23 January 2014	5 July 2016
+347	"Creeping Shadow"	23 January 2014	5 July 2016
+348	"The New Akatsuki"	30 January 2014	5 July 2016
+349	"The Mask that Hides the Heart"	6 February 2014	4 October 2016
+350	"Minato's Death"	13 February 2014	4 October 2016
+351	"Hashirama's Cells"	20 February 2014	4 October 2016
+352	"The Rogue Ninja: Orochimaru"	27 February 2014	4 October 2016
+353	"Orochimaru's Test Subject"	6 March 2014	4 October 2016
+354	"Their Own Paths"	6 March 2014	4 October 2016
+355	"The Targeted Sharingan"	13 March 2014	4 October 2016
+356	"A Shinobi of the Leaf"	20 March 2014	4 October 2016
+357	"An Uchiha Anbu"	3 April 2014	4 October 2016
+358	"Coup d'État"	10 April 2014	4 October 2016
+359	"The Night of the Tragedy"	17 April 2014	4 October 2016
+360	"Jōnin Leader"	24 April 2014	4 October 2016
+361	"Team 7"	8 May 2014	4 October 2016
+362	"Kakashi's Resolve"	15 May 2014	17 January 2017
+363	"The Allied Shinobi Forces Technique"	22 May 2014	17 January 2017
+364	"The Ties That Bind"	5 June 2014	17 January 2017
+365	"The Invisible Dancers"	12 June 2014	17 January 2017
+366	"The All-Knowing"	19 June 2014	17 January 2017
+367	"Hashirama and Madara"	3 July 2014	17 January 2017
+368	"Warring States Period"	10 July 2014	17 January 2017
+369	"My True Dream"	24 July 2014	17 January 2017
+370	"Sasuke's Answer"	31 July 2014	17 January 2017
+371	"Hole"	7 August 2014	17 January 2017
+372	"Something to Fill the Hole"	14 August 2014	17 January 2017
+373	"Team 7, Assemble!"	21 August 2014	17 January 2017
+374	"The New Three-Way Deadlock"	28 August 2014	17 January 2017
+375	"Kakashi vs. Obito"	4 September 2014	4 April 2017
+376	"The Directive to Take the Nine-Tails"	11 September 2014	4 April 2017
+377	"Naruto vs. Mecha-Naruto"	11 September 2014	4 April 2017
+378	"The Ten-Tails' Jinchūriki"	18 September 2014	4 April 2017
+379	"An Opening"	25 September 2014	4 April 2017
+380	"The Day Naruto Was Born"	2 October 2014	4 April 2017
+381	"God Tree"	9 October 2014	4 April 2017
+382	"A Shinobi's Dream"	16 October 2014	4 April 2017
+383	"Pursuing Hope"	23 October 2014	4 April 2017
+384	"A Heart Filled With Comrades"	30 October 2014	4 April 2017
+385	"Obito Uchiha"	6 November 2014	4 April 2017
+386	"I'm Always Watching"	13 November 2014	4 April 2017
+387	"The Promise That Was Kept"	20 November 2014	4 April 2017
+388	"My First Friend"	27 November 2014	4 April 2017
+389	"The Adored Elder Sister"	4 December 2014	27 June 2017
+390	"Hanabi's Decision"	4 December 2014	27 June 2017
+391	"Madara Uchiha Arises"	11 December 2014	27 June 2017
+392	"The Hidden Heart"	18 December 2014	27 June 2017
+393	"A True Ending"	25 December 2014	27 June 2017
+394	"The New Chūnin Exams"	8 January 2015	27 June 2017
+395	"The Chūnin Exams Begin!"	15 January 2015	27 June 2017
+396	"The Three Questions"	22 January 2015	27 June 2017
+397	"One Worthy as a Leader"	29 January 2015	27 June 2017
+398	"The Night Before the Second Exam"	5 February 2015	27 June 2017
+399	"Demon Desert Survival"	12 February 2015	27 June 2017
+400	"As a Taijutsu User"	19 February 2015	27 June 2017
+401	"The Ultimate"	26 February 2015	27 June 2017
+402	"Escape vs. Pursuit"	5 March 2015	27 June 2017
+403	"Unwavering Gutsiness"	12 March 2015	10 October 2017
+404	"Tenten's Troubles"	19 March 2015	10 October 2017
+405	"The Imprisoned Pair"	26 March 2015	10 October 2017
+406	"The Place Where I Belong"	2 April 2015	10 October 2017
+407	"The Yamanaka Clan: Secret Ninjutsu"	9 April 2015	10 October 2017
+408	"The Cursed Puppet"	16 April 2015	10 October 2017
+409	"Their Backs"	23 April 2015	10 October 2017
+410	"The Hidden Plot Set Into Motion"	30 April 2015	10 October 2017
+411	"The Targeted Tailed Beast"	7 May 2015	10 October 2017
+412	"Neji's Judgment"	14 May 2015	10 October 2017
+413	"Hopes Entrusted to the Future"	21 May 2015	10 October 2017
+414	"On the Brink of Death"	28 May 2015	10 October 2017
+415	"The Two Mangekyō"	4 June 2015	10 October 2017
+416	"The Formation of Team Minato"	11 June 2015	10 October 2017
+417	"You'll Be My Backup"	25 June 2015	9 January 2018
+418	"The Blue Beast vs. Six Paths Madara"	2 July 2015	9 January 2018
+419	"Papa's Youth"	9 July 2015	9 January 2018
+420	"Eight Gates Released Formation"	23 July 2015	9 January 2018
+421	"The Sage of Six Paths"	30 July 2015	9 January 2018
+422	"The Ones Who Will Inherit"	6 August 2015	9 January 2018
+423	"Naruto's Rival"	6 August 2015	9 January 2018
+424	"To Rise Up"	13 August 2015	9 January 2018
+425	"The Infinite Dream"	20 August 2015	9 January 2018
+426	"The Infinite Tsukuyomi"	27 August 2015	9 January 2018
+427	"To the Dreamworld"	3 September 2015	9 January 2018
+428	"Where Tenten Belongs"	3 September 2015	9 January 2018
+429	"Killer B Rappūden: Part 1"	10 September 2015	9 January 2018
+430	"Killer B Rappūden: Part 2"	17 September 2015	9 January 2018
+431	"To See That Smile, Just One More Time"	24 September 2015	1 May 2018
+432	"The Loser Ninja"	1 October 2015	1 May 2018
+433	"The Search Mission"	8 October 2015	1 May 2018
+434	"Team Jiraiya"	15 October 2015	1 May 2018
+435	"Order of Priority"	22 October 2015	1 May 2018
+436	"The Masked Man"	5 November 2015	1 May 2018
+437	"The Sealed Power"	12 November 2015	1 May 2018
+438	"The Rules or a Comrade"	19 November 2015	1 May 2018
+439	"The Child of Prophecy"	26 November 2015	1 May 2018
+440	"The Caged Bird"	3 December 2015	1 May 2018
+441	"Returning Home"	10 December 2015	1 May 2018
+442	"The Mutual Path"	17 December 2015	1 May 2018
+443	"The Difference in Power"	24 December 2015	1 May 2018
+444	"Leaving the Village"	14 January 2016	1 May 2018
+445	"Pursuers"	21 January 2016	28 August 2018
+446	"Collision"	28 January 2016	28 August 2018
+447	"Another Moon"	4 February 2016	28 August 2018
+448	"Comrade"	11 February 2016	28 August 2018
+449	"The Shinobi Unite"	18 February 2016	28 August 2018
+450	"Rival"	25 February 2016	28 August 2018
+451	"Birth and Death"	3 March 2016	28 August 2018
+452	"The Genius"	10 March 2016	28 August 2018
+453	"The Pain of Living"	17 March 2016	28 August 2018
+454	"Shisui's Request"	24 March 2016	28 August 2018
+455	"Moonlit Night"	7 April 2016	28 August 2018
+456	"The Darkness of the Akatsuki"	14 April 2016	28 August 2018
+457	"Partner"	21 April 2016	28 August 2018
+458	"Truth"	28 April 2016	28 August 2018
+459	"She of the Beginning"	5 May 2016	4 December 2018
+460	"Kaguya Ōtsutsuki"	12 May 2016	4 December 2018
+461	"Hagoromo and Hamura"	19 May 2016	4 December 2018
+462	"A Fabricated Past"	26 May 2016	4 December 2018
+463	"The No. 1 Most Unpredictable Ninja"	2 June 2016	4 December 2018
+464	"Ninshū: The Ninja Creed"	9 June 2016	4 December 2018
+465	"Asura and Indra"	16 June 2016	4 December 2018
+466	"The Tumultuous Journey"	30 June 2016	4 December 2018
+467	"Asura's Decision"	7 July 2016	4 December 2018
+468	"The Successor"	21 July 2016	4 December 2018
+469	"A Special Mission"	28 July 2016	4 December 2018
+470	"Connecting Thoughts"	4 August 2016	4 December 2018
+471	"The Two of Them… Always"	11 August 2016	4 December 2018
+472	"You Better…"	18 August 2016	4 December 2018
+473	"The Sharingan Revived"	25 August 2016	26 March 2019
+474	"Congratulations"	1 September 2016	26 March 2019
+475	"The Valley of the End"	8 September 2016	26 March 2019
+476	"The Final Battle"	29 September 2016	26 March 2019
+477	"Naruto and Sasuke"	29 September 2016	26 March 2019
+478	"The Unison Sign"	6 October 2016	26 March 2019
+479	"Naruto Uzumaki!!"	13 October 2016	26 March 2019
+480	"Naruto and Hinata"	20 October 2016	26 March 2019
+481	"Sasuke and Sakura"	27 October 2016	26 March 2019
+482	"Gaara and Shikamaru"	3 November 2016	26 March 2019
+483	"Jiraiya and Kakashi"	10 November 2016	26 March 2019
+484	"The Exploding Human"	1 December 2016	26 March 2019
+485	"Coliseum"	8 December 2016	26 March 2019
+486	"Fūshin"	15 December 2016	26 March 2019
+487	"The Ketsuryūgan"	22 December 2016	11 June 2019
+488	"The Last One"	5 January 2017	11 June 2019
+489	"The State of Affairs"	12 January 2017	11 June 2019
+490	"Dark Clouds"	19 January 2017	11 June 2019
+491	"Recklessness"	26 January 2017	11 June 2019
+492	"Cloud of Suspicion"	2 February 2017	11 June 2019
+493	"Dawn"	9 February 2017	11 June 2019
+494	"Naruto's Wedding"	16 February 2017	11 June 2019
+495	"A Full-Powered Wedding Gift"	16 February 2017	11 June 2019
+496	"Steam and Food Pills"	23 February 2017	11 June 2019
+497	"The Kazekage's Wedding Gift"	2 March 2017	11 June 2019
+498	"The Last Mission"	9 March 2017	11 June 2019
+499	"The Outcome of the Secret Mission"	16 March 2017	11 June 2019
+500	"The Message"	23 March 2017	11 June 2019

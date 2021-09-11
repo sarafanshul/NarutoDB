@@ -4,9 +4,6 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-import webscraping.model.team.TeamDebut;
-import webscraping.model.team.TeamInfo;
-import webscraping.model.team.TeamName;
 
 import java.util.List;
 

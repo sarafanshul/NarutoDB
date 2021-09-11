@@ -2,7 +2,6 @@ package webscraping.model.character;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.*;
-import webscraping.model.character.*;
 
 import java.io.Serializable;
 import java.util.List;

@@ -2,10 +2,11 @@ package webscraping.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import webscraping.model.team.TeamDoc;
 import webscraping.model.team.TeamDTO;
+import webscraping.model.team.TeamDoc;
 import webscraping.service.TeamService;
 
 @Slf4j
@@ -17,18 +18,20 @@ public class TeamController {
 
     @PostMapping(value = "/{name}")
     public ResponseEntity<Void> saveTeam(@PathVariable String name) {
-        log.info("Starting get infos for team: {}", name);
-        TeamDoc teamDoc = teamService.getTeamInfo(name);
+//        log.info("Starting get infos for team: {}", name);
+//        TeamDoc teamDoc = teamService.getTeamInfo(name);
 //        teamService.insert(teamDoc);
-        log.info("Team {} infos saved.", name);
-        return ResponseEntity.noContent().build();
+//        log.info("Team {} infos saved.", name);
+//        return ResponseEntity.noContent().build();
+        return ResponseEntity.status(HttpStatus.GONE).build();
     }
 
     @GetMapping(value = "/{name}")
     public ResponseEntity<TeamDTO> getTeam(@PathVariable String name) {
-        log.info("Searching infos for team: {}", name);
-        TeamDTO team = teamService.getTeam(name);
-        log.info("Infos getted for team: {}", name);
-        return ResponseEntity.ok().body(team);
+//        log.info("Searching infos for team: {}", name);
+//        TeamDTO team = teamService.getTeam(name);
+//        log.info("Infos getted for team: {}", name);
+//        return ResponseEntity.ok().body(team);
+        return ResponseEntity.status(HttpStatus.GONE).build();
     }
 }

@@ -5,7 +5,6 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import webscraping.model.village.VillageData;
-import webscraping.util.Converters;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -40,9 +39,7 @@ public class VillageDataSelector {
         Elements symbolElements = doc.select("th:containsOwn(Symbol)");
         if (!symbolElements.isEmpty()) {
             String countrySymbol = symbolElements.first().parent().children().select("td a").attr("href");
-            villageData.setImgIcon(Converters.getBase64Image(countrySymbol.substring(0, countrySymbol.indexOf("/revision")) +
-                "/revision" +
-                "/latest/scale-to-width-down/70"));
+            villageData.setImgIcon(countrySymbol.substring(0, countrySymbol.indexOf("/revision")));
         }
         log.info("Village data getted.");
         return villageData;

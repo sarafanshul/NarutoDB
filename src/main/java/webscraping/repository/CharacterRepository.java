@@ -5,8 +5,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 import org.springframework.stereotype.Repository;
-import webscraping.model.character.CharacterDoc;
 import webscraping.model.character.CharacterDTO;
+import webscraping.model.character.CharacterDoc;
 
 import java.util.List;
 
@@ -34,6 +34,6 @@ public interface CharacterRepository extends MongoRepository<CharacterDoc, Strin
      * @return Page of characters found
      */
     @Query("{'name.english' : { '$regex':'?0' , '$options':'i' } }")
-    Page<CharacterDoc>findByNameEnglishRegexPaged(String name , Pageable pageable);
+    Page<CharacterDoc> findByNameEnglishRegexPaged(String name, Pageable pageable);
 
 }

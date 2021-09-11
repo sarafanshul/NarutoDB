@@ -2,8 +2,6 @@ package webscraping.model.jutsu;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.*;
-import webscraping.model.jutsu.JutsuDebut;
-import webscraping.model.jutsu.JutsuName;
 
 import java.io.Serializable;
 import java.util.List;

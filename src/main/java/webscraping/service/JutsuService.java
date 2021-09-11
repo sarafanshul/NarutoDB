@@ -8,8 +8,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
-import webscraping.model.jutsu.JutsuDoc;
 import webscraping.model.jutsu.JutsuDebut;
+import webscraping.model.jutsu.JutsuDoc;
 import webscraping.model.jutsu.JutsuInfo;
 import webscraping.model.jutsu.JutsuName;
 import webscraping.repository.JutsuRepository;
@@ -19,11 +19,11 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
+import static webscraping.util.JutsuInfoCheckNull.checkNullDebut;
+import static webscraping.util.JutsuInfoCheckNull.checkNullInfoName;
 import static webscraping.util.selector.jutsu.JutsuDebutSelector.getDebutJutsu;
 import static webscraping.util.selector.jutsu.JutsuInfoSelector.getInfoJutsu;
 import static webscraping.util.selector.jutsu.JutsuNameSelector.getNameJutsu;
-import static webscraping.util.JutsuInfoCheckNull.checkNullDebut;
-import static webscraping.util.JutsuInfoCheckNull.checkNullInfoName;
 
 @Slf4j
 @Service
@@ -117,6 +117,6 @@ public class JutsuService {
                 HttpStatus.BAD_REQUEST, "Length too short"
             );
         }
-        return jutsuRepository.findByNameEnglishRegexPaged(name , pageable);
+        return jutsuRepository.findByNameEnglishRegexPaged(name, pageable);
     }
 }

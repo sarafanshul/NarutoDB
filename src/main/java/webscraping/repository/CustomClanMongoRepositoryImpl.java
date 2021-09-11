@@ -12,7 +12,7 @@ import webscraping.model.clan.ClanDoc;
 import java.util.Arrays;
 import java.util.List;
 
-public class CustomClanMongoRepositoryImpl implements CustomClanMongoRepository{
+public class CustomClanMongoRepositoryImpl implements CustomClanMongoRepository {
 
     public final String COLLECTION_NAME = "clans";
 
@@ -21,6 +21,7 @@ public class CustomClanMongoRepositoryImpl implements CustomClanMongoRepository{
 
     /**
      * Finds all Clans W.R.T their Clan::member::length
+     *
      * @param pageable a Pageable object
      * @return Paged collection
      */
@@ -40,20 +41,21 @@ public class CustomClanMongoRepositoryImpl implements CustomClanMongoRepository{
                     .append("kekkeiGenkai", 1L)
                     .append("members", 1L)
                     .append("jutsus", 1L)
-            ) ,
+            ),
             q -> new Document("$sort",
                 new Document("members_size", -1L)
             ),
             Aggregation.skip((long) pageable.getPageNumber() * pageable.getPageSize()),
             Aggregation.limit(pageable.getPageSize())
         );
-        List<ClanDoc> result = mongoTemplate.aggregate(pipeline , COLLECTION_NAME ,ClanDoc.class).getMappedResults();
+        List<ClanDoc> result = mongoTemplate.aggregate(pipeline, COLLECTION_NAME, ClanDoc.class).getMappedResults();
 
-        return new PageImpl<>(result , pageable , result.size());
+        return new PageImpl<>(result, pageable, result.size());
     }
 
     /**
      * Finds all Clans W.R.T their Clan::jutsus::length
+     *
      * @param pageable a Pageable object
      * @return Paged collection
      */
@@ -80,7 +82,7 @@ public class CustomClanMongoRepositoryImpl implements CustomClanMongoRepository{
             Aggregation.skip((long) pageable.getPageNumber() * pageable.getPageSize()),
             Aggregation.limit(pageable.getPageSize())
         );
-        List<ClanDoc> result = mongoTemplate.aggregate(pipeline , COLLECTION_NAME ,ClanDoc.class).getMappedResults();
-        return new PageImpl<>(result , pageable , result.size());
+        List<ClanDoc> result = mongoTemplate.aggregate(pipeline, COLLECTION_NAME, ClanDoc.class).getMappedResults();
+        return new PageImpl<>(result, pageable, result.size());
     }
 }

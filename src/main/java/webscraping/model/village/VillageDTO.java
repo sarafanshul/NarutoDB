@@ -3,12 +3,10 @@ package webscraping.model.village;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.*;
 import org.springframework.data.annotation.Id;
-import webscraping.model.village.VillageData;
-import webscraping.model.village.VillageName;
-import webscraping.model.village.VillageStatistic;
 
 import java.io.Serializable;
 
+@Deprecated
 @Getter
 @Setter
 @AllArgsConstructor

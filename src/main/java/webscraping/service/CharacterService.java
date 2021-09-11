@@ -8,7 +8,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
-import webscraping.model.character.CharacterDoc;
 import webscraping.model.character.*;
 import webscraping.repository.CharacterRepository;
 import webscraping.util.JsoupConnection;
@@ -17,6 +16,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
+import static webscraping.util.CharacterInfoCheckNull.*;
 import static webscraping.util.selector.character.CharDatabookSelector.getDatabookInfo;
 import static webscraping.util.selector.character.CharDebutSelector.getInfoDebut;
 import static webscraping.util.selector.character.CharInfoSelector.getInfoBase;
@@ -24,7 +24,6 @@ import static webscraping.util.selector.character.CharNameSelector.getInfoName;
 import static webscraping.util.selector.character.CharPersonalSelector.getInfoPersonal;
 import static webscraping.util.selector.character.CharRankSelector.getInfoRank;
 import static webscraping.util.selector.character.CharVoiceSelector.getInfoVoices;
-import static webscraping.util.CharacterInfoCheckNull.*;
 
 @Service
 @Slf4j
@@ -131,13 +130,13 @@ public class CharacterService {
         return characterRepository.findAllOrderByJutsusSizeDesc(pageable);
     }
 
-    public Page<CharacterDoc> getCharacterByNameEnglishRegexPaged(String name , Pageable pageable) {
+    public Page<CharacterDoc> getCharacterByNameEnglishRegexPaged(String name, Pageable pageable) {
         if (name.length() < 1) {
             log.warn("String length too short.");
             throw new ResponseStatusException(
                 HttpStatus.BAD_REQUEST, "Length too short"
             );
         }
-        return characterRepository.findByNameEnglishRegexPaged(name , pageable);
+        return characterRepository.findByNameEnglishRegexPaged(name, pageable);
     }
 }

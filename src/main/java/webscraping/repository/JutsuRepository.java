@@ -5,8 +5,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 import org.springframework.stereotype.Repository;
-import webscraping.model.jutsu.JutsuDoc;
 import webscraping.model.jutsu.JutsuDTO;
+import webscraping.model.jutsu.JutsuDoc;
 
 import java.util.List;
 

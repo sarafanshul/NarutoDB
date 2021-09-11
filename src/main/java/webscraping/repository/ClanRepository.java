@@ -9,7 +9,7 @@ import webscraping.model.clan.ClanDoc;
 import java.util.List;
 
 @Repository
-public interface ClanRepository extends MongoRepository<ClanDoc, String> , CustomClanMongoRepository {
+public interface ClanRepository extends MongoRepository<ClanDoc, String>, CustomClanMongoRepository {
 
     @Deprecated
     List<ClanDTO> findByNameEnglish(String name);

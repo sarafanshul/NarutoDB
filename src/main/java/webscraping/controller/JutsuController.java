@@ -59,17 +59,18 @@ public class JutsuController {
      * Usage
      * <br>
      * <i>jutsus/like_paged/<b>shad?size=10&sort=name.english</b></i> : returns all characters with name.english containing <b>shad</b>
+     *
      * @param name to match
      * @return Page of characters found
      */
     @GetMapping(value = "like_paged/{name}")
     public ResponseEntity<Page<JutsuDoc>> getJutsuByName(
-        @PathVariable String name ,
+        @PathVariable String name,
         @PageableDefault(
             size = 20
         ) Pageable pageable
     ) {
-        Page<JutsuDoc> characters = jutsuService.getJutsuByNameEnglishRegexPaged(name , pageable);
+        Page<JutsuDoc> characters = jutsuService.getJutsuByNameEnglishRegexPaged(name, pageable);
         return ResponseEntity.ok().body(characters);
     }
 

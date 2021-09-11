@@ -83,13 +83,14 @@ public class CharacterController {
      * Usage
      * <br>
      * <i>character/page/<b>page=2&size=10</b></i>
+     *
      * @param pageable a pageable entity with index , size(default 20) , and sorting params
      * @return a pageable
      */
     @GetMapping(value = "page")
     public ResponseEntity<Page<CharacterDoc>> getAllCharactersPaged(
-            @PageableDefault(size = 20)
-                    Pageable pageable) {
+        @PageableDefault(size = 20)
+            Pageable pageable) {
         return ResponseEntity.ok().body(characterService.getAllCharactersPaged(pageable));
     }
 
@@ -99,13 +100,14 @@ public class CharacterController {
      * Usage
      * <br>
      * <i>character/power/<b>page=2&size=10</b></i>
+     *
      * @param pageable a pageable entity with index , size(default 20) , and sorting params
      * @return a pageable
      */
     @GetMapping(value = "power")
     public ResponseEntity<Page<CharacterDoc>> getAllCharactersPagedSortedByJutsusSize(
-            @PageableDefault(size = 20)
-                    Pageable pageable) {
+        @PageableDefault(size = 20)
+            Pageable pageable) {
         return ResponseEntity.ok().body(characterService.getAllCharactersPagedSortedByJutsusSize(pageable));
     }
 
@@ -116,16 +118,17 @@ public class CharacterController {
      * Usage
      * <br>
      * <i>character/like_paged/<b>uch?size=10&sort=name.english</b></i> : returns all characters with name.english containing <b>uch</b>
+     *
      * @param name to match
      * @return Page of characters found
      */
     @GetMapping(value = "like_paged/{name}")
     public ResponseEntity<Page<CharacterDoc>> getCharacterLikePaged(
-        @PathVariable String name ,
+        @PathVariable String name,
         @PageableDefault(
             size = 20
         ) Pageable pageable) {
-        Page<CharacterDoc> characters = characterService.getCharacterByNameEnglishRegexPaged(name , pageable);
+        Page<CharacterDoc> characters = characterService.getCharacterByNameEnglishRegexPaged(name, pageable);
         return ResponseEntity.ok().body(characters);
     }
 }

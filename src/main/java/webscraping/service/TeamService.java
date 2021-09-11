@@ -6,22 +6,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
-import webscraping.model.team.TeamDoc;
-import webscraping.model.team.TeamDTO;
-import webscraping.model.team.TeamDebut;
-import webscraping.model.team.TeamInfo;
-import webscraping.model.team.TeamInfoBase;
-import webscraping.model.team.TeamName;
+import webscraping.model.team.*;
 import webscraping.repository.TeamRepository;
 import webscraping.util.JsoupConnection;
 
 import java.io.IOException;
 
+import static webscraping.util.TeamInfoCheckNull.*;
 import static webscraping.util.selector.team.TeamDebutSelector.getTeamDebut;
 import static webscraping.util.selector.team.TeamInfoBaseSelector.getTeamInfoBase;
 import static webscraping.util.selector.team.TeamInfoSelector.getInfoTeam;
 import static webscraping.util.selector.team.TeamNameSelector.getTeamName;
-import static webscraping.util.TeamInfoCheckNull.*;
 
 @Slf4j
 @Service

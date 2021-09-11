@@ -1,10 +1,10 @@
-package webscraping.model.tool;
+package webscraping.model.chapter;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.*;
 
 import java.io.Serializable;
-import java.util.List;
+import java.util.Date;
 
 @Getter
 @Setter
@@ -13,12 +13,10 @@ import java.util.List;
 @ToString
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class ToolDTO implements Serializable {
+public class ChapterAirDate implements Serializable {
     private static final long serialVersionUID = 1L;
 
-    ToolName name;
-    String description;
-    ToolDebut debut;
-    List<String> wielder;
-//    String image;
+    Date japanese;
+    Date english;
+
 }

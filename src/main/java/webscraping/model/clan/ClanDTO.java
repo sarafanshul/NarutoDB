@@ -2,7 +2,6 @@ package webscraping.model.clan;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.*;
-import webscraping.model.clan.ClanName;
 
 import java.io.Serializable;
 import java.util.List;

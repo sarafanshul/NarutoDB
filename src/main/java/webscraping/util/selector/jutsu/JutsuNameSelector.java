@@ -29,12 +29,12 @@ public class JutsuNameSelector {
             } else {
                 jutsuName.setEnglish(english);
             }
-            if( nameElements.size() > 1 ) {
+            if (nameElements.size() > 1) {
                 jutsuName.setKanji(nameElements.get(1).select("rb").text());
 
                 String romaji = nameElements.get(1).select("dfn").text();
-                jutsuName.setRomaji(romaji.length() > 1 ?romaji.substring(1, romaji.length() - 1) : "");
-            }else{
+                jutsuName.setRomaji(romaji.length() > 1 ? romaji.substring(1, romaji.length() - 1) : "");
+            } else {
                 jutsuName.setKanji("");
                 jutsuName.setRomaji("");
             }

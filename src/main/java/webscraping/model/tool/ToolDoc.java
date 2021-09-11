@@ -3,8 +3,6 @@ package webscraping.model.tool;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.*;
 import org.springframework.data.mongodb.core.mapping.Document;
-import webscraping.model.tool.ToolDebut;
-import webscraping.model.tool.ToolName;
 
 import java.util.List;
 

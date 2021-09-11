@@ -4,7 +4,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 import webscraping.model.village.VillageInfo;
-import webscraping.util.Converters;
 
 import java.io.IOException;
 
@@ -33,9 +32,7 @@ public class VillageInfoSelector {
         Elements imageElements = doc.select(".infobox .image");
         if (!imageElements.isEmpty()) {
             String urlImage = imageElements.attr("href");
-            villageInfo.setImage(Converters.getBase64Image(urlImage.substring(0, urlImage.indexOf("/revision")) +
-                "/revision" +
-                "/latest/scale-to-width-down/300"));
+            villageInfo.setImage(urlImage.substring(0, urlImage.indexOf("/revision")));
         }
         log.info("Village base info getted.");
         return villageInfo;

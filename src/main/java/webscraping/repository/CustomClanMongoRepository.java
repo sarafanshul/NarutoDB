@@ -9,6 +9,7 @@ public interface CustomClanMongoRepository {
 
     /**
      * Finds all Clans W.R.T their Clan::member::length
+     *
      * @param pageable a Pageable object
      * @return Paged collection
      */
@@ -16,6 +17,7 @@ public interface CustomClanMongoRepository {
 
     /**
      * Finds all Clans W.R.T their Clan::jutsus::length
+     *
      * @param pageable a Pageable object
      * @return Paged collection
      */
