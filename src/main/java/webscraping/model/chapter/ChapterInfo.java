@@ -2,10 +2,7 @@ package webscraping.model.chapter;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.*;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.io.Serializable;
 import java.util.List;
 
 @Getter
@@ -15,18 +12,12 @@ import java.util.List;
 @ToString
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@Document(collection = "chapters")
-public class ChapterDoc implements Serializable {
+public class ChapterInfo {
     private static final long serialVersionUID = 1L;
 
-    @Id
     Double id;
-    ChapterName name;
     String description;
     List<String> images;
     String arc;
-    ChapterManga episode;
-    ChapterMusic music;
-    ChapterAirDate date;
 
 }
