@@ -1,0 +1,543 @@
+[{
+  "_id": "Amegakure",
+  "name": {
+    "english": "Amegakure",
+    "kanji": "雨隠れの里",
+    "romaji": "Amegakure no Sato"
+  },
+  "description": "Amegakure (雨隠れの里, Amegakure no Sato, literally meaning: Village Hidden by Rain) is a small but highly industrialised hidden village located in an unnamed country. As its name suggests, it rains almost constantly in Amegakure and the surrounding area. All the water seemingly ends in a large lake that surrounds the village.",
+  "image": "https://static.wikia.nocookie.net/naruto/images/4/41/Amegakure.png",
+  "data": {
+    "leader": [
+      "Hanzō",
+      "Pain",
+      "Konan"
+    ],
+    "imgIcon": "https://static.wikia.nocookie.net/naruto/images/5/5b/Amegakure_Symbol.svg"
+  },
+  "_class": "webscraping.model.village.VillageDoc"
+},{
+  "_id": "Bamboo_Village",
+  "name": {
+    "english": "Bamboo Village",
+    "kanji": "竹ノ村",
+    "romaji": "Take no Mura"
+  },
+  "description": "The Bamboo Village (竹ノ村, Take no Mura) is a small village in the Land of Hot Water. It is surrounded by a forest of bamboo, and as such most of the village's buildings and goods are made out of bamboo.",
+  "image": "https://static.wikia.nocookie.net/naruto/images/4/45/Bamboo_Village.png",
+  "data": {
+    "country": "Land of Hot Water",
+    "leader": [
+      "Iō (Bamboo Village)"
+    ]
+  },
+  "_class": "webscraping.model.village.VillageDoc"
+},{
+  "_id": "Ceramic_Village",
+  "name": {
+    "english": "Ceramic Village",
+    "kanji": "陶の里",
+    "romaji": "Chori no Sato"
+  },
+  "description": "The Ceramic Village (陶の里, Chori no Sato) was a small village in the Land of Wind, near the border with the Land of Rivers. The area surrounding the village was not as barren as most of the country, being well-forested. Per its name, the village was famous for its ceramics, the clay for which was gathered from the surrounding area.",
+  "data": {
+    "country": "Land of Wind",
+    "leader": [
+      "Mashō",
+      "Gōshō"
+    ]
+  },
+  "_class": "webscraping.model.village.VillageDoc"
+},{
+  "_id": "Hachō_Village",
+  "name": {
+    "english": "Hachō Village",
+    "kanji": "ハチョウ村",
+    "romaji": "Hachō-mura"
+  },
+  "description": "The Hachō Village (ハチョウ村, Hachō-mura) is a village lying on the outskirts of the border of the Land of Fire. They are on very friendly terms with the Tonika Village. When the village was attacked by Kabuto Yakushi in his attempt to gain access to The Hole, the villagers that were able to survive all fled to this village and the Hachō Village later sent officers to help guard the ruined village.",
+  "image": "https://static.wikia.nocookie.net/naruto/images/8/87/Hacho_village.png",
+  "data": {
+    "country": "Land of Fire",
+    "leader": [
+      "Disonasu"
+    ]
+  },
+  "_class": "webscraping.model.village.VillageDoc"
+},{
+  "_id": "Hoshigakure",
+  "name": {
+    "english": "Hoshigakure",
+    "kanji": "星隠れの里",
+    "romaji": "Hoshigakure no Sato"
+  },
+  "description": "Hoshigakure (星隠れの里, Hoshigakure no Sato, literally meaning: Village Hidden Among Stars) was introduced during the Star Guard Mission. It is founded by the First Hoshikage two hundred years before the start of the series and is located in the Land of Bears. It is also one of the lesser-known shinobi villages in the Naruto universe.",
+  "image": "https://static.wikia.nocookie.net/naruto/images/0/01/Hoshigakure.png",
+  "data": {
+    "country": "Land of Bears",
+    "leader": [
+      "Hoshikage"
+    ],
+    "imgIcon": "https://static.wikia.nocookie.net/naruto/images/2/23/Hoshigakure_Symbol.svg"
+  },
+  "_class": "webscraping.model.village.VillageDoc"
+},{
+  "_id": "Howling_Wolf_Village",
+  "name": {
+    "english": "Howling Wolf Village",
+    "kanji": "狼哭の里",
+    "romaji": "Rōkoku no Sato"
+  },
+  "description": "The Howling Wolf Village (狼哭の里, Rōkoku no Sato) was originally a settlement of the Kodon clan. Since ancient times, the settlement was periodically attacked by Rōen, a wolf-like monster. The Kodon eventually found a way to seal Rōen, bringing peace to the region and leading non-Kodon to settle in the village. By selling medicines and offering modest shinobi services, the Howling Wolf was able to support itself as a hidden village.",
+  "data": {
+    "country": "Land of Medicines"
+  },
+  "_class": "webscraping.model.village.VillageDoc"
+},{
+  "_id": "Inaho_Village",
+  "name": {
+    "english": "Inaho Village",
+    "kanji": "稲穂村",
+    "romaji": "Inaho-mura"
+  },
+  "description": "Inaho Village (稲穂村, Inaho-mura, English TV: Rice Village) is located near the hills where Genmai was kidnapped.",
+  "_class": "webscraping.model.village.VillageDoc"
+},{
+  "_id": "Ishigakure",
+  "name": {
+    "english": "Ishigakure",
+    "kanji": "石隠れの里",
+    "romaji": "Ishigakure no Sato"
+  },
+  "description": "Ishigakure (石隠れの里, Ishigakure no Sato, Viz: Hidden Rock Village, literally meaning: Village Hidden in Stones) is the hidden village of the country located between the Land of Earth and the Land of Wind.",
+  "_class": "webscraping.model.village.VillageDoc"
+},{
+  "_id": "Iwagakure",
+  "name": {
+    "english": "Iwagakure",
+    "kanji": "岩隠れの里",
+    "romaji": "Iwagakure no Sato"
+  },
+  "description": "Iwagakure (岩隠れの里, Iwagakure no Sato, English TV: Hidden Stone Village, literally meaning: Village Hidden by Rocks) is the hidden village of the Land of Earth. As the village of one of the Five Great Shinobi Countries, Iwagakure has a Kage as its leader known as the Tsuchikage, of which there have been four in its history. The rocky mountain ranges that surround the village provide a natural stronghold that it is very proud of.",
+  "image": "https://static.wikia.nocookie.net/naruto/images/e/e4/Iwagakure_no_Sato.png",
+  "data": {
+    "country": "Land of Earth",
+    "leader": [
+      "Tsuchikage"
+    ],
+    "imgIcon": "https://static.wikia.nocookie.net/naruto/images/a/a5/Iwagakure_Symbol.svg"
+  },
+  "statistic": {
+    "population": "4/5",
+    "military": "4/5",
+    "economy": "2/5"
+  },
+  "_class": "webscraping.model.village.VillageDoc"
+},{
+  "_id": "Jōmae_Village",
+  "name": {
+    "english": "Jōmae Village",
+    "kanji": "錠前の里",
+    "romaji": "Jōmae no Sato"
+  },
+  "description": "The Jōmae Village (錠前の里, Jōmae no Sato, literally meaning: Lock Village) is an anime-only shinobi village located in the Land of Keys. This village's shinobi are experts in espionage in order to gain information for negotiations with larger, more powerful nations.",
+  "image": "https://static.wikia.nocookie.net/naruto/images/a/a1/J%C5%8Dmae_Village_Symbol.svg",
+  "data": {
+    "country": "Land of Keys",
+    "leader": [
+      "Jōmae Village Head"
+    ],
+    "imgIcon": "https://static.wikia.nocookie.net/naruto/images/a/a1/J%C5%8Dmae_Village_Symbol.svg"
+  },
+  "_class": "webscraping.model.village.VillageDoc"
+},{
+  "_id": "Kagerō_Village",
+  "name": {
+    "english": "Kagerō Village",
+    "kanji": "陽炎の里",
+    "romaji": "Kagerō no Sato"
+  },
+  "description": "Kagerō Village (陽炎の里, Kagerō no Sato, English TV: Heat Devil Village, literally meaning: Heat Haze Village), was a small village located in the Land of Mountains.",
+  "image": "https://static.wikia.nocookie.net/naruto/images/8/85/Kagero_Village_Destroyed.png",
+  "data": {
+    "country": "Land of Mountains"
+  },
+  "_class": "webscraping.model.village.VillageDoc"
+},{
+  "_id": "Kirigakure",
+  "name": {
+    "english": "Kirigakure",
+    "kanji": "霧隠れの里",
+    "romaji": "Kirigakure no Sato"
+  },
+  "description": "Kirigakure (霧隠れの里, Kirigakure no Sato, English TV: Village Hidden in the Mist, literally meaning: Village Hidden by Mist) is the hidden village of the Land of Water. As the village of one of the Five Great Shinobi Countries, Kiri has a Kage as its leader known as the Mizukage, of which there have been six in its history. Befitting its name, the village is surrounded by a thick mist, with several mountains in the background, making it difficult to find by foreigners.",
+  "image": "https://static.wikia.nocookie.net/naruto/images/7/71/Kirivillage.png",
+  "data": {
+    "country": "Land of Water",
+    "leader": [
+      "Mizukage"
+    ],
+    "imgIcon": "https://static.wikia.nocookie.net/naruto/images/e/e5/Kirigakure_Symbol.svg"
+  },
+  "statistic": {
+    "population": "2/5",
+    "military": "3/5",
+    "economy": "2/5"
+  },
+  "_class": "webscraping.model.village.VillageDoc"
+},{
+  "_id": "Kisaragi_Village",
+  "name": {
+    "english": "Kisaragi Village",
+    "kanji": "如月の里",
+    "romaji": "Kisaragi no Sato"
+  },
+  "description": "Kisaragi Village (如月の里, Kisaragi no Sato) is a village south of Konohagakure. It was the subject of attacks by bandits in league with the Shirogane clan in their search for the spirit orbs.",
+  "data": {
+    "country": "Land of Fire"
+  },
+  "_class": "webscraping.model.village.VillageDoc"
+},{
+  "_id": "Konohagakure",
+  "name": {
+    "english": "Konohagakure",
+    "kanji": "木ノ葉隠れの里",
+    "romaji": "Konohagakure no Sato"
+  },
+  "description": "Konohagakure (木ノ葉隠れの里, Konohagakure no Sato, English TV: \"Village Hidden in the Leaves\" or \"Hidden Leaf Village\", literally meaning: Village Hidden by Tree Leaves) is the hidden village of the Land of Fire. As the village of one of the Five Great Shinobi Countries, Konohagakure has a Kage as its leader known as the Hokage, of which there have been seven in its history. Konoha resides deep within a forest at the base of a mountain known as the Hokage Rock, which has the faces of all those who have taken the office of Hokage engraved on it.",
+  "image": "https://static.wikia.nocookie.net/naruto/images/3/34/Konohagakure.png",
+  "data": {
+    "country": "Land of Fire",
+    "leader": [
+      "Hokage"
+    ],
+    "imgIcon": "https://static.wikia.nocookie.net/naruto/images/d/de/Konohagakure_Symbol.svg"
+  },
+  "statistic": {
+    "population": "5/5",
+    "military": "3/5",
+    "economy": "2/5"
+  },
+  "_class": "webscraping.model.village.VillageDoc"
+},{
+  "_id": "Kumogakure",
+  "name": {
+    "english": "Kumogakure",
+    "kanji": "雲隠れの里",
+    "romaji": "Kumogakure no Sato"
+  },
+  "description": "Kumogakure (雲隠れの里, Kumogakure no Sato, English TV: Hidden Cloud Village, literally meaning: Village Hidden by Clouds) is the hidden village of the Land of Lightning and was founded by the First Raikage. As the village of one of the Five Great Shinobi Countries, Kumogakure has a Kage as its leader known as the Raikage, of which there have been five in its history. The village is located in a range of tall mountains, and is literally hidden in the clouds.",
+  "image": "https://static.wikia.nocookie.net/naruto/images/5/5a/Kumogakure.png",
+  "data": {
+    "country": "Land of Lightning",
+    "leader": [
+      "Raikage"
+    ],
+    "imgIcon": "https://static.wikia.nocookie.net/naruto/images/c/c9/Kumogakure_Symbol.svg"
+  },
+  "statistic": {
+    "population": "3/5",
+    "military": "4/5",
+    "economy": "5/5"
+  },
+  "_class": "webscraping.model.village.VillageDoc"
+},{
+  "_id": "Kusagakure",
+  "name": {
+    "english": "Kusagakure",
+    "kanji": "草隠れの里",
+    "romaji": "Kusagakure no Sato"
+  },
+  "description": "Kusagakure (草隠れの里, Kusagakure no Sato, literally meaning: Village Hidden in the Grass) is located thus far in an unnamed country. Because it had genin participating in the Chūnin Exams organised by Konohagakure, it can be assumed the two villages are allied.",
+  "image": "https://static.wikia.nocookie.net/naruto/images/0/09/Kusagakure.png",
+  "data": {
+    "imgIcon": "https://static.wikia.nocookie.net/naruto/images/9/90/Kusagakure_Symbol.svg"
+  },
+  "_class": "webscraping.model.village.VillageDoc"
+},{
+  "_id": "Mount_Katsuragi",
+  "name": {
+    "english": "Mount Katsuragi",
+    "kanji": "葛城山",
+    "romaji": "Katsuragizan"
+  },
+  "description": "Mount Katsuragi (葛城山, Katsuragizan) is a mountain which holds the Tsuchigumo clan's kinjutsu. Hotaru and Tonbee live on this mountain. To prevent any intruders from obtaining the kinjutsu, the mountain is surrounded by a seemingly unbreakable barrier and protected by a large amount of traps.",
+  "image": "https://static.wikia.nocookie.net/naruto/images/d/df/Mount_Katsuragi.png",
+  "_class": "webscraping.model.village.VillageDoc"
+},{
+  "_id": "Mount_Myōboku",
+  "name": {
+    "english": "Mount Myōboku",
+    "kanji": "妙木山",
+    "romaji": "Myōbokuzan"
+  },
+  "description": "Mount Myōboku (妙木山, Myōbokuzan, literally meaning: Mysterious/Exquisite Tree Mountain), also known as the \"Mountain of Bewilderment\" (迷いの山, Mayoi no Yama, Viz: Maze Mountain) and the \"Land of Toads\" (蝦蟇の国, Gama no Kuni), is one of the big three unexplored sage regions, a legendary place that is equally as famous as the other two, Shikkotsu Forest and Ryūchi Cave. It's the land of toads and the place where all the toads that Naruto, Minato, and Jiraiya have summoned live. It is home for huge and small toads alike. Mount Myōboku is a rich and beautiful land, whose ultimate authority seems to be the Great Toad Sage. Shima and Fukasaku are both elders and sages, and they seem to have an even higher authority than Gamabunta himself.",
+  "image": "https://static.wikia.nocookie.net/naruto/images/5/50/My%C5%8Dbokuzan.PNG",
+  "data": {
+    "leader": [
+      "Gamamaru"
+    ],
+    "imgIcon": "https://static.wikia.nocookie.net/naruto/images/3/31/Toad_Symbol.svg"
+  },
+  "_class": "webscraping.model.village.VillageDoc"
+},{
+  "_id": "Nadeshiko_Village",
+  "name": {
+    "english": "Nadeshiko Village",
+    "kanji": "撫子の里",
+    "romaji": "Nadeshiko no Sato"
+  },
+  "description": "The Nadeshiko Village (撫子の里, Nadeshiko no Sato) is a shinobi village located near the Land of Water. The families of this village are organised through matrilineality. Women from this village must venture outside to find men strong enough to defeat them, resulting in them being taken to the village to marry the kunoichi they defeated.",
+  "image": "https://static.wikia.nocookie.net/naruto/images/f/f2/Nadeshiko_village.png",
+  "data": {
+    "leader": [
+      "Former Leader of Nadeshiko Village",
+      "Shizuka"
+    ],
+    "imgIcon": "https://static.wikia.nocookie.net/naruto/images/1/15/Nadeshiko_Village_Symbol.svg"
+  },
+  "_class": "webscraping.model.village.VillageDoc"
+},{
+  "_id": "Otogakure",
+  "name": {
+    "english": "Otogakure",
+    "kanji": "音隠れの里",
+    "romaji": "Otogakure no Sato"
+  },
+  "description": "Otogakure (音隠れの里, Otogakure no Sato, English TV: Village Hidden in the Sound, literally meaning: Village Hidden by Sound) is the personal hidden village of Orochimaru, which was founded for the express purpose of collecting ninja for his experiments and his quest to learn all techniques. In later years, following Orochimaru's new appreciation for natural development of people and making a truce with Konohagakure, Orochimaru reestablished the village as a legitimate shinobi village.",
+  "image": "https://static.wikia.nocookie.net/naruto/images/c/cc/Otogakure.png",
+  "data": {
+    "country": "Land of Sound",
+    "leader": [
+      "Orochimaru"
+    ],
+    "imgIcon": "https://static.wikia.nocookie.net/naruto/images/f/f3/Otogakure_Symbol.svg"
+  },
+  "_class": "webscraping.model.village.VillageDoc"
+},{
+  "_id": "Ryūchi_Cave",
+  "name": {
+    "english": "Ryūchi Cave",
+    "kanji": "龍地洞",
+    "romaji": "Ryūchidō"
+  },
+  "description": "Ryūchi Cave (龍地洞, Ryūchidō, literally meaning: Dragon Ground Cave) is one of the big three unexplored sage regions, a legendary place that is equally famous as the other two, Mount Myōboku and Shikkotsu Forest. It is the residence of the snakes — including the sacred White Snake Sage — and is also where Orochimaru uncovered the source of Jūgo's clan's abilities. Orochimaru and Kabuto Yakushi trained here to achieve Sage Mode, though only the latter was successful in this endeavour.",
+  "image": "https://static.wikia.nocookie.net/naruto/images/a/ac/Ry%C5%ABchi_Cave.png",
+  "data": {
+    "leader": [
+      "White Snake Sage"
+    ],
+    "imgIcon": "https://static.wikia.nocookie.net/naruto/images/1/1d/Ry%C5%ABchi_Cave_Symbol.svg"
+  },
+  "_class": "webscraping.model.village.VillageDoc"
+},{
+  "_id": "Shikkotsu_Forest",
+  "name": {
+    "english": "Shikkotsu Forest",
+    "kanji": "湿骨林",
+    "romaji": "Shikkotsurin"
+  },
+  "description": "The Shikkotsu Forest (湿骨林, Shikkotsurin, English TV: Shikkotsu Woods, literally meaning: Damp Bone Forest) is a legendary place and one of the three unexplored sage regions; the other two being: Mount Myōboku and Ryūchi Cave. It is the home of the slug Katsuyu, parts of which are summoned by Tsunade and her disciple Sakura Haruno.",
+  "image": "https://static.wikia.nocookie.net/naruto/images/3/38/Shikkotsu_Forest_Symbol.svg",
+  "data": {
+    "imgIcon": "https://static.wikia.nocookie.net/naruto/images/3/38/Shikkotsu_Forest_Symbol.svg"
+  },
+  "_class": "webscraping.model.village.VillageDoc"
+},{
+  "_id": "Shimogakure",
+  "name": {
+    "english": "Shimogakure",
+    "kanji": "霜隠れの里",
+    "romaji": "Shimogakure no Sato"
+  },
+  "description": "Shimogakure (霜隠れの里, Shimogakure no Sato, literally meaning: Village Hidden in Frost) is the hidden village located in the Land of Frost.",
+  "image": "https://static.wikia.nocookie.net/naruto/images/e/ee/Land_of_Frost_Symbol.svg",
+  "data": {
+    "country": "Land of Frost",
+    "imgIcon": "https://static.wikia.nocookie.net/naruto/images/e/ee/Land_of_Frost_Symbol.svg"
+  },
+  "_class": "webscraping.model.village.VillageDoc"
+},{
+  "_id": "Sugi_Village",
+  "name": {
+    "english": "Sugi Village",
+    "kanji": "杉の里",
+    "romaji": "Sugi no Sato"
+  },
+  "description": "Sugi Village (杉の里, Sugi no Sato, literally meaning: Cedar Village) is an anime-only ninja village, in an unspecified country.",
+  "_class": "webscraping.model.village.VillageDoc"
+},{
+  "_id": "Sunagakure",
+  "name": {
+    "english": "Sunagakure",
+    "kanji": "砂隠れの里",
+    "romaji": "Sunagakure no Sato"
+  },
+  "description": "Sunagakure (砂隠れの里, Sunagakure no Sato, literally meaning: Village Hidden by Sand) is the hidden village of the Land of Wind. As the village of one of the Five Great Shinobi Countries, Sunagakure has a Kage as its leader known as the Kazekage, of which there have been five in its history. Being surrounded by desert offers the village a natural deterrent against invasion, as few foreign powers would be willing to endure the sandstorms and water scarcity common to Suna.",
+  "image": "https://static.wikia.nocookie.net/naruto/images/b/b0/Sunagakure.png",
+  "data": {
+    "country": "Land of Wind",
+    "leader": [
+      "Kazekage"
+    ],
+    "imgIcon": "https://static.wikia.nocookie.net/naruto/images/1/18/Sunagakure_Symbol.svg"
+  },
+  "statistic": {
+    "population": "2/5",
+    "military": "2/5",
+    "economy": "2/5"
+  },
+  "_class": "webscraping.model.village.VillageDoc"
+},{
+  "_id": "Takigakure",
+  "name": {
+    "english": "Takigakure",
+    "kanji": "滝隠れの里",
+    "romaji": "Takigakure no Sato"
+  },
+  "description": "Takigakure (滝隠れの里, Takigakure no Sato, literally meaning: Village Hidden by a Waterfall) is a village located in an unnamed country. In terms of the village's appearance, Takigakure seems to be based on mostly Southeast Asian aesthetics. Their current leader is Shibuki.",
+  "image": "https://static.wikia.nocookie.net/naruto/images/b/bc/Takigakure.png",
+  "data": {
+    "leader": [
+      "Hisen",
+      "Shibuki",
+      "Senji"
+    ],
+    "imgIcon": "https://static.wikia.nocookie.net/naruto/images/5/5f/Takigakure_Symbol.svg"
+  },
+  "_class": "webscraping.model.village.VillageDoc"
+},{
+  "_id": "Takumi_Village",
+  "name": {
+    "english": "Takumi Village",
+    "kanji": "匠の里",
+    "romaji": "Takumi no Sato"
+  },
+  "description": "Takumi Village (匠の里, Takumi no Sato, literally meaning: Village of Artisans) is an anime-only village that resides in the Land of Rivers. It was founded approximately one hundred years ago by a man named Seimei. Takumi is known for its skills in making weaponry, many of which are sold to the ninja villages of the world.",
+  "image": "https://static.wikia.nocookie.net/naruto/images/8/88/Takumi_Village.png",
+  "data": {
+    "country": "Land of Rivers",
+    "leader": [
+      "Seimei"
+    ],
+    "imgIcon": "https://static.wikia.nocookie.net/naruto/images/e/e7/Takumi_Village_Symbol.svg"
+  },
+  "_class": "webscraping.model.village.VillageDoc"
+},{
+  "_id": "Tanigakure",
+  "name": {
+    "english": "Tanigakure",
+    "kanji": "谷隠れの里",
+    "romaji": "Tanigakure no Sato"
+  },
+  "description": "Tanigakure (谷隠れの里, Tanigakure no Sato, literally meaning: Village Hidden in Valleys) is the hidden village of the Land of Rivers.",
+  "data": {
+    "country": "Land of Rivers"
+  },
+  "_class": "webscraping.model.village.VillageDoc"
+},{
+  "_id": "Tonika_Village",
+  "name": {
+    "english": "Tonika Village",
+    "kanji": "トニカ村",
+    "romaji": "Tonika-mura"
+  },
+  "description": "The Tonika Village (トニカ村, Tonika-mura) is a village located on the outskirts of the border of the Land of Fire. It is also where The Hole is located. The village was destroyed during Kabuto Yakushi's invasion which was geared towards acquiring The Hole to conduct his experiments. During the invasion, the villagers fought bravely to defend their home, but Kabuto's reincarnated pawns were too powerful and overwhelming.",
+  "image": "https://static.wikia.nocookie.net/naruto/images/3/36/Tonika_village.png",
+  "data": {
+    "country": "Land of Fire",
+    "leader": [
+      "Tonika Village Head"
+    ]
+  },
+  "_class": "webscraping.model.village.VillageDoc"
+},{
+  "_id": "Tsuchigumo_Village",
+  "name": {
+    "english": "Tsuchigumo Village"
+  },
+  "description": "The Tsuchigumo village is the village of the Tsuchigumo clan. It is led by the Tsuchigumo chief. This village is composed of the members of the Tsuchigumo clan who refused to follow En no Gyōja to Mount Katsuragi, and consequently denied the Tsuchigumo clan kinjutsu. They were made into pawns by the Magaki Group, who sought the kinjutsu.",
+  "image": "https://static.wikia.nocookie.net/naruto/images/a/a7/Tsuchigumo_Village.png",
+  "data": {
+    "leader": [
+      "Tsuchigumo Chief"
+    ],
+    "imgIcon": "https://static.wikia.nocookie.net/naruto/images/0/09/Tsuchigumo_Symbol.svg"
+  },
+  "_class": "webscraping.model.village.VillageDoc"
+},{
+  "_id": "Tsukigakure",
+  "name": {
+    "english": "Tsukigakure",
+    "kanji": "月隠れの里",
+    "romaji": "Tsukigakure no Sato"
+  },
+  "description": "Tsukigakure (月隠れの里, Tsukigakure no Sato, English: Hidden Moon Village, literally meaning: Village Hidden under the Moon) is a hidden village led by Tsukino, who succeeded her father after he died. They have a hereditary system and so positions are passed down to the next generation.",
+  "image": "https://static.wikia.nocookie.net/naruto/images/e/ea/Tsukigakure_Symbol.svg",
+  "data": {
+    "leader": [
+      "Tsukino's Father",
+      "Tsukino"
+    ],
+    "imgIcon": "https://static.wikia.nocookie.net/naruto/images/e/ea/Tsukigakure_Symbol.svg"
+  },
+  "_class": "webscraping.model.village.VillageDoc"
+},{
+  "_id": "Uzushiogakure",
+  "name": {
+    "english": "Uzushiogakure",
+    "kanji": "渦潮隠れの里",
+    "romaji": "Uzushiogakure no Sato"
+  },
+  "description": "Uzushiogakure (渦潮隠れの里, Uzushiogakure no Sato, English TV: Hidden Eddy Village, literally meaning: Village Hidden by Whirling Tides) was the shinobi village of the Land of Whirlpools. Its ninja were renowned for their fūinjutsu to the point that it led to its destruction in war. Those who survived the village's destruction scattered across the globe to seek refuge.",
+  "image": "https://static.wikia.nocookie.net/naruto/images/3/31/Uzushio.png",
+  "data": {
+    "country": "Land of Whirlpools",
+    "imgIcon": "https://static.wikia.nocookie.net/naruto/images/0/06/Uzushiogakure_Symbol.svg"
+  },
+  "_class": "webscraping.model.village.VillageDoc"
+},{
+  "_id": "Yugakure",
+  "name": {
+    "english": "Yugakure",
+    "kanji": "湯隠れの里",
+    "romaji": "Yugakure no Sato"
+  },
+  "description": "Yugakure (湯隠れの里, Yugakure no Sato, literally meaning: Village Hidden in Hot Water) is the hidden village of the Land of Hot Water. Like the country in which it resides, Yugakure has strong inclinations towards pacifism.",
+  "image": "https://static.wikia.nocookie.net/naruto/images/d/d3/Yugakure.PNG",
+  "data": {
+    "country": "Land of Hot Water",
+    "imgIcon": "https://static.wikia.nocookie.net/naruto/images/6/66/Yugakure_Symbol.svg"
+  },
+  "_class": "webscraping.model.village.VillageDoc"
+},{
+  "_id": "Yukigakure",
+  "name": {
+    "english": "Yukigakure",
+    "kanji": "雪隠れの里",
+    "romaji": "Yukigakure no Sato"
+  },
+  "description": "Yukigakure (雪隠れの里, Yukigakure no Sato, literally meaning: Village Hidden Among Snow) is a hidden village located in the Land of Snow. Its ninja apparently specialise in manipulating pre-existing ice, typically in the forms of various animals.",
+  "image": "https://static.wikia.nocookie.net/naruto/images/2/26/Yukigakure_Symbol.svg",
+  "data": {
+    "country": "Land of Snow",
+    "imgIcon": "https://static.wikia.nocookie.net/naruto/images/2/26/Yukigakure_Symbol.svg"
+  },
+  "_class": "webscraping.model.village.VillageDoc"
+},{
+  "_id": "Yumegakure",
+  "name": {
+    "english": "Yumegakure",
+    "kanji": "夢隠れの里",
+    "romaji": "Yumegakure no Sato"
+  },
+  "description": "Yumegakure (夢隠れの里, Yumegakure no Sato, literally meaning: Village Hidden Among Dreams) is a small village located in a deep forest of a tiny country, near the border of the Land of Fire. It is led by Enzo Tenrō.",
+  "image": "https://static.wikia.nocookie.net/naruto/images/5/5e/Yumegakure.png",
+  "data": {
+    "leader": [
+      "Enzo Tenrō"
+    ],
+    "imgIcon": "https://static.wikia.nocookie.net/naruto/images/0/04/Yumegakure_Symbol.svg"
+  },
+  "_class": "webscraping.model.village.VillageDoc"
+}]
