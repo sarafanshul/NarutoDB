@@ -5,6 +5,6 @@ import org.springframework.stereotype.Repository;
 import webscraping.model.chapter.ChapterDoc;
 
 @Repository
-public interface ChapterRepository extends MongoRepository<ChapterDoc , Double> {
+public interface ChapterRepository extends MongoRepository<ChapterDoc , String> {
 
 }

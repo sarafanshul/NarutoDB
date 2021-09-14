@@ -89,7 +89,7 @@ public class CharInfoSelector {
         }
         charInfo.setTools(tools);
 
-        //character images
+        // character images
         // return uri instead
         List<String> images = new ArrayList<>();
         Elements imageElements = doc.select(".infobox .image");

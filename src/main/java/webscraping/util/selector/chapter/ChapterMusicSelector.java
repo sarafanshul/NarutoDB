@@ -24,7 +24,6 @@ public class ChapterMusicSelector {
         catch (IndexOutOfBoundsException e){
             log.error("Index : Music", e);
         }
-        log.info(music.getOpening() +"\n" + music.getEnding());
         return music;
     }
 }

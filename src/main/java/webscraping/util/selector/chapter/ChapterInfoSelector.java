@@ -6,6 +6,9 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import webscraping.model.chapter.ChapterInfo;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Slf4j
 public class ChapterInfoSelector {
 
@@ -13,7 +16,7 @@ public class ChapterInfoSelector {
 
     public static ChapterInfo getInfo(Document doc){
 
-        ChapterInfo  info = new ChapterInfo() ;
+        ChapterInfo info = new ChapterInfo() ;
 
         // description
         try {
@@ -22,7 +25,7 @@ public class ChapterInfoSelector {
             for( Element e : elem ){
                 description.append(e.text()).append('\n');
             }
-            info.setDescription(description.toString());
+            info.setDescription(description.toString().trim());
         }
         catch (NullPointerException e){
             log.error("Null Pointer , Info-description" , e);
@@ -36,7 +39,17 @@ public class ChapterInfoSelector {
             log.error("Null Pointer , Info" , e);
         }
 
-        // images
+        // character images
+        // return uri instead
+        List<String> images = new ArrayList<>();
+        Elements imageElements = doc.select(".image.image-thumbnail");
+        if (!imageElements.isEmpty()) {
+            for (Element image : imageElements) {
+                String urlImage = image.attr("href");
+                images.add(urlImage.substring(0, urlImage.indexOf("/revision")));
+            }
+            info.setImages(images);
+        }
 
         return info ;
     }

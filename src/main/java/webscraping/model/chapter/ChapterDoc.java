@@ -20,12 +20,13 @@ public class ChapterDoc implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
-    Double id;
+    String id;
     ChapterName name;
+    ChapterEpisode episode;
     String description;
     List<String> images;
     String arc;
-    ChapterManga episode;
+    ChapterManga manga;
     ChapterMusic music;
     ChapterAirDate date;
 

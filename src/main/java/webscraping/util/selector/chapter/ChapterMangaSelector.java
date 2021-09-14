@@ -13,13 +13,9 @@ public class ChapterMangaSelector {
     public static ChapterManga getInfo(Document doc){
 
         ChapterManga chapterManga = new ChapterManga();
-
         try{
             Elements elem = doc.select("div[data-source=\"chapters\"] div");
-            log.info( "\n\n\n" + elem.text());
-
             chapterManga.setChapters( elem.eachText() );
-
         }catch (Exception e){
             log.error("Unknown Exception , Chapter manga" , e);
         }
