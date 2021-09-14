@@ -378,3 +378,12 @@ GET /clan/order_by_jutsus
 
    
 </details>
+
+
+### How to build a jar file yourself.
+- Make sure you are on release branch
+- add `<packaging>jar</packaging>` to your `pom.xml` | refer [this](https://www.youtube.com/watch?v=UvyYv3WhzjI)
+- build with `mvn clean package`
+- if you get `no main manifest attribute, in .\NarutoDB-1.0-SNAPSHOT.jar`
+- build with `mvn package spring-boot:repackage`
+- run the `**SNAPSHOT.jar` with `java -jar filename.jar`
