@@ -24,6 +24,9 @@ public class CustomCharacterMongoRepositoryImpl implements CustomCharacterMongoR
     public final String ENGLISH_NAME = "name.english";
     public final String COLLECTION_NAME = "characters";
 
+    public static final int SORT_ASC = 1;
+    public static final int SORT_DESC = -1;
+
     @Autowired
     MongoTemplate mongoTemplate;
 
@@ -56,43 +59,56 @@ public class CustomCharacterMongoRepositoryImpl implements CustomCharacterMongoR
     /**
      * Returns a Paged Result of Characters W.R.T Characters::jutsus::length , order DESC
      *
+     * while adding a new field in project all others get excluded , hence brute force see
+     * <a href=https://stackoverflow.com/questions/19431773/include-all-existing-fields-and-add-new-fields-to-document>here</a>
+     *
      * @param pageable Pageable object for pagination
      * @return paged result in order of Jutsu size , DESC
      */
-    /*
-    while adding a new field in project all others get excluded , hence brute force
-    https://stackoverflow.com/questions/19431773/include-all-existing-fields-and-add-new-fields-to-document
-     */
-    @Override
-    public Page<CharacterDoc> findAllOrderByJutsusSizeDesc(Pageable pageable) {
+    public Page<CharacterDoc> findAllOrderByJutsusSize(Pageable pageable , int sortOrder ) {
         Aggregation pipeline = Aggregation.newAggregation(
-            p ->
-                new Document("$project",
-                    new Document("jutsus_count",
-                        new Document("$size",
-                            new Document("$ifNull", Arrays.asList("$jutsus", Arrays.asList()))))
-                        .append("_id", 1L)
-                        .append("name", 1L)
-                        .append("description", 1L)
-                        .append("images", 1L)
-                        .append("debut", 1L)
-                        .append("voices", 1L)
-                        .append("personal", 1L)
-                        .append("charRank", 1L)
-                        .append("family", 1L)
-                        .append("natureTypes", 1L)
-                        .append("uniqueTraits", 1L)
-                        .append("jutsus", 1L)
-                        .append("tools", 1L)
-                        .append("databooks", 1L)),
-            q ->
-                new Document("$sort",
-                    new Document("jutsus_count", -1L)
-                ),
+            r -> new Document("$match",
+                new Document("jutsus",
+                    new Document("$exists", true)
+                        .append("$not",
+                            new Document("$size", 0L)))),
+
+            p -> new Document("$project",
+                new Document("jutsus_count",
+                    new Document("$size",
+                        new Document("$ifNull", Arrays.asList("$jutsus", Arrays.asList()))))
+                    .append("_id", 1L)
+                    .append("name", 1L)
+                    .append("description", 1L)
+                    .append("images", 1L)
+                    .append("debut", 1L)
+                    .append("voices", 1L)
+                    .append("personal", 1L)
+                    .append("charRank", 1L)
+                    .append("family", 1L)
+                    .append("natureTypes", 1L)
+                    .append("uniqueTraits", 1L)
+                    .append("jutsus", 1L)
+                    .append("tools", 1L)
+                    .append("databooks", 1L)),
+
+            q -> new Document("$sort",
+                new Document("jutsus_count", sortOrder)
+            ),
             Aggregation.skip((long) pageable.getPageNumber() * pageable.getPageSize()),
             Aggregation.limit(pageable.getPageSize())
         );
         List<CharacterDoc> results = mongoTemplate.aggregate(pipeline, COLLECTION_NAME, CharacterDoc.class).getMappedResults();
         return new PageImpl<>(results, pageable, results.size());
+    }
+
+    @Override
+    public Page<CharacterDoc> findAllOrderByJutsusSizeDesc(Pageable pageable) {
+        return findAllOrderByJutsusSize(pageable , SORT_DESC);
+    }
+
+    @Override
+    public Page<CharacterDoc> findAllOrderByJutsusSizeAsc(Pageable pageable) {
+        return findAllOrderByJutsusSize(pageable , SORT_ASC);
     }
 }

@@ -23,22 +23,22 @@ public class VillageController {
     @Autowired
     VillageService villageService;
 
-    @PostMapping(value = "id/{id}")
-    public ResponseEntity<Void> saveVillage(@PathVariable String id) {
+    @PostMapping(value = "id")
+    public ResponseEntity<Void> saveVillage(@RequestParam String id) {
         log.info("Starting get info for village: {}", id);
         villageService.insert(id);
         log.info("Village {} info saved.", id);
         return ResponseEntity.noContent().build();
     }
 
-    @GetMapping(value = "id/{id}")
-    public ResponseEntity<VillageDoc> getVillage(@PathVariable String id) {
+    @GetMapping(value = "id")
+    public ResponseEntity<VillageDoc> getVillage(@RequestParam String id) {
         VillageDoc village = villageService.getVillage(id);
         return ResponseEntity.ok().body(village);
     }
 
-    @GetMapping(value = "like/{name}")
-    public ResponseEntity<Collection<VillageDoc>> getCharacterLike(@PathVariable String name) {
+    @GetMapping(value = "like")
+    public ResponseEntity<Collection<VillageDoc>> getCharacterLike(@RequestParam String name) {
         return ResponseEntity.ok().body(villageService.getVillageByNameEnglishRegex(name));
     }
 
@@ -65,5 +65,7 @@ public class VillageController {
     ) {
         return ResponseEntity.ok().body(villageService.getAllVillagesPaged(pageable));
     }
+
+    // add like paged if needed ?>?
 
 }

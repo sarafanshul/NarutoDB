@@ -1,0 +1,17 @@
+
+// match ops for filtering not null names , images , debut to [naruto , naruto s ,boruto]
+{
+  "name.english" : {"$ne":""} ,
+  "images" : {"$ne":null} ,
+  "debut.anime.name" : {"$in" : ["Naruto Shippūden" ,"Naruto" ,"Boruto"]}
+}
+
+// debut sort
+{
+  "debut.anime": 1 or -1
+}
+
+// alpha sort
+{
+  "name.english": 1 or -1
+}

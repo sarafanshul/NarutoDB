@@ -40,4 +40,12 @@ public interface CharacterRepository extends MongoRepository<CharacterDoc, Strin
     @Query("{'name.english' : { '$regex':'?0' , '$options':'i' } }")
     Page<CharacterDoc> findByNameEnglishRegexPaged(String name, Pageable pageable);
 
+    /**
+     * Returns filtered characters by (name != null , image != null , anime = Naruto & Naruto S)
+     * @param pageable customization config for a page
+     * @return filtered list of characters paged and sorted (if asked)
+     */
+    @Query("{ \"name.english\" : {\"$ne\":\"\"} , \"images\" : {\"$ne\":null} , \"debut.anime.name\" : {\"$in\" : [\"Naruto Shippūden\" ,\"Naruto\"]} }")
+    Page<CharacterDoc> findAllFilterByNameEnglishCoreNaruto(Pageable pageable);
+
 }

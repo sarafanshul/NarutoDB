@@ -130,8 +130,12 @@ public class CharacterService {
         return characterRepository.findAll(pageable);
     }
 
-    public Page<CharacterDoc> getAllCharactersPagedSortedByJutsusSize(Pageable pageable) {
+    public Page<CharacterDoc> findAllOrderByJutsusSizeDesc(Pageable pageable) {
         return characterRepository.findAllOrderByJutsusSizeDesc(pageable);
+    }
+
+    public Page<CharacterDoc> findAllOrderByJutsusSizeAsc(Pageable pageable) {
+        return characterRepository.findAllOrderByJutsusSizeAsc(pageable);
     }
 
     public Page<CharacterDoc> getCharacterByNameEnglishRegexPaged(String name, Pageable pageable) {
@@ -142,5 +146,9 @@ public class CharacterService {
             );
         }
         return characterRepository.findByNameEnglishRegexPaged(name, pageable);
+    }
+
+    public Page<CharacterDoc> findAllFilterByNameEnglishCoreNaruto(Pageable pageable){
+        return characterRepository.findAllFilterByNameEnglishCoreNaruto(pageable);
     }
 }

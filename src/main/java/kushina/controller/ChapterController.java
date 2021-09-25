@@ -25,14 +25,14 @@ public class ChapterController {
     @Autowired
     ChapterService chapterService;
 
-    @PostMapping(value = "id/{id}")
-    public ResponseEntity<Void> insertChapter(@PathVariable String id) {
+    @PostMapping(value = "id")
+    public ResponseEntity<Void> insertChapter(@RequestParam String id) {
         chapterService.insert(id);
         return ResponseEntity.ok().build();
     }
 
-    @GetMapping(value = "id/{id}")
-    public ResponseEntity<ChapterDoc> getChapter(@PathVariable String id) {
+    @GetMapping(value = "id")
+    public ResponseEntity<ChapterDoc> getChapter(@RequestParam String id) {
         ChapterDoc character = chapterService.getChapter(id);
         return ResponseEntity.ok().body(character);
     }
@@ -62,5 +62,8 @@ public class ChapterController {
     public ResponseEntity<List<ChapterDoc>> getAllChaptersSorted() {
         return ResponseEntity.ok().body(chapterService.getAllChaptersSorted());
     }
+
+    // new endpoints for sort out episodes by season ie Naruto , Naruto S
+
 
 }

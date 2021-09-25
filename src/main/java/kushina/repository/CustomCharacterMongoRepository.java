@@ -21,4 +21,7 @@ public interface CustomCharacterMongoRepository {
     List<CharacterDoc> getCharacterByMatchingEnglishName(String name);
 
     Page<CharacterDoc> findAllOrderByJutsusSizeDesc(Pageable pageable);
+
+    Page<CharacterDoc> findAllOrderByJutsusSizeAsc(Pageable pageable);
+
 }
