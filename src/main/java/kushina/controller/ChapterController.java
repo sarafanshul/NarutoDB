@@ -63,7 +63,19 @@ public class ChapterController {
         return ResponseEntity.ok().body(chapterService.getAllChaptersSorted());
     }
 
-    // new endpoints for sort out episodes by season ie Naruto , Naruto S
-
+    /**
+     * For fetching all cannon episodes
+     * Usage
+     * <br>
+     * <i>chapter/<b>cannon?sort=episode.absoluteEpisodeNumber,desc<b/><i/>
+     * @param pageable query api
+     * @return Page of all cannon episodes
+     */
+    @GetMapping(value = "cannon")
+    public  ResponseEntity<Page<ChapterDoc>> getAllChapterCannon(
+        @PageableDefault(size = 20)
+            Pageable pageable ){
+        return ResponseEntity.ok().body( chapterService.getAllChaptersCannon(pageable) );
+    }
 
 }

@@ -105,4 +105,8 @@ public class ChapterService {
     public List<ChapterDoc> getAllChaptersSorted() {
         return chapterRepository.findAllByOrderByEpisodeAbsoluteEpisodeNumberAsc();
     }
+
+    public Page<ChapterDoc> getAllChaptersCannon( Pageable pageable ){
+        return chapterRepository.findAllChaptersCannon( pageable ) ;
+    }
 }
