@@ -4,377 +4,63 @@
 Web scraping API created using [JSOUP](https://jsoup.org) to get the Naruto anime data from
 the [NarutoFandom](https://naruto.fandom.com/wiki/Narutopedia) web page and save it in the mongoDB database.
 
+## What's New (v-1.1)
+- Add new endpoints in characters and episodes for ease and extensiblity
+- The endpoints are now query based like `/id?id=x` instead of old statically mapped `id/x` for ease
+- Add autuator for metrics and heath statistics
+- Add Profiles `dev` and `prod` for different usecase
+
 ## Technologies used
-* Java 
+* Java
 * Spring Boot
 * JSOUP
+* Maven
 * MongoDB
 
 ## Requests
 
-<details><summary>Character Endpoint</summary>
+<details><summary>Example Character Endpoint</summary>
 
 ```http
-POST /character/id/{id}
+POST /character/id
 ```
 
 ```http
-GET /character/id/{id}
-GET /character/name/{name}
-GET /character/like/{name}
+GET /character/id
+GET /character/name
+GET /character/like
 GET /character/all
 GET /character/page
+GET /character/power
+GET /character/like_paged
+GET /character/core
 ```
 
 ### Example
 * Use the same name found at the end of the url
     * https://naruto.fandom.com/wiki/Naruto_Uzumaki
 * Use an HTTP POST /id request to save data in mongoDB
-    * **localhost:8080/character/id/Naruto_Uzumaki**
-* Use an HTTP GET /id request to get data with above id in mongoDB
-    * **localhost:8080/character/id/Naruto_Uzumaki**
-* Use an HTTP GET /name request to match english name in mongoDB
-    * **localhost:8080/character/name/Naruto**
+   * **localhost:8080/clan/id?id=Hyuga_Clan**
 * Use an HTTP GET /like request to regex match data in mongoDB
-    * **localhost:8080/character/like/hina**
+    * **localhost:8080/character/like?name=hina**
 * Use an HTTP GET /all request to fetch all save data in mongoDB
     * **localhost:8080/character/all**
 * Use an HTTP GET /page request to fetch pageable data in mongoDB
     * **localhost:8080/character/page?page=0&size=5&sort=id,asc**
 
-### Character document example in mongoDB
-```json
-{
-  "name": {
-    "english": "Naruto Uzumaki",
-    "kanji": "うずまきナルト",
-    "romaji": "Uzumaki Naruto",
-    "others": [
-      "The Show-Off, Number One Unpredictable, Noisy Ninja (目立ちたがり屋で意外性No.のドタバタ忍者, Medachitagariya de Igaisei Nanbā Wan no Dotabata Ninja, English TV: Number One Hyperactive, Knucklehead Ninja)",
-      "Child of the Prophecy (予言の子, Yogen no Ko)",
-      "Saviour of this World (この世の救世主, Kono Yo no Kyūseishu)",
-      "Hero of the Hidden Leaf (木ノ葉隠れの英雄, Konohagakure no Eiyū, literally meaning: Hero of the Hidden Tree Leaves)",
-      "Boy of Miracles (奇跡を起こす少年, Kiseki o Okosu Shōnen)",
-      "Konoha's Orange Hokage (木ノ葉のオレンジ火影, Konoha no Orenji Hokage, literally meaning: Tree Leaves' Orange Fire Shadow)",
-      "Seventh Hokage (七代目火影, Nanadaime Hokage, literally meaning: Seventh Fire Shadow)",
-      "Fox (狐, Kitsune)"
-    ]
-  },
-  "description": "Naruto Uzumaki (うずまきナルト, Uzumaki Naruto) is a shinobi of Konohagakure's Uzumaki clan. He became the jinchūriki of the Nine-Tails on the day of his birth — a fate that caused him to be shunned by most of Konoha throughout his childhood. After joining Team Kakashi, Naruto worked hard to gain the village's acknowledgement all the while chasing his dream to become Hokage. In the following years, through many hardships and ordeals, he became a capable ninja regarded as a hero both by the villagers, and soon after, the rest of the world, becoming known as the Hero of the Hidden Leaf (木ノ葉隠れの英雄, Konohagakure no Eiyū, literally meaning: Hero of the Hidden Tree Leaves). He soon proved to be one of the main factors in winning the Fourth Shinobi World War, leading him to achieve his dream and become the village's Seventh Hokage (七代目火影, Nanadaime Hokage, literally meaning: Seventh Fire Shadow).",
-  "images": [
-    "base64 img string"
-  ],
-  "debut": {
-    "manga": {
-      "name": "Naruto",
-      "volume": 1,
-      "chapter": 1
-    },
-    "anime": {
-      "name": "Naruto",
-      "episode": 1
-    },
-    "novel": "Naruto: Innocent Heart, Demonic Blood",
-    "movie": "Naruto the Movie: Ninja Clash in the Land of Snow",
-    "game": "Naruto: Konoha Ninpōchō",
-    "ova": "Find the Four-Leaf Red Clover!",
-    "appears": [
-      "Anime",
-      "Manga",
-      "Novel",
-      "Game",
-      "Movie"
-    ]
-  },
-  "voices": {
-    "english": [
-      "Maile Flanagan",
-      "Stephanie Sheh",
-      "Jeannie Elias",
-      "Mary Elizabeth McGlynn",
-      "Kate Higgins"
-    ],
-    "japanese": [
-      "Junko Takeuchi",
-      "Ema Kogure"
-    ]
-  },
-  "personal": {
-    "birthDate": "October 10",
-    "sex": "Male",
-    "age": [
-      "Part I: 12–13",
-      "Part II: 15–17"
-    ],
-    "status": "Alive",
-    "height": [
-      "Part I: 145.3 cm–147.5 cm",
-      "Part II: 166 cm",
-      "Blank Period: 180 cm"
-    ],
-    "weight": [
-      "Part I: 40.1 kg–40.6 kg",
-      "Part II: 50.9 kg"
-    ],
-    "bloodType": "B",
-    "kekkeiGenkai": [
-      "Lava Release",
-      "Magnet Release",
-      "Boil Release"
-    ],
-    "classification": [
-      "Jinchūriki",
-      "Sage",
-      "Sensor Type"
-    ],
-    "tailedBeast": [
-      "Shukaku",
-      "Matatabi",
-      "Isobu",
-      "Son Gokū",
-      "Kokuō",
-      "Saiken",
-      "Chōmei",
-      "Gyūki",
-      "Kurama",
-      "Forms"
-    ],
-    "occupation": [
-      "Hokage"
-    ],
-    "affiliation": [
-      "Konohagakure",
-      "Mount Myōboku",
-      "Allied Shinobi Forces"
-    ],
-    "team": [
-      "Team Kakashi",
-      "Sasuke Recovery Team",
-      "Konoha 11",
-      "Bikōchū Search Team",
-      "Kaima Capture Team",
-      "Star Guard Team",
-      "Peddlers Escort Team",
-      "Kazekage Rescue Team",
-      "Team One",
-      "Eight Man Squad",
-      "Hanabi Rescue Team"
-    ],
-    "clan": [
-      "Uzumaki Clan"
-    ]
-  },
-  "charRank": {
-    "ninjaRank": [
-      "Part I: Genin",
-      "Gaiden: Kage"
-    ],
-    "ninjaRegistration": "012607",
-    "academyGradAge": 12
-  },
-  "family": [
-    "Minato Namikaze",
-    "Kushina Uzumaki",
-    "Boruto Uzumaki",
-    "Himawari Uzumaki",
-    "Hinata Uzumaki",
-    "Jiraiya"
-  ],
-  "natureTypes": [
-    "Wind Release",
-    "Lightning Release",
-    "Earth Release",
-    "Water Release",
-    "Fire Release",
-    "Lava Release",
-    "Magnet Release",
-    "Boil Release",
-    "Yin Release",
-    "Yang Release",
-    "Yin–Yang Release"
-  ],
-  "jutsus": [
-    "All Directions Shuriken",
-    "Baryon Mode",
-    "Big Ball Rasengan",
-    "Big Ball Rasenshuriken",
-    "Big Ball Spiralling Serial Zone Spheres",
-    "Boil Release: Unrivalled Strength",
-    "Chakra Transfer Technique",
-    "Clone Body Blow",
-    "Clone Spinning Heel Drop",
-    "Combination Transformation",
-    "Continuous Tailed Beast Balls",
-    "Earth Release: Earth-Style Wall",
-    "Erupting Propulsion Fist",
-    "Fire Release: Toad Oil Flame Bullet",
-    "Frog Kata",
-    "Frog Strike",
-    "Gentle Step Spiralling Twin Lion Fists",
-    "Harem Technique",
-    "Hurricane Thunderclap — Majestic Attire Sword Stroke",
-    "Ink Creation",
-    "Kurama Arm Attack",
-    "Mini-Rasenshuriken",
-    "Multiple Shadow Clone Technique",
-    "Naruto Region Combo",
-    "Naruto Uzumaki Combo",
-    "Naruto Uzumaki Two Thousand Combo",
-    "Negative Emotions Sensing",
-    "New Sexy Technique",
-    "Nine-Tails Chakra Mode",
-    "Ninja Art: Bare-Handed Blade Block",
-    "One Thousand Years of Death",
-    "Pachinko Technique",
-    "Parachute",
-    "Parent and Child Rasengan",
-    "Planetary Rasengan",
-    "Rasengan",
-    "Rasengan: Flash",
-    "Regeneration Ability",
-    "Runt Ball Rasengan",
-    "Sage Art: Lava Release Rasenshuriken",
-    "Sage Art: Magnet Release Rasengan",
-    "Sage Art: Many Ultra-Big Ball Spiralling Serial Spheres",
-    "Sage Art: Super Tailed Beast Rasenshuriken",
-    "Sage Mode",
-    "Scorch Release: Halo Hurricane Jet Black Arrow Style Zero",
-    "Sexy Reverse Harem Technique",
-    "Sexy Technique",
-    "Sexy Technique: Pole Dance and Nice Body",
-    "Shadow Clone Technique",
-    "Shadow Shuriken Technique",
-    "Shuriken Shadow Clone Technique",
-    "Six Paths Sage Mode",
-    "Six Paths Senjutsu",
-    "Six Paths Yang Power",
-    "Six Paths — Chibaku Tensei",
-    "Six Paths: Ultra-Big Ball Rasenshuriken",
-    "Soap Bubble Ninjutsu",
-    "Spiralling Absorption Sphere",
-    "Spiralling Serial Spheres",
-    "Spiralling Strife Spheres",
-    "Strong Fist",
-    "Summoning Technique",
-    "Toad",
-    "Summoning: Food Cart Destroyer Technique",
-    "Super Mini-Tailed Beast Ball",
-    "Super-Ultra-Big Ball Rasengan",
-    "Tailed Beast Ball",
-    "Tailed Beast Ball Rasenshuriken",
-    "Tailed Beast Chakra Arms",
-    "Tailed Beast Full Charge",
-    "Tailed Beast Rasengan",
-    "Tailed Beast Shockwave",
-    "Torii Seal",
-    "Truth-Seeking Ball",
-    "Turning into a Frog Technique",
-    "Typhoon Water Vortex Technique",
-    "Ultra-Big Ball Rasengan",
-    "Ultra-Many Spiralling Serial Spheres",
-    "Uzumaki Formation",
-    "Wind Release: Rasengan",
-    "Wind Release: Rasenshuriken",
-    "Wind Release: Repeated Rasenshuriken",
-    "Wind Release: Toad Gun",
-    "Wind Release: Toad Oil Bullet",
-    "Wind Release: Toad Oil Flame Bullet",
-    "Wind Release: Ultra-Big Ball Rasenshuriken",
-    "Wisdom Wolf Decay"
-  ],
-  "tools": [
-    "Absorbing Hand",
-    "Chakra Blade",
-    "Flying Thunder God Kunai",
-    "Fūma Shuriken",
-    "Hidden Kunai Mechanism",
-    "Sand",
-    "Scroll of Seals",
-    "Shadow Clone Summoning Scroll"
-  ],
-  "databooks": [
-    {
-      "name": "Rin no Sho",
-      "edition": "First",
-      "stats": {
-        "ninjutsu": 2,
-        "taijutsu": 1.5,
-        "genjutsu": 1,
-        "intelligence": 1,
-        "strength": 2,
-        "speed": 2,
-        "stamina": 4,
-        "handSeals": 1,
-        "total": 14.5
-      }
-    },
-    {
-      "name": "Tō no Sho",
-      "edition": "Second",
-      "stats": {
-        "ninjutsu": 3,
-        "taijutsu": 2,
-        "genjutsu": 1,
-        "intelligence": 1.5,
-        "strength": 3,
-        "speed": 3,
-        "stamina": 4,
-        "handSeals": 1,
-        "total": 18.5
-      }
-    },
-    {
-      "name": "Sha no Sho",
-      "edition": "Third",
-      "stats": {
-        "ninjutsu": 4,
-        "taijutsu": 3.5,
-        "genjutsu": 2,
-        "intelligence": 3,
-        "strength": 3.5,
-        "speed": 3.5,
-        "stamina": 5,
-        "handSeals": 1.5,
-        "total": 26
-      }
-    }
-  ]
-}
-```
-
 </details>
 
-<details><summary>Clan Endpoint</summary>
-   
-```http
-POST /clan/id/{id}
-```
 
-```http
-GET /clan/id/{id}
-GET /clan/name/{name}
-GET /clan/all
-GET /clan/page
-GET /clan/order_by_members
-GET /clan/order_by_jutsus
-```
-### Example
-* Use the same name found at the end of the url
-    * https://naruto.fandom.com/wiki/Hyuga_Clan
-* Use an HTTP POST /id request to save data in mongoDB
-    * **localhost:8080/clan/id/Hyuga_Clan**
-* Use an HTTP GET /id request to get data with above id in mongoDB
-    * **localhost:8080/clan/id/Hyuga_Clan**
-* Use an HTTP GET /name request to match english name in mongoDB
-    * **localhost:8080/clan/name/Uzumaki**
-* Use an HTTP GET /all request to fetch all save data in mongoDB
-    * **localhost:8080/clan/all**
-* Use an HTTP GET /page request to fetch pageable data in mongoDB
-    * **localhost:8080/clan/page?page=0&size=5&sort=id,asc**
-* Use an HTTP GET /order_by_members request to fetch pageable clan data in mongoDB sorted by number of members DESC
-    * **localhost:8080/clan/page?page=0&size=5**
-* Use an HTTP GET /clan/order_by_jutsus to fetch pageable Clan data in mongoDB sorted by number of jutsus DESC
-    * **localhost:8080/clan/page?page=0&size=5**
+### How to build a jar file yourself.
+- Make sure you are on release branch
+- add `<packaging>jar</packaging>` to your `pom.xml` | refer [this](https://www.youtube.com/watch?v=UvyYv3WhzjI)
+- build with `mvn clean package`
+- if you get `no main manifest attribute, in .\NarutoDB-1.0-SNAPSHOT.jar`
+- build with `mvn package spring-boot:repackage`
+- run the `**SNAPSHOT.jar` with `java -jar filename.jar`
 
-   
-</details>
+### How to setup your own metrics
+- Add Spring Boot Actuator to your dependency
+- Setup your metrics properties , refer [here](https://levelup.gitconnected.com/application-monitoring-using-spring-boot-actuators-part-1-dab8576f4db6)
+- toggle properties according to need and setup a different port for metrics
+- Access the ports for requests metrics `host:port/actuator/metrics/http.server.requests`
