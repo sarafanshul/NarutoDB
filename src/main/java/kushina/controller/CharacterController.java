@@ -4,6 +4,7 @@
 
 package kushina.controller;
 
+import kushina.model.jutsu.JutsuDoc;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -144,8 +145,6 @@ public class CharacterController {
         return ResponseEntity.ok().body(characters);
     }
 
-    // add actuator etc for metrics
-
     /**
      * <b>For Alpha/Debut Sort purposes</b>
      * Customizable endpoint  , which returns filtered characters by (name != null , image != null , anime = Naruto & Naruto S)
@@ -167,5 +166,16 @@ public class CharacterController {
         return ResponseEntity.ok().body(characters);
     }
 
+    /**
+     * Finds all the jutsus of a character filtered by : name.kanji ,range ,type
+     * @param id character id as per DB
+     * @return List of Filtered-NotNull Jutsus.
+     */
+    @GetMapping(value = "jutsus_filtered")
+    public ResponseEntity<List<JutsuDoc>> getCharacterJutsusFiltered(
+        @RequestParam String id
+    ){
+        return ResponseEntity.ok(characterService.getCharacterJutsusFiltered(id));
+    }
 
 }

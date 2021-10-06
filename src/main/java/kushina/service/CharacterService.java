@@ -4,6 +4,8 @@
 
 package kushina.service;
 
+import kushina.model.jutsu.JutsuDoc;
+import kushina.repository.JutsuRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.jsoup.nodes.Document;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +20,9 @@ import kushina.util.JsoupConnection;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import static kushina.util.CharacterInfoCheckNull.*;
 import static kushina.util.selector.character.CharDatabookSelector.getDatabookInfo;
@@ -35,6 +39,9 @@ public class CharacterService {
 
     @Autowired
     CharacterRepository characterRepository;
+
+    @Autowired
+    JutsuRepository jutsuRepository;
 
     private CharacterDoc getCharacterInfo(String charName) {
         Document doc = JsoupConnection.connectionInfo(charName);
@@ -150,5 +157,26 @@ public class CharacterService {
 
     public Page<CharacterDoc> findAllFilterByNameEnglishCoreNaruto(Pageable pageable){
         return characterRepository.findAllFilterByNameEnglishCoreNaruto(pageable);
+    }
+
+    public List<JutsuDoc> getCharacterJutsusFiltered( String id ){
+        Optional<CharacterDoc> character = getCheckCharacterId(id);
+        if( ! character.isPresent() ){
+            log.warn("Character not found.");
+            throw new ResponseStatusException(
+                HttpStatus.NOT_FOUND, "Character not found.");
+        }
+        return character.get().getJutsus().stream().map( jutsuName ->{
+            String jutsuId = jutsuName.replace(" " , "_"); // id's are first name split by '_'
+            List<JutsuDoc> result = jutsuRepository.findJutsuByIdFiltered(jutsuId);
+            if( ! result.isEmpty() )
+                return result.get(0);
+            else
+                return null;
+        })
+            .filter(
+                Objects::nonNull
+            )
+            .collect(Collectors.toList());
     }
 }

@@ -43,4 +43,12 @@ public interface JutsuRepository extends MongoRepository<JutsuDoc, String> {
      */
     @Query("{ 'name.english' : { '$regex' : '?0' , '$options' : 'i' } }")
     Page<JutsuDoc> findByNameEnglishRegexPaged(String name, Pageable pageable);
+
+    /**
+     * Finds the jutsus with filters : name.kanji ,range ,type
+     * @param id jutsuId as per DB
+     * @return List of jutsu of size 1 if found, list of null otherwise
+     */
+    @Query("{\"_id\" : '?0', \"name.kanji\" : {$nin : [null ,\"\"]}, range : {$nin : [null ,\"\"]}, type : {$ne : null} }")
+    List<JutsuDoc> findJutsuByIdFiltered(String id);
 }
