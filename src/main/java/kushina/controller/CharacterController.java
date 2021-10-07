@@ -168,6 +168,10 @@ public class CharacterController {
 
     /**
      * Finds all the jutsus of a character filtered by : name.kanji ,range ,type
+     * <br>
+     * Usage
+     * <br>
+     * <i>character/<b>jutsus_filtered?id=Hinata_Hyuga</b></i>
      * @param id character id as per DB
      * @return List of Filtered-NotNull Jutsus.
      */

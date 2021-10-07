@@ -25,22 +25,22 @@ public class ClanController {
     @Autowired
     ClanService clanService;
 
-    @PostMapping(value = "id/{id}")
-    public ResponseEntity<Void> saveClan(@PathVariable String id) {
+    @PostMapping(value = "id")
+    public ResponseEntity<Void> saveClan(@RequestParam String id) {
         log.info("Starting get info for clan: {}", id);
         clanService.insert(id);
         log.info("Clan {} info saved.", id);
         return ResponseEntity.noContent().build();
     }
 
-    @GetMapping(value = "id/{id}")
-    public ResponseEntity<ClanDoc> getClan(@PathVariable String id) {
+    @GetMapping(value = "id")
+    public ResponseEntity<ClanDoc> getClan(@RequestParam String id) {
         ClanDoc clan = clanService.getClan(id);
         return ResponseEntity.ok().body(clan);
     }
 
-    @GetMapping(value = "like/{name}")
-    public ResponseEntity<Collection<ClanDoc>> getCharactersByName(@PathVariable String name) {
+    @GetMapping(value = "like")
+    public ResponseEntity<Collection<ClanDoc>> getCharactersByName(@RequestParam String name) {
         List<ClanDoc> characters = clanService.getClanByNameEnglishRegex(name);
         return ResponseEntity.ok().body(characters);
     }

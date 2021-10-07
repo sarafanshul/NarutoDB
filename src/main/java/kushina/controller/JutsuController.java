@@ -24,22 +24,36 @@ public class JutsuController {
     @Autowired
     JutsuService jutsuService;
 
-    @PostMapping(value = "id/{id}")
-    public ResponseEntity<Void> saveJutsu(@PathVariable String id) {
+    @PostMapping(value = "id")
+    public ResponseEntity<Void> saveJutsu(@RequestParam String id) {
         log.info("Starting get info for jutsu: {}", id);
         jutsuService.insert(id);
         log.info("Jutsu {} info saved.", id);
         return ResponseEntity.noContent().build();
     }
 
-    @GetMapping(value = "id/{id}")
-    public ResponseEntity<JutsuDoc> getJutsu(@PathVariable String id) {
+    /**
+     * Usage
+     * <br>
+     * <i>jutsu/<b>id?id=Bō_Shadow_Clone_Technique</b></i>
+     * <br>
+     * @param id jutsu Id
+     * @return 200 with a Jutsu object , 404 otherwise
+     */
+    @GetMapping(value = "id")
+    public ResponseEntity<JutsuDoc> getJutsu(@RequestParam String id) {
         JutsuDoc jutsu = jutsuService.getJutsu(id);
         return ResponseEntity.ok().body(jutsu);
     }
 
-    @GetMapping(value = "like/{name}")
-    public ResponseEntity<Collection<JutsuDoc>> getJutsuByName(@PathVariable String name) {
+    /**
+     * Usage
+     * <br>
+     * <i>jutsu/<b>like?name=shadow</b></i>
+     * <br>
+     */
+    @GetMapping(value = "like")
+    public ResponseEntity<Collection<JutsuDoc>> getJutsuByName(@RequestParam String name) {
         List<JutsuDoc> characters = jutsuService.getJutsuByNameEnglishRegex(name);
         return ResponseEntity.ok().body(characters);
     }
@@ -67,9 +81,9 @@ public class JutsuController {
      * @param name to match
      * @return Page of characters found
      */
-    @GetMapping(value = "like_paged/{name}")
+    @GetMapping(value = "like_paged")
     public ResponseEntity<Page<JutsuDoc>> getJutsuByName(
-        @PathVariable String name,
+        @RequestParam String name,
         @PageableDefault(
             size = 20
         ) Pageable pageable
@@ -77,12 +91,5 @@ public class JutsuController {
         Page<JutsuDoc> characters = jutsuService.getJutsuByNameEnglishRegexPaged(name, pageable);
         return ResponseEntity.ok().body(characters);
     }
-
-    /*
-    Impl
-    by usage ,
-    by power ,
-    by users ,
-     */
 
 }
