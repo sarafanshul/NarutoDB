@@ -109,4 +109,8 @@ public class ChapterService {
     public Page<ChapterDoc> getAllChaptersCannon( Pageable pageable ){
         return chapterRepository.findAllChaptersCannon( pageable ) ;
     }
+
+    public Page<ChapterDoc> findAllByOrderByEpisodeRangeSorted(int rangeL, int rangeR, boolean cannon, int sortOrder, Pageable pageable){
+        return chapterRepository.findAllByOrderByEpisodeRangeSorted(rangeL, rangeR, cannon, sortOrder, pageable);
+    }
 }

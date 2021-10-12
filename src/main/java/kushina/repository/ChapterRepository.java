@@ -14,7 +14,7 @@ import kushina.model.chapter.ChapterDoc;
 import java.util.List;
 
 @Repository
-public interface ChapterRepository extends MongoRepository<ChapterDoc, String> {
+public interface ChapterRepository extends MongoRepository<ChapterDoc, String> ,CustomChapterMongoRepository {
 
     Page<ChapterDoc> findAllByOrderByEpisodeAbsoluteEpisodeNumberAsc(Pageable pageable);
 
@@ -22,4 +22,5 @@ public interface ChapterRepository extends MongoRepository<ChapterDoc, String> {
 
     @Query("{ \"$nor\": [ { \"manga.chapters\" : null } , { \"manga.chapters\" : {\"$size\": 0} } ] }")
     Page<ChapterDoc> findAllChaptersCannon(Pageable pageable );
+
 }
