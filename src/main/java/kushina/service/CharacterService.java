@@ -198,6 +198,9 @@ public class CharacterService {
             throw new ResponseStatusException(
                 HttpStatus.NO_CONTENT ,"No anime associated with character!"
             );
-        return chapterRepository.findChapterBySeriesAndEpisode(anime.getName() ,anime.getEpisode());
+        return chapterRepository.findChapterBySeriesAndEpisode(
+                anime.getName().replace("Naruto Shippūden" ,"Naruto: Shippūden") ,
+                anime.getEpisode()
+            );
     }
 }
