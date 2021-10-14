@@ -23,4 +23,6 @@ public interface ChapterRepository extends MongoRepository<ChapterDoc, String> ,
     @Query("{ \"$nor\": [ { \"manga.chapters\" : null } , { \"manga.chapters\" : {\"$size\": 0} } ] }")
     Page<ChapterDoc> findAllChaptersCannon(Pageable pageable );
 
+    @Query("{ \"episode.series\" : ?0 , \"episode.episode\" : ?1 }")
+    List<ChapterDoc> findChapterBySeriesAndEpisode( String series , Double episode);
 }

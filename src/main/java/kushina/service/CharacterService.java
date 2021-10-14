@@ -4,7 +4,9 @@
 
 package kushina.service;
 
+import kushina.model.chapter.ChapterDoc;
 import kushina.model.jutsu.JutsuDoc;
+import kushina.repository.ChapterRepository;
 import kushina.repository.JutsuRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.jsoup.nodes.Document;
@@ -42,6 +44,9 @@ public class CharacterService {
 
     @Autowired
     JutsuRepository jutsuRepository;
+
+    @Autowired
+    ChapterRepository chapterRepository;
 
     private CharacterDoc getCharacterInfo(String charName) {
         Document doc = JsoupConnection.connectionInfo(charName);
@@ -178,5 +183,21 @@ public class CharacterService {
                 Objects::nonNull
             )
             .collect(Collectors.toList());
+    }
+
+    public List<ChapterDoc> getCharacterDebutChapter( String id ){
+        Optional<CharacterDoc> character = getCheckCharacterId(id);
+        if( !character.isPresent() ){
+            log.warn("character not found");
+            throw new ResponseStatusException(
+                HttpStatus.NOT_FOUND, "Character not found."
+            );
+        }
+        CharAnime anime =  character.get().getDebut().getAnime();
+        if( anime.getName() == null || anime.getEpisode() == null )
+            throw new ResponseStatusException(
+                HttpStatus.NO_CONTENT ,"No anime associated with character!"
+            );
+        return chapterRepository.findChapterBySeriesAndEpisode(anime.getName() ,anime.getEpisode());
     }
 }

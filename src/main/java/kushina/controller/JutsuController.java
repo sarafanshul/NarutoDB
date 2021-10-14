@@ -35,7 +35,7 @@ public class JutsuController {
     /**
      * Usage
      * <br>
-     * <i>jutsu/<b>id?id=Bō_Shadow_Clone_Technique</b></i>
+     * <i>jutsu/<b>id?id=Bo_Shadow_Clone_Technique</b></i>
      * <br>
      * @param id jutsu Id
      * @return 200 with a Jutsu object , 404 otherwise

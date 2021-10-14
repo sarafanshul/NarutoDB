@@ -5,11 +5,17 @@ Rest API for Naruto Anime created using [JSOUP](https://jsoup.org) to get the da
 the [NarutoFandom](https://naruto.fandom.com/wiki/Narutopedia) web page and save it in the mongoDB database
 for caching.
 
-## What's New (v-1.1)
-- Add new endpoints in characters and episodes for ease and extensiblity
-- The endpoints are now query based like `/id?id=x` instead of old statically mapped `id/x` for ease
-- Add autuator for metrics and heath statistics
-- Add Profiles `dev` and `prod` for different usecase
+## What's New (v-1.1.*)
+- v.1.1.3
+    - Add new Debutante endpoint for fetching debut anime info of a character
+    - New 404 page
+- v-1.1.2
+    - Add new Izanami endpoint for fetching ranged/filtered info about Chapter
+- v-1.1.1
+    - Add new endpoints in characters and episodes for ease and extensiblity
+    - The endpoints are now query based like `/id?id=x` instead of old statically mapped `id/x` for ease
+    - Add autuator for metrics and heath statistics
+    - Add Profiles `dev` and `prod` for different usecase
 
 ## Technologies used
 * Java

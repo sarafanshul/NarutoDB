@@ -66,6 +66,4 @@ public class VillageController {
         return ResponseEntity.ok().body(villageService.getAllVillagesPaged(pageable));
     }
 
-    // add like paged if needed ?>?
-
 }

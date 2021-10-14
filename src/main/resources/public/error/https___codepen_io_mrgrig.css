@@ -1,0 +1,172 @@
+$root-font-size: 16;
+
+@function rem($int) {
+  @return (((1 / $root-font-size) * $int) * 1rem);
+}
+
+// Primary Color
+$primary: #263238;
+$primary-light: #4F5B62;
+$primary-dark: #000A12;
+
+// Secondary Color
+$secondary: #DD2C00;
+$secondary-light: #FF6434;
+$secondary-dark: #A30000;
+
+// Tertiary Color
+$tertiary: #2962FF;
+$tertiary-light: #768FFF;
+$tertiary-dark: #0039CB;
+
+// Primary Text
+$primary-text-on-primary: rgba(255, 255, 255, 1);
+$primary-text-on-primary-light: rgba(255, 255, 255, 1);
+$primary-text-on-primary-dark: rgba(255, 255, 255, 1);
+$primary-text-on-secondary: rgba(255, 255, 255, 1);
+$primary-text-on-secondary-light: rgba(0, 0, 0, 1);
+$primary-text-on-secondary-dark: rgba(255, 255, 255, 1);
+$primary-text-on-tertiary: rgba(255, 255, 255, 1);
+$primary-text-on-tertiary-light: rgba(0, 0, 0, 1);
+$primary-text-on-tertiary-dark: rgba(255, 255, 255, 1);
+$primary-text-on-light:  rgba(0, 0, 0, 1);
+$primary-text-on-dark: rgba(255, 255, 255, 1);
+
+// Secondary Text
+$secondary-text-on-primary: rgba(255, 255, 255, 0.5);
+$secondary-text-on-primary-light: rgba(255, 255, 255, 0.71);
+$secondary-text-on-primary-dark: rgba(255, 255, 255, 0.45);
+$secondary-text-on-secondary: rgba(255, 255, 255, 0.97);
+$secondary-text-on-secondary-light:  rgba(0, 0, 0, 0.68);
+$secondary-text-on-secondary-dark: rgba(255, 255, 255, 0.71);
+$secondary-text-on-tertiary: rgba(255, 255, 255, 0.94);
+$secondary-text-on-tertiary-light:  rgba(0, 0, 0, 0.68);
+$secondary-text-on-tertiary-dark: rgba(255, 255, 255, 0.66);
+$secondary-text-on-light:  rgba(0, 0, 0, 0.56);
+$secondary-text-on-dark: rgba(255, 255, 255, 0.57);
+
+// Disabled Text
+$disabled-text-on-primary: rgba(255, 255, 255, 0.35);
+$disabled-text-on-primary-light: rgba(255, 255, 255, 0.49);
+$disabled-text-on-primary-dark: rgba(255, 255, 255, 0.34);
+$disabled-text-on-secondary: rgba(255, 255, 255, 0.72);
+$disabled-text-on-secondary-light:  rgba(0, 0, 0, 0.5);
+$disabled-text-on-secondary-dark: rgba(255, 255, 255, 0.53);
+$disabled-text-on-tertiary: rgba(255, 255, 255, 0.65);
+$disabled-text-on-tertiary-light:  rgba(0, 0, 0, 0.5);
+$disabled-text-on-tertiary-dark: rgba(255, 255, 255, 0.48);
+$disabled-text-on-light:  rgba(0, 0, 0, 0.43);
+$disabled-text-on-dark: rgba(255, 255, 255, 0.39);
+
+// Error Text
+$error-text-on-light: #b71c1c;
+$error-text-on-dark: #ef9a9a;
+
+
+// Borders
+$border-color-on-light: rgba(0, 0, 0, 0.12);
+$border-secondary-color-on-light: rgba(0, 0, 0, 0.38);
+$border-color-on-dark: rgba(255, 255, 255, 0.12);
+$border-secondary-color-on-dark: rgba(255, 255, 255, 0.5);
+$border-width-small: rem(1);
+$border-width-medium: rem(3);
+
+$border-on-light: $border-color-on-light solid $border-width-small;
+$border-on-dark: $border-color-on-dark solid $border-width-small;
+
+// Backgrounds
+$primary-background: #EEEEEE;
+$secondary-background: #424242;
+$error-background: #ffebee;
+
+:root {
+  // Primary Color
+  --primary: #{$primary};
+  --primary-light: #{$primary-light};
+  --primary-dark: #{$primary-dark};
+
+  // Secondary Color
+  --secondary: #{$secondary};
+  --secondary-light: #{$secondary-light};
+  --secondary-dark: #{$secondary-dark};
+
+  // Tertiary Color
+  --tertiary: #{$tertiary};
+  --tertiary-light: #{$tertiary-light};
+  --tertiary-dark: #{$tertiary-dark};
+
+  // Primary Text
+  --primary-text-on-primary: #{$primary-text-on-primary};
+  --primary-text-on-primary-light: #{$primary-text-on-primary-light};
+  --primary-text-on-primary-dark: #{$primary-text-on-primary-dark};
+  --primary-text-on-secondary: #{$primary-text-on-secondary};
+  --primary-text-on-secondary-light: #{$primary-text-on-secondary-light};
+  --primary-text-on-secondary-dark: #{$primary-text-on-secondary-dark};
+  --primary-text-on-tertiary: #{$primary-text-on-tertiary};
+  --primary-text-on-tertiary-light: #{$primary-text-on-tertiary-light};
+  --primary-text-on-tertiary-dark: #{$primary-text-on-tertiary-dark};
+  --primary-text-on-light:  #{$primary-text-on-light};
+  --primary-text-on-dark: #{$primary-text-on-dark};
+
+  // Secondary Text
+  --secondary-text-on-primary: #{$secondary-text-on-primary};
+  --secondary-text-on-primary-light: #{$secondary-text-on-primary-light};
+  --secondary-text-on-primary-dark: #{$secondary-text-on-primary-dark};
+  --secondary-text-on-secondary: #{$secondary-text-on-secondary};
+  --secondary-text-on-secondary-light:  #{$secondary-text-on-secondary-light};
+  --secondary-text-on-secondary-dark: #{$secondary-text-on-secondary-dark};
+  --secondary-text-on-tertiary: #{$secondary-text-on-tertiary};
+  --secondary-text-on-tertiary-light:  #{$secondary-text-on-tertiary-light};
+  --secondary-text-on-tertiary-dark: #{$secondary-text-on-tertiary-dark};
+  --secondary-text-on-light:  #{$secondary-text-on-light};
+  --secondary-text-on-dark: #{$secondary-text-on-dark};
+
+  // Disabled Text
+  --disabled-text-on-primary: #{$disabled-text-on-primary};
+  --disabled-text-on-primary-light: #{$disabled-text-on-primary-light};
+  --disabled-text-on-primary-dark: #{$disabled-text-on-primary-dark};
+  --disabled-text-on-secondary: #{$disabled-text-on-secondary};
+  --disabled-text-on-secondary-light:  #{$disabled-text-on-secondary-light};
+  --disabled-text-on-secondary-dark: #{$disabled-text-on-secondary-dark};
+  --disabled-text-on-tertiary: #{$disabled-text-on-tertiary};
+  --disabled-text-on-tertiary-light:  #{$disabled-text-on-tertiary-light};
+  --disabled-text-on-tertiary-dark: #{$disabled-text-on-tertiary-dark};
+  --disabled-text-on-light:  #{$disabled-text-on-light};
+  --disabled-text-on-dark: #{$disabled-text-on-dark};
+  
+  // Error Text
+  --error-text-on-light: #{$error-text-on-light};
+  --error-text-on-dark: #{$error-text-on-dark};
+  
+  // Borders
+  --border-color-on-light: #{$border-color-on-light};
+  --border-color-on-dark: #{$border-color-on-dark};
+  --border-width-small: #{$border-width-small};
+  --border-width-medium: #{$border-width-medium};
+  --border-secondary-color-on-light: #{$border-secondary-color-on-light};
+  --border-secondary-color-on-dark: #{$border-secondary-color-on-dark};
+  
+  --border-on-light: #{$border-on-light};
+  --border-on-dark: #{$border-on-dark};
+
+  // Backgrounds
+  --primary-background: #{$primary-background};
+  --secondary-background: #{$secondary-background};
+
+  // Sizes
+  --root-font-size: #{$root-font-size};
+}
+
+:root {
+  font-size: calc(var(--root-font-size) * 1px);
+}
+
+body, html {
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  background-color: var(--primary-background);
+  font-family: 'Roboto', sans-serif;
+}

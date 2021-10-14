@@ -20,8 +20,18 @@ public interface CustomCharacterMongoRepository {
      */
     List<CharacterDoc> getCharacterByMatchingEnglishName(String name);
 
+    /**
+     * Returns a Paged Result of Characters W.R.T Characters::jutsus::length , order DESC
+     * @param pageable Pageable object for pagination
+     * @return paged result in order of Jutsu size , DESC
+     */
     Page<CharacterDoc> findAllOrderByJutsusSizeDesc(Pageable pageable);
 
+    /**
+     * Returns a Paged Result of Characters W.R.T Characters::jutsus::length , order ASC
+     * @param pageable Pageable object for pagination
+     * @return paged result in order of Jutsu size , ASC
+     */
     Page<CharacterDoc> findAllOrderByJutsusSizeAsc(Pageable pageable);
 
 }

@@ -4,6 +4,7 @@
 
 package kushina.controller;
 
+import kushina.model.chapter.ChapterDoc;
 import kushina.model.jutsu.JutsuDoc;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -180,6 +181,21 @@ public class CharacterController {
         @RequestParam String id
     ){
         return ResponseEntity.ok(characterService.getCharacterJutsusFiltered(id));
+    }
+
+    /**
+     * <br>
+     * Usage
+     * <br>
+     * <i>character/<b>debutante?id=Itachi_Uchiha</b></i>
+     * @param id character id as per DB
+     * @return List of size one, Debut Chapter
+     */
+    @GetMapping(value = "debutante")
+    public ResponseEntity<List<ChapterDoc>> getCharacterDebutChapter(
+        @RequestParam String id
+    ){
+        return ResponseEntity.ok(characterService.getCharacterDebutChapter(id));
     }
 
 }
