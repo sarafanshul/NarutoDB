@@ -7,6 +7,7 @@ package kushina.util;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.mongodb.MongoDbFactory;
@@ -21,8 +22,11 @@ import org.springframework.data.mongodb.core.mapping.MongoMappingContext;
 @Configuration
 public class MongoConfig extends AbstractMongoClientConfiguration { //not to add field _class in mongo
 
-    public final String DATABASE_NAME = "narutoDatabook";
-    public final String CONNECTION_URL = "mongodb://localhost:27017";
+    @Value("${database.name}")
+    private String DATABASE_NAME;
+
+    @Value("${database.host}")
+    private String CONNECTION_URL;
 
     @Autowired
     MongoDbFactory mongoDbFactory;

@@ -4,10 +4,10 @@
 
 package kushina.util.selector.chapter;
 
+import kushina.model.chapter.ChapterManga;
 import lombok.extern.slf4j.Slf4j;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
-import kushina.model.chapter.ChapterManga;
 
 @Slf4j
 public class ChapterMangaSelector {

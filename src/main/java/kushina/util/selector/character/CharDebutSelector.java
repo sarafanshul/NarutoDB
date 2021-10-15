@@ -5,12 +5,12 @@
 package kushina.util.selector.character;
 
 import com.google.common.base.CharMatcher;
-import lombok.extern.slf4j.Slf4j;
-import org.jsoup.nodes.Document;
-import org.jsoup.select.Elements;
 import kushina.model.character.CharAnime;
 import kushina.model.character.CharDebut;
 import kushina.model.character.CharManga;
+import lombok.extern.slf4j.Slf4j;
+import org.jsoup.nodes.Document;
+import org.jsoup.select.Elements;
 
 import java.util.ArrayList;
 import java.util.List;

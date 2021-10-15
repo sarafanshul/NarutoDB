@@ -4,12 +4,12 @@
 
 package kushina.util.selector.tool;
 
+import kushina.model.tool.ToolInfo;
+import kushina.util.Converters;
 import lombok.extern.slf4j.Slf4j;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-import kushina.model.tool.ToolInfo;
-import kushina.util.Converters;
 
 import java.io.IOException;
 import java.util.ArrayList;

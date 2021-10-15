@@ -4,11 +4,11 @@
 
 package kushina.util.selector.character;
 
+import kushina.model.character.CharInfo;
 import lombok.extern.slf4j.Slf4j;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-import kushina.model.character.CharInfo;
 
 import java.io.IOException;
 import java.util.ArrayList;

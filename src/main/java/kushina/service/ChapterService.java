@@ -4,6 +4,10 @@
 
 package kushina.service;
 
+import kushina.model.chapter.*;
+import kushina.repository.ChapterRepository;
+import kushina.util.JsoupConnection;
+import kushina.util.selector.chapter.*;
 import lombok.extern.slf4j.Slf4j;
 import org.jsoup.nodes.Document;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,10 +16,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
-import kushina.model.chapter.*;
-import kushina.repository.ChapterRepository;
-import kushina.util.JsoupConnection;
-import kushina.util.selector.chapter.*;
 
 import java.util.List;
 import java.util.Optional;
@@ -106,11 +106,11 @@ public class ChapterService {
         return chapterRepository.findAllByOrderByEpisodeAbsoluteEpisodeNumberAsc();
     }
 
-    public Page<ChapterDoc> getAllChaptersCannon( Pageable pageable ){
-        return chapterRepository.findAllChaptersCannon( pageable ) ;
+    public Page<ChapterDoc> getAllChaptersCannon(Pageable pageable) {
+        return chapterRepository.findAllChaptersCannon(pageable);
     }
 
-    public Page<ChapterDoc> findAllByOrderByEpisodeRangeSorted(int rangeL, int rangeR, boolean cannon, int sortOrder, Pageable pageable){
+    public Page<ChapterDoc> findAllByOrderByEpisodeRangeSorted(int rangeL, int rangeR, boolean cannon, int sortOrder, Pageable pageable) {
         return chapterRepository.findAllByOrderByEpisodeRangeSorted(rangeL, rangeR, cannon, sortOrder, pageable);
     }
 }

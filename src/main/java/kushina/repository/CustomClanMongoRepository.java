@@ -4,9 +4,9 @@
 
 package kushina.repository;
 
+import kushina.model.clan.ClanDoc;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import kushina.model.clan.ClanDoc;
 
 
 public interface CustomClanMongoRepository {

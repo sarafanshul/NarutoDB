@@ -5,9 +5,12 @@
 package kushina.service;
 
 import kushina.model.chapter.ChapterDoc;
+import kushina.model.character.*;
 import kushina.model.jutsu.JutsuDoc;
 import kushina.repository.ChapterRepository;
+import kushina.repository.CharacterRepository;
 import kushina.repository.JutsuRepository;
+import kushina.util.JsoupConnection;
 import lombok.extern.slf4j.Slf4j;
 import org.jsoup.nodes.Document;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,9 +19,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
-import kushina.model.character.*;
-import kushina.repository.CharacterRepository;
-import kushina.util.JsoupConnection;
 
 import java.io.IOException;
 import java.util.List;
@@ -160,21 +160,21 @@ public class CharacterService {
         return characterRepository.findByNameEnglishRegexPaged(name, pageable);
     }
 
-    public Page<CharacterDoc> findAllFilterByNameEnglishCoreNaruto(Pageable pageable){
+    public Page<CharacterDoc> findAllFilterByNameEnglishCoreNaruto(Pageable pageable) {
         return characterRepository.findAllFilterByNameEnglishCoreNaruto(pageable);
     }
 
-    public List<JutsuDoc> getCharacterJutsusFiltered( String id ){
+    public List<JutsuDoc> getCharacterJutsusFiltered(String id) {
         Optional<CharacterDoc> character = getCheckCharacterId(id);
-        if( ! character.isPresent() ){
+        if (!character.isPresent()) {
             log.warn("Character not found.");
             throw new ResponseStatusException(
                 HttpStatus.NOT_FOUND, "Character not found.");
         }
-        return character.get().getJutsus().stream().map( jutsuName ->{
-            String jutsuId = jutsuName.replace(" " , "_"); // id's are first name split by '_'
+        return character.get().getJutsus().stream().map(jutsuName -> {
+            String jutsuId = jutsuName.replace(" ", "_"); // id's are first name split by '_'
             List<JutsuDoc> result = jutsuRepository.findJutsuByIdFiltered(jutsuId);
-            if( ! result.isEmpty() )
+            if (!result.isEmpty())
                 return result.get(0);
             else
                 return null;
@@ -185,22 +185,22 @@ public class CharacterService {
             .collect(Collectors.toList());
     }
 
-    public List<ChapterDoc> getCharacterDebutChapter( String id ){
+    public List<ChapterDoc> getCharacterDebutChapter(String id) {
         Optional<CharacterDoc> character = getCheckCharacterId(id);
-        if( !character.isPresent() ){
+        if (!character.isPresent()) {
             log.warn("character not found");
             throw new ResponseStatusException(
                 HttpStatus.NOT_FOUND, "Character not found."
             );
         }
-        CharAnime anime =  character.get().getDebut().getAnime();
-        if( anime.getName() == null || anime.getEpisode() == null )
+        CharAnime anime = character.get().getDebut().getAnime();
+        if (anime.getName() == null || anime.getEpisode() == null)
             throw new ResponseStatusException(
-                HttpStatus.NO_CONTENT ,"No anime associated with character!"
+                HttpStatus.NO_CONTENT, "No anime associated with character!"
             );
         return chapterRepository.findChapterBySeriesAndEpisode(
-                anime.getName().replace("Naruto Shippūden" ,"Naruto: Shippūden") ,
-                anime.getEpisode()
-            );
+            anime.getName().replace("Naruto Shippūden", "Naruto: Shippūden"),
+            anime.getEpisode()
+        );
     }
 }

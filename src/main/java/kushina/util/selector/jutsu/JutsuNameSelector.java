@@ -4,10 +4,10 @@
 
 package kushina.util.selector.jutsu;
 
+import kushina.model.jutsu.JutsuName;
 import lombok.extern.slf4j.Slf4j;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
-import kushina.model.jutsu.JutsuName;
 
 @Slf4j
 public class JutsuNameSelector {

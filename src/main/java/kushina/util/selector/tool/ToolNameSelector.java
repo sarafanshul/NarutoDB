@@ -4,10 +4,10 @@
 
 package kushina.util.selector.tool;
 
+import kushina.model.tool.ToolName;
 import lombok.extern.slf4j.Slf4j;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
-import kushina.model.tool.ToolName;
 
 @Slf4j
 public class ToolNameSelector {

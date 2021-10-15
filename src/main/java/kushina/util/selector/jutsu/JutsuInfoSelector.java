@@ -4,11 +4,11 @@
 
 package kushina.util.selector.jutsu;
 
+import kushina.model.jutsu.JutsuInfo;
 import lombok.extern.slf4j.Slf4j;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-import kushina.model.jutsu.JutsuInfo;
 
 import java.io.IOException;
 import java.util.ArrayList;

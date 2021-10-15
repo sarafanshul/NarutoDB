@@ -4,6 +4,12 @@
 
 package kushina.service;
 
+import kushina.model.jutsu.JutsuDebut;
+import kushina.model.jutsu.JutsuDoc;
+import kushina.model.jutsu.JutsuInfo;
+import kushina.model.jutsu.JutsuName;
+import kushina.repository.JutsuRepository;
+import kushina.util.JsoupConnection;
 import lombok.extern.slf4j.Slf4j;
 import org.jsoup.nodes.Document;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,12 +18,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
-import kushina.model.jutsu.JutsuDebut;
-import kushina.model.jutsu.JutsuDoc;
-import kushina.model.jutsu.JutsuInfo;
-import kushina.model.jutsu.JutsuName;
-import kushina.repository.JutsuRepository;
-import kushina.util.JsoupConnection;
 
 import java.io.IOException;
 import java.util.List;

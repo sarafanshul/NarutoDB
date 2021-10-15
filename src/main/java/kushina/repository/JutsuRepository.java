@@ -4,13 +4,13 @@
 
 package kushina.repository;
 
+import kushina.model.jutsu.JutsuDTO;
+import kushina.model.jutsu.JutsuDoc;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 import org.springframework.stereotype.Repository;
-import kushina.model.jutsu.JutsuDTO;
-import kushina.model.jutsu.JutsuDoc;
 
 import java.util.List;
 
@@ -46,6 +46,7 @@ public interface JutsuRepository extends MongoRepository<JutsuDoc, String> {
 
     /**
      * Finds the jutsus with filters : name.kanji ,range ,type
+     *
      * @param id jutsuId as per DB
      * @return List of jutsu of size 1 if found, list of null otherwise
      */

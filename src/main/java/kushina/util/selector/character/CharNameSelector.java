@@ -4,10 +4,10 @@
 
 package kushina.util.selector.character;
 
+import kushina.model.character.CharName;
 import lombok.extern.slf4j.Slf4j;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
-import kushina.model.character.CharName;
 
 import java.util.ArrayList;
 import java.util.List;
