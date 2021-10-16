@@ -4,11 +4,11 @@
 
 package kushina.repository;
 
+import kushina.model.clan.ClanDTO;
+import kushina.model.clan.ClanDoc;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 import org.springframework.stereotype.Repository;
-import kushina.model.clan.ClanDTO;
-import kushina.model.clan.ClanDoc;
 
 import java.util.List;
 

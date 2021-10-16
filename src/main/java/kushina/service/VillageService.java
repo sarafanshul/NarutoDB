@@ -4,6 +4,13 @@
 
 package kushina.service;
 
+import kushina.model.village.*;
+import kushina.repository.VillageRepository;
+import kushina.util.JsoupConnection;
+import kushina.util.selector.village.VillageDataSelector;
+import kushina.util.selector.village.VillageInfoSelector;
+import kushina.util.selector.village.VillageNameSelector;
+import kushina.util.selector.village.VillageStatisticSelector;
 import lombok.extern.slf4j.Slf4j;
 import org.jsoup.nodes.Document;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,13 +19,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
-import kushina.model.village.*;
-import kushina.repository.VillageRepository;
-import kushina.util.JsoupConnection;
-import kushina.util.selector.village.VillageDataSelector;
-import kushina.util.selector.village.VillageInfoSelector;
-import kushina.util.selector.village.VillageNameSelector;
-import kushina.util.selector.village.VillageStatisticSelector;
 
 import java.io.IOException;
 import java.util.List;

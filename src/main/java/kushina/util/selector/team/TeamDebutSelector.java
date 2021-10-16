@@ -4,12 +4,12 @@
 
 package kushina.util.selector.team;
 
-import lombok.extern.slf4j.Slf4j;
-import org.jsoup.nodes.Document;
-import org.jsoup.select.Elements;
 import kushina.model.team.TeamAnime;
 import kushina.model.team.TeamDebut;
 import kushina.model.team.TeamManga;
+import lombok.extern.slf4j.Slf4j;
+import org.jsoup.nodes.Document;
+import org.jsoup.select.Elements;
 
 import java.util.ArrayList;
 import java.util.List;

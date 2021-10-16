@@ -1,9 +1,16 @@
 # Naruto DB
 
+## ALERT
+RUN THIS ON JAVA version != 13 , it'll cause `SSLHandshakeException`
+
 ## Description
 Rest API for Naruto Anime created using [JSOUP](https://jsoup.org) to get the data from
 the [NarutoFandom](https://naruto.fandom.com/wiki/Narutopedia) web page and save it in the mongoDB database
 for caching.
+
+## What's New (v-1.2.*)
+- v.1.2.0
+    - change data-base config from cli using `-Dspring-boot.run.arguments=--database.host=XXX,database.name=XXX`
 
 ## What's New (v-1.1.*)
 - v.1.1.3

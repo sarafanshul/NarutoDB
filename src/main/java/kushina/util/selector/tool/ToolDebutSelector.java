@@ -4,12 +4,12 @@
 
 package kushina.util.selector.tool;
 
-import lombok.extern.slf4j.Slf4j;
-import org.jsoup.nodes.Document;
-import org.jsoup.select.Elements;
 import kushina.model.tool.ToolAnime;
 import kushina.model.tool.ToolDebut;
 import kushina.model.tool.ToolManga;
+import lombok.extern.slf4j.Slf4j;
+import org.jsoup.nodes.Document;
+import org.jsoup.select.Elements;
 
 import java.util.ArrayList;
 import java.util.List;

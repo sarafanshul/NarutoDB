@@ -17,12 +17,13 @@ public interface CustomChapterMongoRepository {
      *      <li>with <i>cannon<i/> episodes</li>
      *      <li>with a custom sort <i>order<i/></li>
      * </ol>
-     * @param rangeL starting episode number (inclusive)
-     * @param rangeR end episode number (inclusive)
-     * @param cannon filter cannon chapters
+     *
+     * @param rangeL    starting episode number (inclusive)
+     * @param rangeR    end episode number (inclusive)
+     * @param cannon    filter cannon chapters
      * @param sortOrder <b>"1"</b> <i>ASC</i> , <b>"-1"</b> <i>DESC</i>
-     * @param pageable page param
+     * @param pageable  page param
      * @return Paged data from DB
      */
-    Page<ChapterDoc> findAllByOrderByEpisodeRangeSorted(int rangeL , int rangeR ,boolean cannon , int sortOrder , Pageable pageable);
+    Page<ChapterDoc> findAllByOrderByEpisodeRangeSorted(int rangeL, int rangeR, boolean cannon, int sortOrder, Pageable pageable);
 }

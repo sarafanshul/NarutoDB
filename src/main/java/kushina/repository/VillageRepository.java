@@ -4,11 +4,11 @@
 
 package kushina.repository;
 
+import kushina.model.village.VillageDTO;
+import kushina.model.village.VillageDoc;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 import org.springframework.stereotype.Repository;
-import kushina.model.village.VillageDTO;
-import kushina.model.village.VillageDoc;
 
 import java.util.List;
 

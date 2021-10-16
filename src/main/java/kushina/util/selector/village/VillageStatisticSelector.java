@@ -4,10 +4,10 @@
 
 package kushina.util.selector.village;
 
+import kushina.model.village.VillageStatistic;
 import lombok.extern.slf4j.Slf4j;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
-import kushina.model.village.VillageStatistic;
 
 @Slf4j
 public class VillageStatisticSelector {

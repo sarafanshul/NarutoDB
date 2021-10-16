@@ -5,7 +5,9 @@
 package kushina.controller;
 
 import kushina.model.chapter.ChapterDoc;
+import kushina.model.character.CharacterDoc;
 import kushina.model.jutsu.JutsuDoc;
+import kushina.service.CharacterService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -13,8 +15,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import kushina.model.character.CharacterDoc;
-import kushina.service.CharacterService;
 
 import java.util.Collection;
 import java.util.List;
@@ -111,15 +111,15 @@ public class CharacterController {
      * <b>reverse=Boolean</b> according to pref
      *
      * @param pageable a pageable entity with index , size(default 20) , and sorting params
-     * @param reverse param for desc
+     * @param reverse  param for desc
      * @return a pageable
      */
     @GetMapping(value = "power")
     public ResponseEntity<Page<CharacterDoc>> getAllCharactersPagedSortedByJutsusSize(
         @PageableDefault(size = 20)
-            Pageable pageable ,
-        @RequestParam(required = false) Boolean reverse ) {
-        if( reverse != null && reverse )
+            Pageable pageable,
+        @RequestParam(required = false) Boolean reverse) {
+        if (reverse != null && reverse)
             return ResponseEntity.ok().body(characterService.findAllOrderByJutsusSizeDesc(pageable));
         return ResponseEntity.ok().body(characterService.findAllOrderByJutsusSizeAsc(pageable));
     }
@@ -155,6 +155,7 @@ public class CharacterController {
      * <i>character/core/?sort=name.english,desc/asc</b></i>
      * <br>
      * <i>character/core/?sort=debut.anime,desc/asc</b></i>
+     *
      * @param pageable to customize the result
      * @return a Page filtered list of characters paged and sorted (if asked)
      */
@@ -173,13 +174,14 @@ public class CharacterController {
      * Usage
      * <br>
      * <i>character/<b>jutsus_filtered?id=Hinata_Hyuga</b></i>
+     *
      * @param id character id as per DB
      * @return List of Filtered-NotNull Jutsus.
      */
     @GetMapping(value = "jutsus_filtered")
     public ResponseEntity<List<JutsuDoc>> getCharacterJutsusFiltered(
         @RequestParam String id
-    ){
+    ) {
         return ResponseEntity.ok(characterService.getCharacterJutsusFiltered(id));
     }
 
@@ -188,13 +190,14 @@ public class CharacterController {
      * Usage
      * <br>
      * <i>character/<b>debutante?id=Itachi_Uchiha</b></i>
+     *
      * @param id character id as per DB
      * @return List of size one, Debut Chapter
      */
     @GetMapping(value = "debutante")
     public ResponseEntity<List<ChapterDoc>> getCharacterDebutChapter(
         @RequestParam String id
-    ){
+    ) {
         return ResponseEntity.ok(characterService.getCharacterDebutChapter(id));
     }
 

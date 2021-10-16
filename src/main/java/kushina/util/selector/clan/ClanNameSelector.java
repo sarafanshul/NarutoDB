@@ -4,10 +4,10 @@
 
 package kushina.util.selector.clan;
 
+import kushina.model.clan.ClanName;
 import lombok.extern.slf4j.Slf4j;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
-import kushina.model.clan.ClanName;
 
 @Slf4j
 public class ClanNameSelector {

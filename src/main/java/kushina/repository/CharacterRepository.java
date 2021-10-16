@@ -4,13 +4,13 @@
 
 package kushina.repository;
 
+import kushina.model.character.CharacterDTO;
+import kushina.model.character.CharacterDoc;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 import org.springframework.stereotype.Repository;
-import kushina.model.character.CharacterDTO;
-import kushina.model.character.CharacterDoc;
 
 import java.util.List;
 
@@ -42,6 +42,7 @@ public interface CharacterRepository extends MongoRepository<CharacterDoc, Strin
 
     /**
      * Returns filtered characters by (name != null , image != null , anime = Naruto & Naruto S)
+     *
      * @param pageable customization config for a page
      * @return filtered list of characters paged and sorted (if asked)
      */

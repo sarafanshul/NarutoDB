@@ -4,10 +4,10 @@
 
 package kushina.util.selector.village;
 
+import kushina.model.village.VillageInfo;
 import lombok.extern.slf4j.Slf4j;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
-import kushina.model.village.VillageInfo;
 
 import java.io.IOException;
 

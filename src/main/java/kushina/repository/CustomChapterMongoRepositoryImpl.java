@@ -31,8 +31,8 @@ public class CustomChapterMongoRepositoryImpl implements CustomChapterMongoRepos
     public Page<ChapterDoc> findAllByOrderByEpisodeRangeSorted(int rangeL, int rangeR, boolean cannon, int sortOrder, Pageable pageable) {
         Aggregation pipeline;
         // remove if else to AND in query instead.
-        if( cannon )
-             pipeline = Aggregation.newAggregation(
+        if (cannon)
+            pipeline = Aggregation.newAggregation(
                 cannonMatch -> new Document("$match",
                     new Document("$nor", Arrays.asList(new Document("manga.chapters",
                             new BsonNull()),
@@ -64,7 +64,7 @@ public class CustomChapterMongoRepositoryImpl implements CustomChapterMongoRepos
                 Aggregation.limit(pageable.getPageSize())
             );
 
-        List<ChapterDoc> results = mongoTemplate.aggregate(pipeline ,COLLECTION_NAME ,ChapterDoc.class).getMappedResults();
+        List<ChapterDoc> results = mongoTemplate.aggregate(pipeline, COLLECTION_NAME, ChapterDoc.class).getMappedResults();
 
         return new PageImpl<>(results, pageable, results.size());
     }

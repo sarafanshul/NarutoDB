@@ -4,12 +4,12 @@
 
 package kushina.util.selector.jutsu;
 
-import lombok.extern.slf4j.Slf4j;
-import org.jsoup.nodes.Document;
-import org.jsoup.select.Elements;
 import kushina.model.jutsu.JutsuAnime;
 import kushina.model.jutsu.JutsuDebut;
 import kushina.model.jutsu.JutsuManga;
+import lombok.extern.slf4j.Slf4j;
+import org.jsoup.nodes.Document;
+import org.jsoup.select.Elements;
 
 import java.util.ArrayList;
 import java.util.List;

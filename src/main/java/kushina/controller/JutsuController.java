@@ -4,6 +4,8 @@
 
 package kushina.controller;
 
+import kushina.model.jutsu.JutsuDoc;
+import kushina.service.JutsuService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -11,8 +13,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import kushina.model.jutsu.JutsuDoc;
-import kushina.service.JutsuService;
 
 import java.util.Collection;
 import java.util.List;
@@ -37,6 +37,7 @@ public class JutsuController {
      * <br>
      * <i>jutsu/<b>id?id=Bo_Shadow_Clone_Technique</b></i>
      * <br>
+     *
      * @param id jutsu Id
      * @return 200 with a Jutsu object , 404 otherwise
      */

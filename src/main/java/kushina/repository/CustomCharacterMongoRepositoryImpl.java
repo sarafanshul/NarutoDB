@@ -4,6 +4,7 @@
 
 package kushina.repository;
 
+import kushina.model.character.CharacterDoc;
 import org.bson.Document;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -13,7 +14,6 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.aggregation.Aggregation;
 import org.springframework.data.mongodb.core.query.TextCriteria;
-import kushina.model.character.CharacterDoc;
 
 import java.util.Arrays;
 import java.util.List;
@@ -58,15 +58,15 @@ public class CustomCharacterMongoRepositoryImpl implements CustomCharacterMongoR
 
     /**
      * Returns a Paged Result of Characters W.R.T Characters::jutsus::length
-     *
+     * <p>
      * while adding a new field in project all others get excluded , hence brute force see
      * <a href=https://stackoverflow.com/questions/19431773/include-all-existing-fields-and-add-new-fields-to-document>here</a>
      *
-     * @param pageable Pageable object for pagination
+     * @param pageable  Pageable object for pagination
      * @param sortOrder ASC = 1 ,DESC = -1
      * @return paged result in order of Jutsu size
      */
-    public Page<CharacterDoc> findAllOrderByJutsusSize(Pageable pageable , int sortOrder ) {
+    public Page<CharacterDoc> findAllOrderByJutsusSize(Pageable pageable, int sortOrder) {
         Aggregation pipeline = Aggregation.newAggregation(
             r -> new Document("$match",
                 new Document("jutsus",
@@ -105,11 +105,11 @@ public class CustomCharacterMongoRepositoryImpl implements CustomCharacterMongoR
 
     @Override
     public Page<CharacterDoc> findAllOrderByJutsusSizeDesc(Pageable pageable) {
-        return findAllOrderByJutsusSize(pageable , SORT_DESC);
+        return findAllOrderByJutsusSize(pageable, SORT_DESC);
     }
 
     @Override
     public Page<CharacterDoc> findAllOrderByJutsusSizeAsc(Pageable pageable) {
-        return findAllOrderByJutsusSize(pageable , SORT_ASC);
+        return findAllOrderByJutsusSize(pageable, SORT_ASC);
     }
 }
