@@ -5,12 +5,8 @@ name: Java CI publish artifact
 
 on:
   push:
-      branches:
-          - '*'
-          - '*/*'
-          - '**'
       tags:
-          - v1.*
+          - v*
 
 jobs:
   
