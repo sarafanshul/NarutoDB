@@ -1,5 +1,5 @@
 # This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
-# after completion it'll publish the build artifacts
+# after completion it'll publish and release the build artifacts
 
 name: Java CI publish artifact
 
@@ -31,10 +31,8 @@ jobs:
         with:
           name: Build Artifacts
           path: target/*.jar
-      -name: Release Artifacts
+      - name: Release Artifacts
         uses: ncipollo/release-action@v1
         with:
           artifacts: "target/*.jar"
           token: ${{ secrets.GITHUB_TOKEN }}
-
-
