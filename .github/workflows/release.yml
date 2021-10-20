@@ -1,7 +1,7 @@
 # This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
 # after completion it'll publish and release the build artifacts and deploy to aws
 
-name: Java CI publish artifact
+name: Java CD deploy artifact
 
 on:
   push:
@@ -44,4 +44,5 @@ jobs:
           application_name: NarutoDB
           environment_name: Narutodb-env
           version_label: $RELEASE_VERSION
+          region: ap-south-1
           deployment_package: "target/NarutoDB.jar"
