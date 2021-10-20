@@ -33,6 +33,7 @@
                 </executions>
             </plugin>
         </plugins>
+        <finalName>NarutoDB</finalName>
     </build>
 
     <profiles>

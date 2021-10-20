@@ -1,5 +1,5 @@
 # This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
-# after completion it'll publish and release the build artifacts
+# after completion it'll publish and release the build artifacts and deploy to aws
 
 name: Java CI publish artifact
 
@@ -9,7 +9,7 @@ on:
           - v*
 
 jobs:
-  
+
   build:
     runs-on: ubuntu-latest
     steps:
@@ -27,8 +27,19 @@ jobs:
         with:
           name: Build Artifacts
           path: target/*.jar
+      - name: Get Version
+        run: echo ::set-env name=RELEASE_VERSION::$(echo ${GITHUB_REF:10})
       - name: Release Artifacts
         uses: ncipollo/release-action@v1
         with:
-          artifacts: "target/*.jar"
+          artifacts: "target/NarutoDB.jar"
           token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Deploy Artifacts
+        uses: einaregilsson/beanstalk-deploy@v18
+        with:
+          aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          application_name: NarutoDB
+          environment_name: Narutodb-env
+          version_label: $RELEASE_VERSION
+          deployment_package: "target/NarutoDB.jar"
